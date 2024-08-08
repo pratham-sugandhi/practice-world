@@ -1,0 +1,92 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-image:url(pattern-background-desktop.svg) ;
+    background-size: auto;
+    display: flex;
+    justify-content:center ;
+    align-content: center;
+}
+.bigbox{
+    height: 425px;
+    width: 325px;
+    margin-top: 125px;
+    background-color: white;
+    border-radius: 10px;
+}    
+.box1{
+    height: 150px;
+    width: 325px;
+    background-image: url(illustration-hero.svg);
+    background-size: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.box2{
+    height: 275px;
+    width:325px ;
+}
+.p1{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    stroke-width: 700;
+    text-align: center;
+    color: hsla(258, 90%, 16%, 0.929);
+}
+p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: dimgray;
+}
+.plan{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color:rgba(150, 86, 210, 0.05);
+    height: 50px;
+    width: 285px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.plan-{
+    height: 20px;
+    width: 100px;
+    text-align: center;
+}
+img{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+    color: rgba(102, 17, 229, 0.977);
+}
+.button{
+    height: 35px;
+    width: 285px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 25px;
+    background-color: rgba(101, 35, 216, 0.847);
+    color: white;
+    stroke-width: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.but-{
+    height: 25px;
+    width: 285px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: hsla(258, 90%, 16%, 0.929);
+}
