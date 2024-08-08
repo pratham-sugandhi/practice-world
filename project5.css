@@ -2,8 +2,70 @@
     padding: 0%;
     margin: 0%;
 }
+body{
+    background-color: rgb(179, 177, 177);
+    display: flex;
+}
 .box1{
-    height: 700px;
-    width: 450px;
-    background-color: rgb(142, 25, 178);
+    height: 610px;
+    width: 410px;
+    display: flex;
+    background-color: rgb(170, 35, 211);
+    border-bottom-left-radius:185px; 
+    border-bottom-right-radius:185px;
+}
+.box2{
+    height: 445px;
+    width: 290px;
+    position: absolute;
+    margin-top: 125px;
+    margin-left: 345px;
+    border-radius: 25px;
+    background-color: white;
+    
+}
+.header{
+    height: 65px;
+    width: 250px;
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    background-color: rgb(170, 35, 211);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.box2{
+    display: flex;
+    justify-content: center;
+}
+.mini-header{
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 15px;
+    width: 150px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.head{
+    
+}
+
+
+
+
+
+.boxx{
+    height: 200px;
+    width: 350px;
+    margin-top:250px;
+    margin-left: 400px;
+    color: rgba(255, 255, 255, 0.815);
+}
+p{
+    font-size: 2rem;
+    color: rgb(19, 40, 101);
 }
