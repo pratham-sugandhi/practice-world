@@ -14,6 +14,8 @@ body{
     border-bottom-left-radius:185px; 
     border-bottom-right-radius:185px;
 }
+
+/* mobile */
 .box2{
     height: 445px;
     width: 290px;
@@ -26,7 +28,7 @@ body{
 }
 .header{
     height: 65px;
-    width: 250px;
+    width: 260px;
     position: relative;
     margin-left: 15px;
     margin-right: 15px;
@@ -36,10 +38,6 @@ body{
     border-top-right-radius: 15px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-}
-.box2{
-    display: flex;
-    justify-content: center;
 }
 .mini-header{
     margin-left: 50px;
@@ -51,13 +49,108 @@ body{
     border-bottom-right-radius: 35px;
 }
 .head{
-    
+    height: 45px;
+    display: flex;
+}
+.img{
+    height:40px;
+    width: 40px;
+    margin-top: 2.5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-image: url(avatar.jpg);
+    background-size: cover;
+    border-radius: 50%;
+}
+.text{
+    height: 45px;
+    width: 150px;
+    color: white;
+    stroke-width: 700;
+    margin-top: 3px;
+    font-size: 1.3rem;
+}
+.tex{
+    font-size: 1rem;
+    color: rgba(202, 201, 201, 0.82);
+}
+.content-area{
+    height: 350px;
+    width: 260px;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: rgba(205, 205, 205, 0.3);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-top: 5px;
+}
+.chat{
+    height: 23px;
+    width: 140px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-right: 3px;
+    border-radius: 5px;
+    color: rgba(148, 0, 211, 0.857);
+    font-size: 0.55rem;
+    background-color: rgba(131, 79, 149, 0.33);
+}
+.box-3{
+    height: 13px;
+    margin-left:105px;
+    color: rgb(255, 255, 255);
+    stroke-width: 700;
+}
+.box-4{
+    height: 32px;
+}
+.box-5{
+    font-size: 0.81rem;
+    background-color: rgb(167, 0, 239);
+    color: white;
+}
+#check{
+    margin: 3px;
+}
+.chat-img{
+    height: 45px;
+    width: 160px;
+    margin-top: 10px;
+    margin-left: 90px;
+    display: flex;
+}
+.-img{
+   height: 45px;
+   width: 45px;
+   margin-left: 10px;
+   border-radius: 10px;
+}
+.image1{
+    background-image: url(dog-image-1.jpg);
+    background-size: cover;
+}
+.image2{
+    background-image: url(dog-image-2.jpg);
+    background-size: cover;
+}
+.image3{
+    background-image: url(dog-image-3.jpg);
+    background-size: cover;
+}
+.foot{
+    height: 35px;
+    width: 215px;
+    margin-left: 15px;
+    margin-top: 25px;
+    border-radius: 25px;
+    background-color: white;
+    padding-left: 10px;
 }
 
 
-
-
-
+/* 2nd part */
 .boxx{
     height: 200px;
     width: 350px;
