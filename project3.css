@@ -62,20 +62,24 @@ p{
     border: 5px solid, rgb(249, 246, 246) ,0.8;
     overflow-inline:15px ;
 }
-.sum{
+.summ{
     font-size: 2rem;
     color: black;
     margin-bottom: 5px;
 }
+.boss{
+    height: 230px;
+    margin-top: 10px;
+    padding: 10px;
+}
 .box{
-    text-align: inline;
     border-radius: 8px;
     margin-top: 20px;
     height: 35px;
     width: 180px;
     font-size: 1.2rem;
-    padding-top: 10px;
-    padding-left: 15px;
+    display: flex;
+    align-items: center;
 }
 .a{
    color: rgb(210, 26, 26);
@@ -93,9 +97,14 @@ p{
     color: rgb(21, 27, 206);
     background-color: rgb(87, 55, 201,0.1);
 }
-pre{
-    color: black;
+.bozz{
+    height: 35px;
+    width: 35px;
+    margin-left:55px ;
+    display: flex;
+    align-items: center;
     font-size: 1.2rem;
+    color: rgba(34, 58, 58, 0.89);
 }
 .button{
     margin-left: 12px;
