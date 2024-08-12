@@ -2,9 +2,10 @@
     padding: 0%;
     margin: 0%;
 }
-body{
-    background-image:url(pattern-background-desktop.svg) ;
-    background-size: auto;
+.sectionA{
+    background:url("MUSICBOXPROJECT/assets/images/pattern-background-desktop.svg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content:center ;
     align-content: center;
@@ -19,7 +20,7 @@ body{
 .box1{
     height: 150px;
     width: 325px;
-    background-image: url(illustration-hero.svg);
+    background-image: url("assets/images/illustration-hero.svg");
     background-size: cover;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
