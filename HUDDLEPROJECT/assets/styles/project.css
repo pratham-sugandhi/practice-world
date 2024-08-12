@@ -12,7 +12,7 @@ body{
     width: 850px;
     padding: 20px;
     border: 2px,solid,black;
-    background-image: url(bg-hero-desktop.svg);
+    background-image: url("bg-hero-desktop.svg");
     background-size: cover;
 }
 .header{

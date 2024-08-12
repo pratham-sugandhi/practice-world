@@ -58,7 +58,7 @@ body{
     margin-top: 2.5px;
     margin-left: 10px;
     margin-right: 10px;
-    background-image: url(CHATPAGEPROJECT\assets\images\avatar.jpg);
+    background-image: url(avatar.jpg);
     background-size: cover;
     border-radius: 50%;
 }
@@ -128,15 +128,15 @@ body{
    border-radius: 10px;
 }
 .image1{
-    background-image: url(assets\images\dog-image-1.jpg);
+    background-image: url(dog-image-1.jpg);
     background-size: cover;
 }
 .image2{
-    background-image: url(assets\images\dog-image-2.jpg);
+    background-image: url(dog-image-2.jpg);
     background-size: cover;
 }
 .image3{
-    background-image: url(assets\images\dog-image-3.jpg);
+    background-image: url(dog-image-3.jpg);
     background-size: cover;
 }
 .foot{
