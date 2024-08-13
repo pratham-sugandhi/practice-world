@@ -11,7 +11,6 @@ body{
     height: 400px;
     width: 850px;
     padding: 20px;
-    border: 2px,solid,black;
     background-image: url("bg-hero-desktop.svg");
     background-size: cover;
 }
@@ -51,18 +50,16 @@ body{
     margin-top: 65px;
 } 
 .zone-1{
-    font-size: 2rem;
-    color: black;
-}
-.zone-2{
     font-size: 0.8rem;
     color: black;
 }
-.zone-3{
+.zone-2{
     margin-top: 20px;
-    height: 35px;
+    height: 25px;
     width: 200px;
+    padding: 20px;
     border-radius: 50px;
+    font-size: 1.5rem;
     background-color: rgb(231, 90, 161);
 }
 .box4{
@@ -84,10 +81,6 @@ a{
     height: 300px;
     width: 850px;
     margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    border: 2px,solid,black;
 }
 .box-{
     height: 250px;
@@ -98,20 +91,70 @@ a{
 .box-a{
     height: 100px;
     width: 300px;
-    margin-top: 60px;
+    margin-top: 100px;
     text-align: center;
     color: #000;
-    font-size: 1rem;
 }
-.para{
-    font-size: 2rem;
-    stroke-width: 700;
-    margin-bottom: 20px;
+.box-img{
+    height: 250px;
+    width: 350px;
+    margin-left: 150px;
+    background-image: url(illustration-grow-together.svg);
+    background-size: cover;
+} 
+ /* area-3  */
+.area3{
+    height: 300px;
+    width: 850px;
+    margin-top: 50px;
+    justify-content: center;
+    align-content: center;
+}
+.box--{
+    height: 250px;
+    width: 750px;
+    margin-top: 25px; 
+    display: flex;
+}
+.box-img2{
+    height: 250px;
+    width: 350px;
+    background-image: url(illustration-flowing-conversation.svg);
+    background-size: cover;
 }
 .box-b{
+    height: 100px;
+    width: 300px;
+    margin-top: 100px;
+    margin-left: 100px;
+    text-align: center;
+    color: #000;
+}
+/* area4 */
+.area4{
+    height: 300px;
+    width: 850px;
+    margin-top: 50px;
+    border: 2px,solid,black;
+}
+.box---{
+    height: 250px;
+    width: 750px;
+    margin-top: 25px; 
+    display: flex;
+}
+.box-c{
+    height: 100px;
+    width: 300px;
+    margin-top: 100px;
+    text-align: center;
+    color: #000;
+}
+.box-img3{
     height: 250px;
     width: 350px;
     margin-left: 100px;
-    background-image: url(illustration-grow-together.svg);
+    background-image: url(illustration-your-users.svg);
     background-size: cover;
-}
+} 
+/* footer */
