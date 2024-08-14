@@ -1,0 +1,80 @@
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mainBodySection{
+    background-color: rgb(2, 2, 45);
+    background-image: url(bg-desktop.png);
+
+    height: 100vh;
+    background-position:bottom;
+    background-size:contain;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fylo-section{
+    height: 100px;
+    width: 150px;
+    margin-bottom: 75px;
+    color: white;
+    background-color: rgba(0, 0, 255, 0.763);
+
+    border-radius: 5px;
+    border-top-right-radius:50px ;
+}
+.fylo-section h1{
+    font-size: 2rem;
+    margin: 25px;
+}
+.storage-section{
+    height: 100px;
+    width: 300px;
+    margin-bottom: 75px;
+    margin-left: 50px;
+    background-color: rgba(1, 1, 250, 0.724);
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.storage-section p{
+    font-size: 1rem;
+    color: white;
+}
+.loading-box{
+    height: 15px;
+    width: 250px;
+    margin-top: 15px;
+    border-radius: 25px;
+    border: 2px,solid,black;
+    background-image:  linear-gradient( rgb(242, 128, 70), rgb(252, 35, 151));
+}
+.loader{
+    height: 12px;
+    width: 12px;
+    margin-left: 234px;
+    border: 2px,solid,white;
+    border-radius: 50%;
+}
+
+
+
+/* making page responsive
+
+@media screen and (max-width: 600px)
+{
+    
+    .mainBodySection{
+        background-image: url(bg-desktop.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+    .storage-section{
+        flex-direction: column;
+    }
+} */
