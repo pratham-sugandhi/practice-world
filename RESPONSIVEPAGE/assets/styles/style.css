@@ -1,0 +1,63 @@
+*{
+   margin: 0;
+   padding: 0;  
+   box-sizing: border-box;
+}
+.mainSection { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.sedans{
+    height: 300px;
+    width: 250px;
+    background-color: orange;
+    color: white;
+    padding: 20px;
+}
+.suvs{
+    height: 300px;
+    width: 250px;
+    background-color: rgb(19, 81, 95);
+    color: white;
+    padding: 20px;
+}
+.luxury{
+    height: 300px;
+    width: 250px;
+    background-color: rgb(0, 61, 55);
+    color: white;
+    padding: 20px;
+}
+.sedans a{
+    text-decoration: none;
+    color: orange;
+}
+.suvs a{
+    text-decoration: none;
+    color:rgb(19, 81, 95) ;
+}
+.luxury a{
+    text-decoration: none;
+    color:rgb(0, 61, 55) ;
+}
+.button{
+    height: 35px;
+    width: 105px;
+    padding-top: 12px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: white;
+}
+
+/* media-queriessss */
+.mainSection{
+    flex-direction: row;
+}
+@media  (max-width:600px) {
+    .mainSection {
+        flex-direction: column;
+        margin-top: none;
+    }
+}
