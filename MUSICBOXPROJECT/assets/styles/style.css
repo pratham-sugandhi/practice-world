@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.imgFluid {
+  width: 100%;
+  height: auto;
+}
+
+.musicBox {
+  background-color: #ffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mainBodySection {
+  background: #262626;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.musicContentBox {
+  width: 350px;
+  background-color: #ffff;
+  padding: 30px 50px;
+  border-radius: 20px;
+}
+
+.headText {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.ptext {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.annualPlanBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f8f9fe;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.planImg {
+  display: flex;
+  align-items: center;
+}
+
+.clickBtn {
+  background: #766cf1;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.clickBtn a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cancelbtnwrap {
+  color: #000;
+  font-size: 25px;
+  font-weight: 600;
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.cancelbtnwrap a {
+  color: #000;
+  text-decoration: none;
+}

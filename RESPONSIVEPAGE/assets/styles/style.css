@@ -10,21 +10,21 @@
     margin-top: 150px;
 }
 .sedans{
-    height: 300px;
+    height: 350px;
     width: 250px;
     background-color: orange;
     color: white;
     padding: 20px;
 }
 .suvs{
-    height: 300px;
+    height: 350px;
     width: 250px;
     background-color: rgb(19, 81, 95);
     color: white;
     padding: 20px;
 }
 .luxury{
-    height: 300px;
+    height: 350px;
     width: 250px;
     background-color: rgb(0, 61, 55);
     color: white;
@@ -54,8 +54,9 @@
 /* media-queriessss */
 .mainSection{
     flex-direction: row;
+    margin-top: 150px;
 }
-@media  (max-width:600px) {
+@media screen and (max-width:600px) {
     .mainSection {
         flex-direction: column;
         margin-top: none;
