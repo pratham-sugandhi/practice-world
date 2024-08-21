@@ -64,17 +64,16 @@
 
 
 
-/* making page responsive
+ /* making page responsive */
+
+.mainBodySection{
+    flex-direction: row;
+}
 
 @media screen and (max-width: 600px)
 {
     
     .mainBodySection{
-        background-image: url(bg-desktop.png);
-        background-size:cover;
-        background-repeat: no-repeat;
-    }
-    .storage-section{
         flex-direction: column;
     }
-} */
+} 

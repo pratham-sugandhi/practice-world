@@ -4,20 +4,16 @@
 }
 body{
     background-color: rgba(0, 0, 0, 0.945);
+    height: 100vh;
 }
 .bigbox{
     height: 500px;
     width: 400px;
     background-color: rgba(30, 29, 29, 0.607);
     border-radius: 10px;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 80px; 
     margin-left: 375px;
-    margin-right: 450px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px 25px;
 }
 .profile{
     padding-top: 35px;
@@ -59,6 +55,7 @@ p{
     margin-left: 50px;
     height: 35px;
     width: 300px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,4 +71,20 @@ a{
 }
 .border:hover {
     background-color: rgb(231, 231, 2);
+}
+
+.bigbox{
+    margin-bottom: 80px;
+    margin-left: 375px;
+    margin-right: 450px;
+}
+
+@media screen and (max-width:600px) {
+    
+   .bigbox{
+       margin-bottom: 0px;
+       margin-left: 0;
+       margin-right: 0;
+       margin-top: 50%;
+   }
 }
