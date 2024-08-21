@@ -19,8 +19,9 @@
     padding-right: 25px;
     padding-top: 15px;
     padding-bottom: 15px;
+
     height: 100%;
-    width: 50%;
+    width: auto;
     background-color: white;
     border-radius: 15px;
 }
@@ -36,4 +37,16 @@ h3{
 }
 .prep{
     background-color: rgb(117, 7, 62,0.09);
+}
+
+.bigbox{
+    margin-left: 280px;
+    width: 50%;
+}
+
+@media screen and (max-width:600px) {
+    .bigbox{
+        margin-left: 0%;
+        width: auto;
+    }
 }

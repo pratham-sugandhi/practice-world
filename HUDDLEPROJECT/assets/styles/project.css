@@ -158,3 +158,42 @@ a{
     background-size: cover;
 } 
 /* footer */
+
+body{
+    flex-direction: row;
+}
+.area1{
+    height: 400px;
+    width: 850px;
+    flex-direction: row;
+    
+}.area2{
+    height: 300px;
+    width: 850px;
+    flex-direction: row;
+}
+.area3{
+    height: 300px;
+    width: 850px;
+    flex-direction: row;
+}
+
+@media screen and (max-width:600px) {
+    body{
+        flex-direction: column;
+    }
+    .area1{
+        height: auto;
+        width: auto;
+        flex-direction: column;
+    }.area2{
+        height: auto;
+        width: auto;
+        flex-direction: column;
+    }
+    .area3{
+        height: auto;
+        width: auto;
+        flex-direction: column;
+    }
+}
