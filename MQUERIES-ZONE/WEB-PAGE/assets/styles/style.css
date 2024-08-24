@@ -45,11 +45,13 @@ a{
 
 .sidebarSection{
     margin-top: 10px;
+    width: 320px;
     float: right;
     background-color: #cccccccc;
 }
 .longbarSection{
     margin-top: 10px;
+    width: 320px;
     float: right;
     background-color: #cccccccc;
 }
