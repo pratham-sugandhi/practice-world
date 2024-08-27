@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.headNav{
+    background-color: blueviolet;
+}
+.mainNav{
+    background-color: rgb(132, 17, 240);
+}
