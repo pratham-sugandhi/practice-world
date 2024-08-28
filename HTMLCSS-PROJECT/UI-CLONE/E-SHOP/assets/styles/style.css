@@ -33,16 +33,16 @@ a:hover{
 p{
     margin: 0;
 }
-.btn-danger{
+.btn .btn-danger{
     background: var(--bg-danger);
     border-color: var(--bg-danger);
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     font-weight: 500;
 }
-.btn-danger:hover{
+.btn .btn-danger:hover{
     color: var(--text-danger);
-    background: transparent;
+    background:transparent;
 }
 
 /* Navigation Css */
@@ -58,13 +58,13 @@ p{
 #header .navbar-nav .nav-item .nav-link.active{
     color: var(--bg-danger);
 }
-#header .navbar-toggler-icon{
+/* #header .navbar-toggler-icon{
     width: unset;
     height: unset;
-}
-/* #header .navbar-toggler:focus{
-    box-shadow: none;
 } */
+#header .navbar-toggler:focus{
+    box-shadow: none;
+} 
 
 /* Home Css */
 .home .home-banner-1,
@@ -95,3 +95,5 @@ p{
     width: 2.5rem;
     height: 0.313rem;
 }
+
+/* Css */
