@@ -8,6 +8,11 @@
     .home .home-banner .home-banner-text{
         transform: translate(-80%, -50%);
     }
+
+    /* Offer Css */
+    .offers .offer-box .offer-info .heading-bigger{
+        font-size: 3rem;
+    }
     /* Special Css */
 }
 @media (max-width:991px){
@@ -15,6 +20,7 @@
     .home .home-banner .home-banner-text{
         transform: translate(-66%, -50%);
     }
+    /* Offer Css */
     /* Special Css */
 }
 @media (max-width:767px){
