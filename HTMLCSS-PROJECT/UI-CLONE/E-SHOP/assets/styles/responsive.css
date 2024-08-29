@@ -20,7 +20,6 @@
     .home .home-banner .home-banner-text{
         transform: translate(-66%, -50%);
     }
-    /* Offer Css */
     /* Special Css */
 }
 @media (max-width:767px){
@@ -43,6 +42,10 @@
     }
     .home .home-banner .home-banner-text .btn-danger{
         padding: 0.5rem 1.5rem;
+    }
+    /* product css */
+    .products .up_to_content h2{
+        font-size: 0.725rem;
     }
     /* Special Css */
 }

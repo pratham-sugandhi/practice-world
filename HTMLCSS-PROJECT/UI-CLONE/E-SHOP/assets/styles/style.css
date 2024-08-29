@@ -1,8 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    text-align: center;
 }
-
 :root{
     /* colors */
     --bg-white:#fff;
@@ -14,7 +14,6 @@
     --text-danger:#f63440;
     --text-gray:#aaa;
 }
-
 body{
     font-family: var(--primary-font);
     font-size: 1rem;
@@ -24,6 +23,9 @@ body{
     color: var(--text-black);
     overflow-x: hidden;
 }
+
+
+
 
 /* Custom Css */
 a,
@@ -45,6 +47,9 @@ p{
     background:transparent;
 }
 
+
+
+
 /* Navigation Css */
 #header .fixed-top{
     box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 5%);
@@ -65,6 +70,8 @@ p{
 #header .navbar-toggler:focus{
     box-shadow: none;
 } 
+
+
 
 /* Home Css */
 .home .home-banner-1,
@@ -95,6 +102,8 @@ p{
     width: 2.5rem;
     height: 0.313rem;
 }
+
+
 
 /* Offer Css */
 .offers{
@@ -176,3 +185,124 @@ p{
     border-color: var(--bg-danger);
     background-color: var(--bg-danger);
 }
+
+
+
+/* product css */
+.product{
+    padding-top: 8.75rem;
+}
+.col-sm-12{
+    padding-top: 8.75rem;
+}
+.headline h2::before{
+    content: '';
+    width: 30%;
+    height: 0.125rem;
+    background-color: var(--bg-danger);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:0.625rem ;  
+}
+.products a{
+    text-decoration: none;
+    color: var(--text-black);
+}
+.product-list .product-image img{
+    transition: all 500ms ease-in-out;
+}
+.product-list .product-image .product-image-secondary{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.product-list .product-image:hover .product-image-secondary{
+    opacity: 1;
+}
+.product-list .product-image .sale{
+    background: var(--bg-danger);
+    border-radius: 0.313rem;
+    color: var(--text-white);
+    font-size: 0.813rem;
+    letter-spacing: 0.125rem;
+    line-height: 1.563rem;
+    padding: 0.125rem 0.813rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 1rem;
+    top: 1.88rem;
+    z-index: 99;
+}
+.product-list .product-name h3{
+    font-size:1.125rem ;
+    color: var(--text-black);
+    transition: all 0.3s ease 0s;
+}
+.product-list .product-name h3:hover{
+    color: var(--text-danger);
+}
+.product-list .product-name .amount{
+    color: var(--text-black);
+    font-weight: 500;
+}
+.product-list .product-name .amount del{
+    color: var(--text-gray);
+}
+.product-list .product-name .ti-star{
+    color: var(--text-gray);
+}
+.product-list .product-name .ti-star.active{
+    color: var(--text-danger);
+}
+.product-list .product-name .add_to_cart{
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease 0s;
+}
+.product-list .product-name .add_to_Card:hover{
+    color: var(--text-danger);
+}
+
+/* <!-- UP TO 75% OFF --> */
+.products .up_to_off {
+   position: relative;
+}
+.products .up_to_off::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.products .up_to_off img{
+    transition: 0.5s;
+}
+.products .up_to_off:hover img{
+    transform: scale(1.1);
+}
+.up_to_off{
+    text-align:unset;
+}
+.products .up_to_content h2{
+    color: var(--text-white);
+    font-size: 1.635rem;
+    position: absolute;
+    bottom: 35%;
+    left: 35%;
+    transform: translate(-50% -50%);
+    z-index: 3;
+}  
