@@ -5,6 +5,7 @@
 }
 :root{
     /* colors */
+    --bg-light-white:#d5d4d4;
     --bg-white:#fff;
     --bg-danger:#f63440;
     /* text color */
@@ -12,7 +13,8 @@
     --text-white:#fff;
     --text-black:#121212;
     --text-danger:#f63440;
-    --text-gray:#aaa;
+    --text-gray:#e8e7e7;
+    --text-dark-gray:#676767dd;
 }
 body{
     font-family: var(--primary-font);
@@ -102,7 +104,15 @@ p{
     width: 2.5rem;
     height: 0.313rem;
 }
-
+.home .carousel-control-next-icon,
+.home .carousel-control-prev-icon{
+    background-color: var(--bg-danger);
+}
+/* .home .slider-icon{
+    font-size: 3rem;
+    font-weight: 600;
+    background: var(--bg-danger);
+} */
 
 
 /* Offer Css */
@@ -306,3 +316,97 @@ p{
     transform: translate(-50% -50%);
     z-index: 3;
 }  
+
+
+/* Special css */
+.special{
+    padding: 6rem 0;
+    background: var(--bg-light-white);
+}
+.special .countdown-container{
+    padding-top: 4.375rem;
+}
+.special .countdown-container p{
+    color: var(--text-dark-gray);
+    font-weight: 300;
+    line-height: 1.875rem;
+}
+/* .special .countdown-container .countdown-counter{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.875rem;
+}
+.special .countdown-container .countdown-counter li{
+    display: inline-flex;
+    font-size: 0.875rem;
+    font-weight: bold;
+    background: var(--bg-white);
+    border-radius: 0.313rem;
+    padding: 2rem 1rem;
+    width: 50%;
+    margin: 0 0.33rem;
+} 
+.special .countdown-container .countdown-counter li span{
+    font-weight:500;
+}
+*/
+.special .special-img span{
+    background: var(--bg-danger);
+    border-radius: 0.313rem;
+    color: var(--text-white);
+    font-size: 0.813rem;
+    letter-spacing: 0.25rem;
+    line-height: 1.563rem;
+    padding: 0.125rem 0.813rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 1rem;
+    top: 1.188rem;
+    z-index: 99;
+}
+
+
+/* Testimonial  css */
+.testimonial{
+    padding: 0 0 8rem;
+}
+.testimonial .testimonial-wrapper{
+    box-shadow: 0 0 0.563rem 0 rgb(0, 0, 0 /5%);
+    background: var(--bg-white);
+    margin: auto;
+    padding: 1rem 5rem;
+    border: 0.063rem solid var(--bg-light-white);
+    border-radius: 0.625rem;
+}
+.testimonial .testimonial-wrapper img{
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+    margin: 1.25rem auto;
+    object-fit: cover;
+    background-color: var(--bg-white);
+    border: 0.063rem solid var(--bg-light-white);
+}
+
+.testimonial .carousel-indicators [data-bs-target]{
+    background-color: var(--bg-danger);
+    width: 2.5rem;
+    height: 0.313rem;
+}
+.testimonial .carousel-control-next-icon,
+.testimonial .carousel-control-prev-icon{
+    background-color: var(--bg-danger);
+}
+/* .testimonial .slider-icon{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--bg-danger);
+} */
+.testimonial .carousel-control-prev{
+    left: -8.75rem;
+}
+.testimonial .carousel-control-next{
+    right: -8.75rem;
+}

@@ -20,7 +20,13 @@
     .home .home-banner .home-banner-text{
         transform: translate(-66%, -50%);
     }
-    /* Special Css */
+    /* testimonial css */
+    .testimonial .carousel-control-prev{
+        left: -1.75rem;
+    }
+    .testimonial .carousel-control-next{
+        right: -1.75rem;
+    }
 }
 @media (max-width:767px){
     /* Home Css */
@@ -47,7 +53,11 @@
     .products .up_to_content h2{
         font-size: 0.725rem;
     }
-    /* Special Css */
+    /* testimonial css */
+    .testimonial .carousel-control-prev,
+    .testimonial .carousel-control-next{
+        display: none;
+    }
 }
 @media (max-width:330px){
     /* Home Css */
