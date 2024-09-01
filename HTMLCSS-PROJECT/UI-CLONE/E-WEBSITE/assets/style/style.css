@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* NAVIGATION */
+.navbar .navbar-brand .img{
+    width: 200px;
+    background-size: cover;
+}
+
+/* HOME */
+.brands{
+    background-color: rgba(68, 161, 211, 0.272);
+}
+
+
+/* ABOUT */
+.about2{
+    background-color: rgba(68, 161, 211, 0.272);
+}
+.box{
+    height: 100px;
+    width: 200px;
+}
+.box-1{
+    height: 100px;
+}
+
+
+/* Features */
+.Features{
+    background-color: rgba(68, 161, 211, 0.272);  
+}
