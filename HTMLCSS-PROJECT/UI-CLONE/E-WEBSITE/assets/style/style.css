@@ -1,12 +1,36 @@
+/* general */
 *{
     margin: 0;
     padding: 0;
+}
+:root{
+    /* bg-colors */
+    --bg-black:#090b3c;
+    --dark-green:#0e9d80;
+    /* text colors */
+    --text-dark-gray:#4c535d;
+    --text-dark-green:#12c4a0;
+    
 }
 /* NAVIGATION */
 .navbar .navbar-brand .img{
     width: 200px;
     background-size: cover;
 }
+.navbar .nav-item{
+    margin: 0 10px;
+}
+.navbar .nav-item .nav-link{
+    color: #4c535d;
+    font-size: 18px;
+    line-height: 1;
+}
+.navbar .nav-item .nav-link.active{
+    color: var(--text-dark-green);
+}
+
+
+
 
 /* HOME */
 .brands{
@@ -15,19 +39,39 @@
 
 
 /* ABOUT */
+.banner_wrapper{
+    width: 100%;
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+}
 .about2{
     background-color: rgba(68, 161, 211, 0.272);
 }
-.box{
-    height: 100px;
-    width: 200px;
+.projects .box{
+    font-size: 3rem;
+    color: rgb(255, 130, 5);
+    font-weight: 400;
 }
-.box-1{
-    height: 100px;
-}
-
 
 /* Features */
 .Features{
     background-color: rgba(68, 161, 211, 0.272);  
+}
+.inner-feature1{
+    background-color: rgba(221, 221, 48, 0.676);
+}
+.inner-feature2{
+    background-color: plum;
+}
+.inner-feature3{
+    background-color: rgba(79, 186, 232, 0.676);
+}
+.inner-feature4{
+    background-color:rgba(26, 145, 26, 0.715) ;
+}
+.inner-feature5{
+    background-color:rgba(244, 165, 96, 0.753) ;
+}
+.inner-feature6{
+    background-color: rgba(250, 128, 114, 0.66);
 }

@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- NAVIGATION-SECTIOIN -->
-    <section id="header mb-2">
+    <header id="header">
         <nav class="navbar navbar-expand-lg bg-white fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand m-auto" href="#">
@@ -49,11 +49,11 @@
               </div>
             </div>
         </nav>
-    </section>
+    </header>
 
 
     <!-- HOME-SECTIOIN -->
-    <section class="home mt-5 pt-5 overflow-hidden">
+    <section id="home" class="banner_wrapper mt-5 pt-5 overflow-hidden"> 
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-6 m-auto pt-5">
@@ -67,11 +67,14 @@
                 </div>
             </div>
         </div>
-
+    </section>
+    <div class="clients">
         <div class="container-fluid brands">
             <div class="row mt-5 pt-3 mb-5 pb-3">
                 <div class="col-12">
                     <p class="text-center pt-3 fs-5">Trusted by clients across the globe</p>
+                </div>
+                <div class="owl-carousel client-slider-section">
                     <ul class="list-unstyled d-flex">
                         <li class="m-auto">
                             <a href=""><img src="assets/images/dummy_logo2.png" alt="" class="img-fluid"></a>
@@ -95,7 +98,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- About-SECTIOIN -->
      <section class="about overflow-hidden">
@@ -127,53 +130,73 @@
             </div>
         </div>
         
-        <div class="container">
-            <!-- incomplete -->
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt, numquam et quasi accusantium deleniti voluptate dolor est deserunt animi provident repellat odio, tempora dolores rerum distinctio architecto, veritatis dolorum!</p>
+        <div class="projects">
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <h2 class="box">8,500</h2>
+                        <p>Completed Projects</p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <h2 class="box">9,470</h2>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <h2 class="box">1,120</h2>
+                        <p>Ongoing Projects</p>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 text-center">
+                        <h2 class="box">152</h2>
+                        <p>Awards Won</p>
+                    </div>
+                </div>
+            </div>  
         </div>
      </section>
 
     <!-- Features Section -->
-     <section class="Features overflow-hidden mt-5">
+     <section class="Features overflow-hidden mt-5 mb-5">
         <div class="container-fluid">
             <div class="container text-center mt-5">
                 <span>So much to offer</span>
                 <h2>Our automated features</h2>
             </div>
-            <div class="container m-auto">
+            <div class="container">
                 <div class="row">
-                <div class="col-4 m-auto">
-                    <img src="assets/images/consultancy.png" alt="" class="img-fluid">
-                    <h2 class="fw-bold m-auto p3">consultancy</h2>
-                    <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    <div class="inner-feature1 col-4">
+                        <img src="assets/images/consultancy.png" alt="" class="img-fluid">
+                        <h2 class="fw-bold m-auto p3">consultancy</h2>
+                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    </div>
+                    <div class="inner-feature2 col-4">
+                        <img src="assets/images/solutions.png" alt="" class="img-fluid">
+                        <h2 class="fw-bold m-auto p3">consultancy</h2>
+                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    </div>
+                    <div class="inner-feature3 col-4">
+                        <img src="assets/images/simple.png" alt="" class="img-fluid">
+                        <h2 class="fw-bold m-auto p3">consultancy</h2>
+                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    </div>
                 </div>
-                <div class="col-4 m-auto">
-                    <img src="assets/images/solutions.png" alt="" class="img-fluid">
-                    <h2 class="fw-bold m-auto p3">consultancy</h2>
-                    <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                <div class="row mt-3">
+                    <div class="inner-feature4 col-4">
+                        <img src="assets/images/deadline.png" alt="" class="img-fluid">
+                        <h2 class="fw-bold m-auto p3">consultancy</h2>
+                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    </div>
+                    <div class="inner-feature5 col-4">
+                        <img src="assets/images/data.png" alt="" class="img-fluid">
+                        <h2 class="fw-bold m-auto p3">consultancy</h2>
+                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    </div>
+                    <div class="inner-feature6 col-4">
+                        <img src="assets/images/flexible.png" alt="" class="img-fluid">
+                        <h2 class="fw-bold m-auto p3">consultancy</h2>
+                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    </div>
                 </div>
-                <div class="col-4 m-auto">
-                    <img src="assets/images/simple.png" alt="" class="img-fluid">
-                    <h2 class="fw-bold m-auto p3">consultancy</h2>
-                    <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
-                </div>
-                <div class="col-4 m-auto">
-                    <img src="assets/images/deadline.png" alt="" class="img-fluid">
-                    <h2 class="fw-bold m-auto p3">consultancy</h2>
-                    <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
-                </div>
-                <div class="col-4 m-auto">
-                    <img src="assets/images/data.png" alt="" class="img-fluid">
-                    <h2 class="fw-bold m-auto p3">consultancy</h2>
-                    <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
-                </div>
-                <div class="col-4 m-auto">
-                    <img src="assets/images/flexible.png" alt="" class="img-fluid">
-                    <h2 class="fw-bold m-auto p3">consultancy</h2>
-                    <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
-                </div>
-            </div></div>
-        </div>
+            </div>
      </section>
 
     <!-- Pricing Section -->
