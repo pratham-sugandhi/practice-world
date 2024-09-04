@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/responsive.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.4.0/esm/ionicons.min.js">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="85">
+
     <!-- NAVIGATION-SECTIOIN -->
-    <header id="header">
-        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+    <header class="header_wrapper">
+       <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand m-auto" href="#">
-                 <img src="assets/images/logo-new.png" alt="" class="img img-fluid">
+                 <img src="assets/images/logo-new.png" alt="logo" class="img img-fluid">
                 </a>
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                 <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                  <!-- <ion-icon name="menu"></ion-icon> -->
+                   <span><img src="assets/images/menu.svg" alt=""></span>
                </button>
               
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,22 +30,22 @@
                      <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                     <a class="nav-link" href="#About">About</a>
+                     <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                     <a class="nav-link" href="#Features">Features</a>
+                     <a class="nav-link" href="#features">Features</a>
                     </li>
                     <li class="nav-item">
-                     <a class="nav-link" href="#Pricing">Pricing</a>
+                     <a class="nav-link" href="#pricing">Pricing</a>
                     </li>
                     <li class="nav-item">
-                     <a class="nav-link" href="#Reviews">Reviews</a>
+                     <a class="nav-link" href="#reviews">Reviews</a>
                     </li>
                     <li class="nav-item">
-                     <a class="nav-link" href="#Clients">Clients</a>
+                     <a class="nav-link" href="#clients">Clients</a>
                     </li>
-                  <li class="nav-item">
-                   <a class="nav-link" href="#FaQs">FaQs</a>
+                   <li class="nav-item">
+                   <a class="nav-link" href="#faQs">FaQs</a>
                   </li>
                 </ul>
                 <button class="btn btn-outline-dark" type="button">Contact</button>
@@ -49,6 +53,46 @@
               </div>
             </div>
         </nav>
+
+        <!--<nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand m-auto" href="#">
+                <img src="assets/images/logo-new.png" alt="logo" class="img img-fluid">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbar-nav">
+                <ul class="navbar-nav  m-auto list-unstyled">
+                    <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="#pricing">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                     <a class="nav-link" href="#clients">Clients</a>
+                    </li>
+                   <li class="nav-item">
+                   <a class="nav-link" href="#faQs">FaQs</a>
+                  </li>
+                </ul>
+                
+                <button class="btn btn-outline-dark" type="button">Contact</button>
+                <button class="btn btn-dark" type="button">Free Trial</button>
+              </div>
+            </div>
+          </nav> -->
     </header>
 
 
@@ -162,36 +206,41 @@
                 <h2>Our automated features</h2>
             </div>
             <div class="container">
-                <div class="row">
-                    <div class="inner-feature1 col-4">
-                        <img src="assets/images/consultancy.png" alt="" class="img-fluid">
-                        <h2 class="fw-bold m-auto p3">consultancy</h2>
-                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                <div class="row ">
+                    <div class="inner-feature1 col-4 position-relative">
+                        <img src="assets/images/consultancy.png" alt="" class="img-fluid position-absolute top-0 Start-0">
+
+                        <div class="div">
+                          <h2 class="fw-bold m-auto p3">consultancy</h2>
+                          <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                      </div>
                     </div>
-                    <div class="inner-feature2 col-4">
-                        <img src="assets/images/solutions.png" alt="" class="img-fluid">
-                        <h2 class="fw-bold m-auto p3">consultancy</h2>
-                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    <div class="inner-feature2 col-4 position-relative">
+                        <div class="div">
+                          <img src="assets/images/solutions.png" alt="" class="img-fluid position-absolute top-0 Start-0">
+                          <h2 class="fw-bold m-auto p3">consultancy</h2>
+                          <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                        </div>
                     </div>
-                    <div class="inner-feature3 col-4">
-                        <img src="assets/images/simple.png" alt="" class="img-fluid">
+                    <div class="inner-feature3 col-4 position-relative">
+                        <img src="assets/images/simple.png" alt="" class="img-fluid position-absolute top-0 Start-0">
                         <h2 class="fw-bold m-auto p3">consultancy</h2>
                         <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="inner-feature4 col-4">
-                        <img src="assets/images/deadline.png" alt="" class="img-fluid">
+                    <div class="inner-feature4 col-4  position-relative">
+                        <img src="assets/images/deadline.png" alt="" class="img-fluid position-absolute top-0 Start-0">
                         <h2 class="fw-bold m-auto p3">consultancy</h2>
                         <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
                     </div>
-                    <div class="inner-feature5 col-4">
-                        <img src="assets/images/data.png" alt="" class="img-fluid">
+                    <div class="inner-feature5 col-4  position-relative">
+                        <img src="assets/images/data.png" alt="" class="img-fluid position-absolute top-0 Start-0">
                         <h2 class="fw-bold m-auto p3">consultancy</h2>
                         <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
                     </div>
-                    <div class="inner-feature6 col-4">
-                        <img src="assets/images/flexible.png" alt="" class="img-fluid">
+                    <div class="inner-feature6 col-4  position-relative">
+                        <img src="assets/images/flexible.png" alt="" class="img-fluid position-absolute top-0 Start-0">
                         <h2 class="fw-bold m-auto p3">consultancy</h2>
                         <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
                     </div>
@@ -211,5 +260,9 @@
             <div class="cards"></div>
         </div>
      </section>
+
+     <!-- ionicons -->
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
