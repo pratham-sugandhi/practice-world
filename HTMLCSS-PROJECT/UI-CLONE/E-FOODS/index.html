@@ -7,46 +7,368 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/responsive.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.4.0/esm/ionicons.min.js">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
 <body>
-    <header>
-     <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="#"><a href="assets/images/images/logo.png" class="img-flud"></a></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fas fa-stream navbar-toggler-icon"></span>
-            <i class=""></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#explore-food">Explore Foods</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#reviews">Reviews</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#testimonial">Testimonial</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#faq">FAQ</a>
-              </li>
-              <li>
-                <button class="main-btn">1200 345 231</button>
-              </li>
-            </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/images/logo.png" alt="" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item pt-2">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item pt-2">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item pt-2">
+              <a class="nav-link" href="#">Explore Foods</a>
+            </li>
+            <li class="nav-item pt-2">
+              <a class="nav-link" href="#">Reviews</a>
+            </li>
+            <li class="nav-item pt-2">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+              <button class="main-btn">1200 345 231</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <!-- TOP BANNEER -->
+    <section id="home">
+      <div class="container-fluid px-0 top-banner">
+       <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-6">
+            <h1 class="mb-4">Good Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum voluptatem velit? Officiis dolores vel repellendus saepe repellat mollitia soluta dignissimos aperiam, perspiciatis fuga delectus quaerat debitis non necessitatibus accusantium.</p>
+            <button class="main-btn">order now</button>
           </div>
         </div>
-     </nav>
-    </header>
+       </div>
+      </div>
+    </section>
 
+    <!-- COUNTER-SECTION   REQUIRE JS TO RUN -->
+     <section id="counter">
+      <section class="counter-section mb-5">
+        <div class="container">
+          <div class="row text-centre">
+            <div class="col-md-3 col-lg-0 mb-md-0 mb-5">
+              <h2>
+                <span id="count1"></span>1287+
+              </h2>
+              <p>SAVINGS</p>
+            </div>
+            <div class="col-md-3 col-lg-0 mb-md-0 mb-5">
+              <h2>
+                <span id="count2"></span>1682+
+              </h2>
+              <p>PHOTOS</p>
+            </div>
+            <div class="col-md-3 col-lg-0 mb-md-0 mb-5">
+              <h2>
+                <span id="count3"></span>9406+
+              </h2>
+              <p>ROCKETS</p>
+            </div>
+            <div class="col-md-3 col-lg-0 mb-md-0 mb-5">
+              <h2>
+                <span id="count4"></span>3775+
+              </h2>
+              <p>GLOBES</p>
+            </div>
+          </div>
+        </div>
+      </section>
+     </section>
+
+    <!--  ABOUT US-->
+     <section id="about">
+      <div class="about-section wrapper">
+        <div class="container">
+          <div class="row about-inner align-items-centre">
+            <div class="col-lg-7 col=-md-12 mb-lg-0 mb-5">
+              <div class="card border-0">
+                <img src="assets/images/images/img/img-1.png" alt="" class="img-fluid">
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 text-sec">
+                <h2>We Lorem ipsum dolorveritatis, sunt inventore suscipit?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vccusamus soluta saepe quas. Tempore consectetur cumque, minima officia quisquam architecto libero a nemo.</p>
+                <button class="main-btn mt-4">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container food-type">
+          <div class="row align-items-centre">
+            <div class="col-lg-5 col;-md-12 text-sec-2 mb-lg-0 mb-5">
+              <h2>We Lorem ipsumuas veritatis minus,sunt inventore suscipit?</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vccusamus soluta saepe quas. Tempore consectetur cumque, minima officia quisquam architecto libero a nemo.</p>
+              <ul class="list-unstyled py-3">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Lorem ipsum dolor sit amet.</li>
+              </ul>
+              <button class="main-btn mt-4">Learn More</button>
+            </div>
+
+            <div class="col-lg-7 col-md-12 ">
+              <div class="card border-0"></div>
+                <img src="assets/images/images/img/img-2.png" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+    
+    <!-- STORY -->
+     <section id="story">
+      <div class="story-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="text-content">
+                <h2>We Lorem ipsumuas veritatis minus,sunt inventore suscipit?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vccusamus soluta saepe quas. Tempore consectetur cumque, minima officia quisquam architecto libero a nemo.</p>
+                <button class="main-btn">Read More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- EXPLORE FOODS -->
+     <section id="explore-food">
+      <div class="explore-food-section">
+        <div class="explore-food wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="text-content">
+                  <h2>Explore our foods</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nesciunt voluptas, cum qui temporibus numquam, facilis ipsum at sit velit ex beatae adipisci? Nemo nulla beatae quibusdam autem porro eveniet!
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row pt-5">
+              <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                <div class="card">
+                  <img src="assets/images/images/img/img-3.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="mini-card pt-3">
+                  <h4>Rainbow Vegetable Sandwich</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <span>$10.50 <del>$11.78</del></span>
+                  <button class="mt-4 main-btn">Order Now</button>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                <div class="card">
+                  <img src="assets/images/images/img/img-4.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="mini-card pt-3">
+                  <h4>Rainbow Vegetable Sandwich</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <span>$10.50 <del>$11.78</del></span>
+                  <button class="mt-4 main-btn">Order Now</button>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
+                <div class="card">
+                  <img src="assets/images/images/img/img-3.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="mini-card pt-3">
+                  <h4>Rainbow Vegetable Sandwich</h4>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <span>$10.50 <del>$11.78</del></span>
+                  <button class="mt-4 main-btn">Order Now</button>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      
+     </section>
+     <!-- TESTIMONIAL -->
+      <section id="testimonial">
+        <div class="testimonial-section wrapper">
+          <div class="container text-centre">
+            <div class="text-content text-centre pb-4">
+              <h2>Testimonials</h2>
+            </div>
+          </div>
+          
+          
+          <div class="row">
+            <div class="col-sm-12 col-lg-10 offset-lg-1">
+              <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-caption">
+                      <img src="assets/images/images/review/review-1.jpg" alt="">
+                      <p>Some representative placeholder content for the first slide.</p>
+                      <h5>First slide label</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <img src="assets/images/images/review/review-2.jpg" alt="">
+                      <p>Some representative placeholder content for the first slide.</p>
+                      <h5>First slide label</h5>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-caption">
+                      <img src="assets/images/images/review/review-1.jpg" alt="">
+                      <p>Some representative placeholder content for the first slide.</p>
+                      <h5>First slide label</h5>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+       <section id="faq">
+        <div class="faq wrapper pt-2">
+          <div class="container">
+            <div class="row text-centre">
+              <div class="col-sm-12 text-centre">
+                <h2>Frequently Asked Question</h2>
+              </div>
+            </div>
+            <div class="row pt-5">
+              <div class="col-sm-6 mb-4">
+                <h4><span>~</span>Lorem, ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, laborum. Sequi cum maxime voluptates vel dolores saepe blanditiis necessitatibus? Minima corporis deserunt at aliquam voluptatibus ipsa eius consequuntur facilis dolorem!</p>
+              </div>
+
+              <div class="col-sm-6 mb-4">
+                <h4><span>~</span>Lorem, ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, laborum. Sequi cum maxime voluptates vel dolores saepe blanditiis necessitatibus? Minima corporis deserunt at aliquam voluptatibus ipsa eius consequuntur facilis dolorem!</p>
+              </div>
+            </div>
+            <div class="row pt-5">
+              <div class="col-sm-6 mb-4">
+                <h4><span>~</span>Lorem, ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, laborum. Sequi cum maxime voluptates vel dolores saepe blanditiis necessitatibus? Minima corporis deserunt at aliquam voluptatibus ipsa eius consequuntur facilis dolorem!</p>
+              </div>
+
+              <div class="col-sm-6 mb-4">
+                <h4><span>~</span>Lorem, ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, laborum. Sequi cum maxime voluptates vel dolores saepe blanditiis necessitatibus? Minima corporis deserunt at aliquam voluptatibus ipsa eius consequuntur facilis dolorem!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+
+       <!-- BOOK-FOOD -->
+        <section id="book-food">
+          <div class="book-food">
+            <div class="container book-food-text">
+              <div class="row text-centre">
+                <div class="col-lg-9 col-md-12">
+                  <h2>Lorem ipsum dolor sit amet ipsum dolor sit amet.</h2>
+                </div>
+                <div class="col-lg-3 col-md-12 mt-lg-0 mt-4">
+                  <button class="main-btn">Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- NEWS-LETTER -->
+         <section id="NEWS-LETTER">
+          <div class="news-letter wrapper mt-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="text-content pt-4 pb-4">
+                    <h2>Lorem ipsum dolor consectetur adipisicing elit
+                    </h2>
+                    <p>Lorem ipsum dolor consectetur adipisicing elit. Similique placeat aperiam incidunt, dolorem quae laborum eum officiis magnam temporibus tempore dolorum recusandae laboriosam beatae necessitatibus! Quod numquam nemo minus beatae!</p>
+                  </div>
+                </div>
+                <form class="newsletter">
+                  <div class="row">
+                    <div class="col-md-8 col-12 pt-3">
+                      <input class="form-control" placeholder="Email Address here" name="email" type="email">
+
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <button class="main-btn" type="submit">Subscribe</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+         </section>
+
+         <!-- FOOTER -->
+          <footer id="footer">
+            <div class="footer mt-5 py-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 text-content">
+                    <a class="footer-link" href="#">Register</a>
+                    <a class="footer-link" href="#">Forum</a>
+                    <a class="footer-link" href="#">Affiliate</a>
+                    <a class="footer-link" href="#">FAQ</a>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="footer-copy">
+                    <div class="copy-right text-centre pt-5">
+                      <p class="text-light">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/lib...">
 </body>
 </html>

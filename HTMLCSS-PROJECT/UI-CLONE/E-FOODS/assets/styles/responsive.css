@@ -1,0 +1,11 @@
+/* TOP BANNER */
+@media (max-width:330px){
+    
+}
+
+@media (max-width:767px){
+    .counter-section h2,
+    .counter-section p{
+        text-align: center;
+    }
+}
