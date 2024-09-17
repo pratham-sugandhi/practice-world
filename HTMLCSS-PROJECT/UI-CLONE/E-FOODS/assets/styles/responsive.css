@@ -1,11 +1,32 @@
 /* TOP BANNER */
 @media (max-width:330px){
     
+    .home .top-banner{
+        padding: 9.875rem 0 6.375rem;
+    }
 }
 
 @media (max-width:767px){
     .counter-section h2,
     .counter-section p{
         text-align: center;
+    }
+    .home .top-banner{
+        padding: 10.875rem 0 6.375rem;
+    }
+    .counter-section .row{
+        text-align: center;
+    }
+    .about-section .text-sec {
+        margin-top: 0;
+    }
+    .about-section .text-sec-2 {
+        margin-top: 0;
+    }
+    .newsletter .row {
+        margin-left: 0%;
+    }
+    .newsletter .row .main-btn{
+        padding-left: 13rem;
     }
 }
