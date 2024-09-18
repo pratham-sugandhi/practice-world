@@ -1,0 +1,21 @@
+@media (max-width:767px){
+    .img-area {
+        max-width: 100%;
+        height: auto;
+    }
+    .price-wrapper {
+        padding: 0;
+    }
+    .brand-wrapper {
+        padding: 50px 0;
+    }
+    .faq-wrapper {
+        padding: 50px 0 0;
+    }
+}
+@media (min-width: 992px) {
+    .inner-div {
+        margin-top: 6rem !important;
+    }
+}
+

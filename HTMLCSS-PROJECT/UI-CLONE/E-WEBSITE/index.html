@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hashtag</title>
+
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="assets/style/responsive.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -12,7 +13,7 @@
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="85">
 
     <!-- NAVIGATION-SECTIOIN -->
-    <header class="header_wrapper">
+    <header class="header_wrapper fixed-top">
        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand m-auto" href="#">
@@ -48,7 +49,7 @@
                   </li>
                 </ul>
                 <button class="btn btn-outline-dark" type="button">Contact</button>
-                <button class="btn btn-dark" type="button">Free Trial</button>
+                <button class="btn btn-dark ms-1" type="button">Free Trial</button>
               </div>
             </div>
         </nav>
@@ -57,11 +58,12 @@
 
 
     <!-- HOME-SECTIOIN -->
-    <section id="home" class="banner_wrapper mt-5 pt-5 overflow-hidden"> 
+    <section id="home" class="banner_wrapper pt-5 overflow-hidden"> 
         <div class="container">
-            <div class="col-sm-12 col-lg-6 m-auto pt-5">
-                <img src="assets/images/hero_img.png"  alt="" class="img-fluid">
             <div class="row">
+                <div class="col-sm-12 col-lg-6 m-auto pt-5">
+                   <img src="assets/images/hero_img.png"  alt="" class="img-fluid">
+                </div>
                 <div class="col-sm-12 col-lg-6 m-auto">
                     <p>Social Media Marketing</p>
                     <h1>Start Lorem ipsum dolor sit amet.</h1>
@@ -71,6 +73,7 @@
             </div>
         </div>
     </section>
+
     <div class="clients">
         <div class="container-fluid brands">
             <div class="row mt-5 pt-3 mb-5 pb-3">
@@ -80,22 +83,22 @@
                 <div class="owl-carousel client-slider-section">
                     <ul class="list-unstyled d-flex">
                         <li class="m-auto">
-                            <a href=""><img src="assets/images/dummy_logo2.png" alt="" class="img-fluid"></a>
+                            <a href=""><img src="assets/images/dummy_logo2.png" alt="" class=" img-area"></a>
                         </li>
                         <li class="m-auto">
-                            <a href=""><img src="assets/images/dummy_logo3.png" alt="" class="img-fluid"></a>
+                            <a href=""><img src="assets/images/dummy_logo3.png" alt="" class=" img-area"></a>
                         </li>
                         <li class="m-auto">
-                            <a href=""><img src="assets/images/dummy_logo1.png" alt="" class="img-fluid"></a>
+                            <a href=""><img src="assets/images/dummy_logo1.png" alt="" class=" img-area"></a>
                         </li>
                         <li class="m-auto">
-                            <a href=""><img src="assets/images/dummy_logo2.png" alt="" class="img-fluid"></a>
+                            <a href=""><img src="assets/images/dummy_logo2.png" alt="" class=" img-area"></a>
                         </li>
                         <li class="m-auto">
-                            <a href=""><img src="assets/images/dummy_logo3.png" alt=""  class="img-fluid"></a>
+                            <a href=""><img src="assets/images/dummy_logo3.png" alt=""  class=" img-area"></a>
                         </li>
                         <li class="m-auto">
-                            <a href=""><img src="assets/images/dummy_logo1.png" alt="" class="img-fluid"></a>
+                            <a href=""><img src="assets/images/dummy_logo1.png" alt="" class=" img-area"></a>
                         </li>
                     </ul>
                 </div>
@@ -104,7 +107,7 @@
     </div>
 
     <!-- About-SECTIOIN -->
-     <section class="about overflow-hidden">
+     <section id="about" class="about overflow-hidden">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-6 m-auto">
@@ -120,36 +123,38 @@
         </div>
 
         <div class="container-fluid mt-5 about2">
-            <div class="row">
-                <div class="col-sm-12 col-lg-6 m-auto pt-5">
-                    <img src="assets/images/innovation.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-sm-12 col-lg-6 m-auto">
-                    <button class="btn btn-dark mb-2" type="button"><a href="about">2</a></button>
-                    <h1>The Lorem ipsum dolor sit amet oreipsum dolorsit with our amet.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aspernatur consequuntur rerum ut eaque sit exercitationem necessitatibus voluptas. Dicta temporibus facilis aperiam quaerat.</p>
-                    <button class="btn btn-dark mt-2" type="button">Learn More</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6 m-auto pt-5">
+                        <img src="assets/images/innovation.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-sm-12 col-lg-6 m-auto">
+                        <button class="btn btn-dark mb-2" type="button"><a href="about">2</a></button>
+                        <h1>The Lorem ipsum dolor sit amet oreipsum dolorsit with our amet.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste aspernatur consequuntur rerum ut eaque sit exercitationem necessitatibus voluptas. Dicta temporibus facilis aperiam quaerat.</p>
+                        <button class="btn btn-dark mt-2" type="button">Learn More</button>
+                    </div>
                 </div>
             </div>
         </div>
         
         <div class="projects">
             <div class="container mt-4">
-                <div class="row">
+                <div class="row mt-5">
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <h2 class="box">8,500</h2>
+                        <h2 class="box fw-bold">8,500</h2>
                         <p>Completed Projects</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <h2 class="box">9,470</h2>
+                        <h2 class="box fw-bold">9,470</h2>
                         <p>Happy Clients</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <h2 class="box">1,120</h2>
+                        <h2 class="box fw-bold">1,120</h2>
                         <p>Ongoing Projects</p>
                     </div>
                     <div class="col-sm-6 col-lg-3 text-center">
-                        <h2 class="box">152</h2>
+                        <h2 class="box fw-bold">152</h2>
                         <p>Awards Won</p>
                     </div>
                 </div>
@@ -158,70 +163,372 @@
      </section>
 
     <!-- Features Section -->
-     <section class="Features overflow-hidden mt-5 mb-5">
+     <section id="features" class="features overflow-hidden mt-5 mb-5">
         <div class="container-fluid">
-            <div class="container text-center mt-5">
+            <div class="container text-center mt-5 mb-5">
                 <span>So much to offer</span>
                 <h2>Our automated features</h2>
             </div>
             <div class="container">
                 <div class="row ">
-                    <div class="inner-feature1 col-4 position-relative">
-                        <img src="assets/images/consultancy.png" alt="" class="img-fluid position-absolute top-0 Start-0">
-
-                        <div class="div">
-                          <h2 class="fw-bold m-auto p3">consultancy</h2>
-                          <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
-                      </div>
-                    </div>
-                    <div class="inner-feature2 col-4 position-relative">
-                        <div class="div">
-                          <img src="assets/images/solutions.png" alt="" class="img-fluid position-absolute top-0 Start-0">
-                          <h2 class="fw-bold m-auto p3">consultancy</h2>
-                          <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    <div class="col-4 position-relative">
+                        <div class="inner-feature1 text-wrap">
+                            <img src="assets/images/consultancy.png" alt="" class="img-fluid position-absolute top-0 Start-0 translate-middle">
+    
+                            <div class="div">
+                              <h2 class="fw-bold m-auto p3">consultancy</h2>
+                              <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                          </div>
                         </div>
                     </div>
-                    <div class="inner-feature3 col-4 position-relative">
-                        <img src="assets/images/simple.png" alt="" class="img-fluid position-absolute top-0 Start-0">
-                        <h2 class="fw-bold m-auto p3">consultancy</h2>
-                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    
+                    <div class="col-4 position-relative">
+                        <div class="inner-feature2">
+                            <div class="div">
+                              <img src="assets/images/solutions.png" alt="" class="img-fluid position-absolute top-0 Start-0 translate-middle">
+                              <h2 class="fw-bold m-auto p3">consultancy</h2>
+                              <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 position-relative">
+                        <div class="inner-feature3">
+                            <img src="assets/images/simple.png" alt="" class="img-fluid position-absolute top-0 Start-0 translate-middle">
+                            <h2 class="fw-bold m-auto p3">consultancy</h2>
+                            <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                        </div>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="inner-feature4 col-4  position-relative">
-                        <img src="assets/images/deadline.png" alt="" class="img-fluid position-absolute top-0 Start-0">
-                        <h2 class="fw-bold m-auto p3">consultancy</h2>
-                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+
+                <div class="row mt-5">
+                    <div class="col-4 position-relative">
+                        <div class="inner-feature4">
+                            <img src="assets/images/deadline.png" alt="" class="img-fluid position-absolute top-0 Start-0 translate-middle">
+                            <h2 class="fw-bold m-auto p3">consultancy</h2>
+                            <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                        </div>
                     </div>
-                    <div class="inner-feature5 col-4  position-relative">
-                        <img src="assets/images/data.png" alt="" class="img-fluid position-absolute top-0 Start-0">
-                        <h2 class="fw-bold m-auto p3">consultancy</h2>
-                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    <div class="col-4  position-relative">
+                        <div class="inner-feature5">
+                            <img src="assets/images/data.png" alt="" class="img-fluid position-absolute top-0 Start-0 translate-middle">
+                            <h2 class="fw-bold m-auto p3">consultancy</h2>
+                            <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                        </div>
                     </div>
-                    <div class="inner-feature6 col-4  position-relative">
-                        <img src="assets/images/flexible.png" alt="" class="img-fluid position-absolute top-0 Start-0">
-                        <h2 class="fw-bold m-auto p3">consultancy</h2>
-                        <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                    <div class="col-4 position-relative">
+                        <div class="inner-feature6">
+                            <img src="assets/images/flexible.png" alt="" class="img-fluid position-absolute top-0 Start-0 translate-middle">
+                            <h2 class="fw-bold m-auto p3">consultancy</h2>
+                            <p class="m-auto ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum porro eum obcaecati molestias, molestiae ipsum recusandae doloremque dolores non dolor minima, beatae consequuntur? Optio dolor voluptatum, dolores nemo impedit harum?</p>
+                        </div>
                     </div>
                 </div>
             </div>
      </section>
 
     <!-- Pricing Section -->
-     <section class="pricing overflow-hidden mt-5">
-        <div class="container text-center">
-            <span class="mt-4">A plan for everyone</span>
-            <h2>Choose your pricing plan</h2>
+     <section id="pricing" class="price-wrapper ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-lg-5">
+                    <p class="pricing-subtitle text-center">A plan for everyone</p>
+                    <h2 class="pricing-title text-center">Choose your pricing plan</h2>
+                </div>
+            </div>
+            <div class="row align-items-center mt-3 px-3 px-lg-0">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="pricing-card pricing-one">
+                        <p class="pricing-period">Personal</p>
+                        <img src="assets/images/personal.png" alt="" class="img-fluid">
+                        <p class="pricing-rate">FREE</p>
+                        <P class="pricing-text">monthly</P>
+                        <div class="pricing-all-plan">
+                            <ul>
+                                <li>Unlimited Accounts</li>
+                                <li>System Management</li>
+                                <li>Database Statistics</li>
+                                <li><strike>Exportable Data</strike></li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-dark">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <!-- <p class="pricing-ribbon"><span>Popular</span></p> -->
+                    <div class="pricing-card featured">
+                        <p class="pricing-period">Growth</p>
+                        <img src="assets/images/growth.png" alt="" class="img-fluid">
+                        <p class="pricing-rate">$67.99</p>
+                        <P class="pricing-text ">monthly</P>
+                        <div class="pricing-all-plan">
+                            <ul>
+                                <li>Unlimited Accounts</li>
+                                <li>System Management</li>
+                                <li>Database Statistics</li>
+                                <li><strike>Exportable Data</strike></li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-dark btn-feature">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="pricing-card">
+                        <p class="pricing-period">professional</p>
+                        <img src="assets/images/professional.png" alt="" class="img-fluid">
+                        <p class="pricing-rate">$79.99</p>
+                        <P class="pricing-text">monthly</P>
+                        <div class="pricing-all-plan">
+                            <ul>
+                                <li>Unlimited Accounts</li>
+                                <li>System Management</li>
+                                <li>Database Statistics</li>
+                                <li>Exportable Data</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-dark">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <span class="mt-4"></span>
         </div>
         <div class="container mt-2 d-flex">
             <div class="cards"></div>
             <div class="cards"></div>
             <div class="cards"></div>
         </div>
-     </section>
+    
+        <!-- free trial -->
+         <div class="free-trial mt-5 mb-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-6 text-center text-lg-start">
+                        <h2 class="free-title">Ready Lorem ipsum, dolor sit Impedit, esse. amet consectetur adipisicing elit.</h2>
+                    </div>
+                    <div class="col-sm-12 col-lg-6 text-center text-lg-end mt-4 mt-lg-0">
+                        <a href="#contact" class="btn btn-feature">Start a free trial</a>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+
+     <!-- REVIEWS -->
+      <section id="reviews" class="reviews mt-3 mb-5">
+        <div class="container reviews">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>Clients love us</p>
+                    <h2>Testimonials</h2>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-sm-12">
+                    <a href=""><img src="assets/images/testimonial1.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="col-lg-8 col-sm-12">
+                    <div class="inner-div">
+                        <h3 class="fw-bold">James Bond</h3>
+                        <p>Chief executive offer</p>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa necessitatibus obcaecati sed. Quo, impedit ipsam?</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-8 col-sm-12">
+                    <div class="inner-div">
+                        <h3 class="fw-bold">Johny Roy</h3>
+                        <p>Chief executive offer</p>
+                        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa necessitatibus obcaecati sed. Quo, impedit ipsam?</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <a href=""><img src="assets/images/testimonial2.png" alt="" class="img-fluid"></a>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Brands -->
+       <section id="clients" class="brand-wrapper mt-lg-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <p class="brand-subtitle">Who We Work With</p>
+                    <h2 class="brand-title">Client showcase</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-2 col1 showcase-card align-self-centre">
+                    <a href="#faq"><img src="assets/images/dummy_logo2.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo1.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo2.png" class="mb-4 img-fluid" alt=""></a>
+                </div>
+                <div class="col-sm-2 col1 showcase-card align-self-centre">
+                    <a href="#faq"><img src="assets/images/dummy_logo1.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo3.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo1.png" class="mb-4 img-fluid" alt=""></a>
+                </div>
+                <div class="col-sm-2 col1 showcase-card align-self-centre">
+                    <a href="#faq"><img src="assets/images/dummy_logo3.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo1.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo3.png" class="mb-4 img-fluid" alt=""></a>
+                </div>
+
+                <div class="col-sm-2 col1 showcase-card align-self-centre">
+                    <a href="#faq"><img src="assets/images/dummy_logo2.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo1.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo2.png" class="mb-4 img-fluid" alt=""></a>
+                </div>
+                <div class="col-sm-2 col1 showcase-card align-self-centre">
+                    <a href="#faq"><img src="assets/images/dummy_logo1.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo3.png" class="mb-4 img-fluid" alt=""></a>
+                    <a href="#faq"><img src="assets/images/dummy_logo1.png" class="mb-4 img-fluid" alt=""></a>
+                </div>
+            </div>
+        </div>
+       </section>
+
+       <!-- Faq -->
+        <section id="faQs" class="faq-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <p class="faq-subtitle">We're here to help</p>
+                        <h2 class="faq-title">Frequently Asked Questions</h2>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-8 mb-5 mb-lg-0">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    1. How does the free trial work?
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis repellat atque nobis, nostrum nam sequi quam quidem iure modi, error porro! Quo quas ducimus esse eligendi, enim qui inventore dolorem.
+                                </div>
+                              </div> 
+                            </div>
+
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                  2. Lorem ipsum dolor sit amet.
+                                </button>
+                              </h2>
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis dignissimos voluptas velit quae doloremque ipsam nulla sequi. A tempore veniam unde debitis, similique maiores impedit laboriosam in non totam. Autem?
+                                </div>
+                              </div> 
+                            </div>
+
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                  3. Lorem ipsum dolor sit amet.
+                                </button>
+                              </h2>
+                              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi minima impedit repellendus dignissimos iure. Quisquam amet ducimus odit ullam molestiae eos pariatur. Laudantium, magni harum. Assumenda nobis consequatur obcaecati sit?
+                                </div>
+                              </div>  
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    4. Lorem ipsum dolor sit amet.
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi minima impedit repellendus dignissimos iure. Quisquam amet ducimus odit ullam molestiae eos pariatur. Laudantium, magni harum. Assumenda nobis consequatur obcaecati sit?
+                                  </div>
+                                </div>  
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                    5. Lorem ipsum dolor sit amet.
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                  <div class="accordion-body">
+                                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi minima impedit repellendus dignissimos iure. Quisquam amet ducimus odit ullam molestiae eos pariatur. Laudantium, magni harum. Assumenda nobis consequatur obcaecati sit?
+                                  </div>
+                                </div>
+                            </div>  
+                        </div>  
+                    </div>
+                    
+                    <div class="col-sm-12 col-lg-4  mb-5 mb-lg-0">
+                        <img src="assets/images/faq.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div> 
+            
+            <!-- send message -->
+            <div class="free-trial mt-5 mb-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-sm-12 col-lg-6 text-center text-lg-start">
+                            <h2 class="free-title">Questions ipsum, dolor sit Impedit, esse. amet consectetur adipisicing elit.</h2>
+                        </div>
+                        <div class="col-sm-12 col-lg-6 text-center text-lg-end mt-4 mt-lg-0">
+                            <a href="#contact" class="btn btn-feature">Free consultation</a>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Footer -->
+         <section class="footer-wrapper" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 footer-logo mb-4 mb-lg-0">
+                        <img src="assets/images/logo-white.png" class="img-fluid" alt="">
+                        <p class="footer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolorem voluptas laborum et, numquam, tempora animi odio laudantium quo aperiam quas suscipit placeat incidunt delectus quod neque, consectetur nisi deleniti.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, sit minima corporis quos qui cupiditate voluptatibus maxime iusto molestiae voluptatum facilis dolorem, ducimus asperiores enim repudiandae nam tempore perspiciatis deserunt!</p>
+                    </div>
+                    <div class="col-lg-4 px-lg-5 mb-lg-0">
+                        <h3 class="footer-title">Contact</h3>
+                        <p class="footer-text">
+                            <a href="#">info.services@Hashtag.com</a><br>
+                            <a href="#">12/ 241  <br> City, 12345, UK, COUNTRY</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <h3 class="footer-title">Social Media</h3>
+                        <p>
+                            <a href="#" class="footer-icon"></a>
+                            <a href="#" class="footer-icon"></a>
+                            <a href="#" class="footer-icon"></a>
+                            <a href="#" class="footer-icon"></a>
+                        </p>
+                    </div>
+                    <div class="col-12 footer-credits text-center">
+                        <span>&copy;2021 <a href="#" target="_blank" title="Code4education">Code4education</a>&trade;.All Rights Reserved.</span>
+                    </div>
+                </div>
+            </div>
+         </section>
 
      <!-- ionicons -->
      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+     <!-- Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
