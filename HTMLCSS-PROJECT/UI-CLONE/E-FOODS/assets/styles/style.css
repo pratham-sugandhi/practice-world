@@ -35,7 +35,8 @@
     color: var(--primary-color);
     font-weight: 400;
 }
-.navbar .navbar-nav .nav-item .nav-link:hover{
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item .nav-link.active{
     color: var(--text-blue)
 }
 
