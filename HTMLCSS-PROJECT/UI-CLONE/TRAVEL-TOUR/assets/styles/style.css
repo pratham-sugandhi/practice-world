@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.btn-warning{
+    color: white  !important;
+}
+:root{
+
+}
+
+/* NAV */
+#navbar{
+    background: #f9f9f9;
+}
+.header-wrapper .navbar-brand{
+    font-size: 36px;
+    font-weight: 550; 
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+.header-wrapper .logo{
+    font-size: 36px;
+    font-weight: 550; 
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+    color: #ffa500;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+.header-wrapper .nav-link:hover{
+    border:none ;
+    background: #ffa500;
+    border-radius: 5px;
+    color: white;
+}
+
+/* HOME */
+.home-wrapper{
+    width: 100%;
+    height: 100vh;
+    padding-top: 200px;
+    background:url('../images/background\ img.png') no-repeat center;
+    background-size: cover;
+}
+.home-wrapper .home-content{
+    text-align: center;
+    color: white;
+}
+.home-wrapper .home-content span{
+    color: #ffa500;
+}
+
+/* BOOK */
+.book-wrapper .main-text{
+    font-size: 36px;
+    font-weight: 550; 
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+.book-wrapper .logo{
+    font-size: 36px;
+    font-weight: 550; 
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+    color: #ffa500;
+}
+.book-wrapper .book-img{
+    box-shadow: 0px 2px 29px 5px hsl(0, 0%, 0%, 0.5);
+}
+
+/* PACKAGES */
+.packages-wrapper .main-text{
+    font-size: 36px;
+    font-weight: 550; 
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+.packages-wrapper .logo{
+    font-size: 36px;
+    font-weight: 550; 
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+    color: #ffa500;
+}
+.packages-wrapper .card{
+    padding: 10px;
+    box-shadow: 0px 2px 10px 5px hsl(0, 0%, 0%, 0.5);
+}
+
+/* SERVICES */
+.services-wrapper .main-text{
+    font-size: 36px;
+    font-weight: 550; 
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+.services-wrapper .logo{
+    font-size: 36px;
+    font-weight: 550; 
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+    color: #ffa500;
+}
+.services-wrapper .card-inner{
+    padding: 25px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 2px 10px 5px hsl(0, 0%, 0%, 0.5);
+}
+.services-wrapper .card-inner .img-fluid{
+    max-width: 50%;
+}
+
+/* GALLARY */
+.gallary-wrapper .main-text{
+    font-size: 36px;
+    font-weight: 550; 
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+.gallary-wrapper  .logo{
+    font-size: 36px;
+    font-weight: 550; 
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+    color: #ffa500;
+}
+.gallary-wrapper .row .img-fluid{
+    border-radius: 10px;
+}
+
+/* ABOUT */
+.about-wrapper .main-text{
+    font-size: 36px;
+    font-weight: 550; 
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+.about-wrapper  .logo{
+    font-size: 36px;
+    font-weight: 550; 
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+    color: #ffa500;
+}
+.about-wrapper img{
+    border-radius: 10px;
+}
+
+/* TRAVEL */
+.travel-wrapper{
+    margin-top:25px;
+    background: rgba(210, 209, 209, 0.303);
+}
+.travel-wrapper .main-text{
+    font-size: 36px;
+    font-weight: 550; 
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+.travel-wrapper  .logo{
+    font-size: 36px;
+    font-weight: 550; 
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+    color: #ffa500;
+}
+.travel-wrapper .travel-subtitle{
+    font-size: 16px;
+    font-weight: 600;
+}
+.travel-wrapper .travel-title{
+    font-size: 16px;
+    font-weight: 600;   
+}
