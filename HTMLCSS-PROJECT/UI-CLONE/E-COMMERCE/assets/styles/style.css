@@ -108,3 +108,19 @@
     top: 50%;
     transform: translate(-50%);
 }
+
+/* ABOUT US */
+.about-title .position-relative {
+    position: relative !important;
+    padding-top:45px ;
+}
+.about-title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color: rgb(254, 125, 146);
+    left: -20px;
+    top: 50%;
+    transform: translate(-50%);
+}
