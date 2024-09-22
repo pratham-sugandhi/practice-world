@@ -39,6 +39,12 @@
     }
 }
 
+@media(max-width:991px){
+    .navbar .nav-item{
+        text-align: center;
+    }
+}
+
 @media (max-width:1030px){
     
 }

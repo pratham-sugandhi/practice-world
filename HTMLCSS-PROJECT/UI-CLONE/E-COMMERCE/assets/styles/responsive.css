@@ -1,0 +1,15 @@
+/* RESPONSIVE FORMAT*/
+@media (max-width:1030px){
+
+}
+@media(max-width:991px){
+    .navbar .nav-item{
+        text-align: center;
+    }
+}
+@media (max-width:767px){
+
+}
+@media (max-width:330px){
+    
+}

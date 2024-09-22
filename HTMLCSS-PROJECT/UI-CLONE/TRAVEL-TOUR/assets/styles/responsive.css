@@ -1,0 +1,19 @@
+/* RESPONSIVE FORMAT*/
+@media (max-width:1030px){
+
+}
+@media(max-width:991px){
+    .navbar .nav-item{
+        text-align: center;
+    }
+}
+@media (max-width:767px){
+    /* .home-wrapper {
+        width: 100%;
+        height: 80vh;
+        padding-top: 200px;
+    } */
+}
+@media (max-width:330px){
+    
+}

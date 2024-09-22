@@ -65,14 +65,6 @@ p{
 #header .navbar-nav .nav-item .nav-link.active{
     color: var(--bg-danger);
 }
-/* #header .navbar-toggler-icon{
-    width: unset;
-    height: unset;
-} */
-#header .navbar-toggler:focus{
-    box-shadow: none;
-} 
-
 
 
 /* Home Css */

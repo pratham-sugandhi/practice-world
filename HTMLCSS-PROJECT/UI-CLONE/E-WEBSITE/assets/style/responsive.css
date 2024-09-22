@@ -1,4 +1,17 @@
+@media (max-width:991px){
+    .navbar .nav-item .nav-link{
+        text-align: center;
+    }
+    .navbar .collapse .btn-outside{
+        margin-left: 350px;
+    }
+}
 @media (max-width:767px){
+    
+    .navbar .collapse .btn-outside{
+        margin-left: 90px;
+    }
+
     .img-area {
         max-width: 100%;
         height: auto;
@@ -14,6 +27,7 @@
     }
 }
 @media (min-width: 992px) {
+    
     .inner-div {
         margin-top: 6rem !important;
     }
