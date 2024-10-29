@@ -1,0 +1,198 @@
+/* .main-div{
+    height: 50px;
+    width: 350px;
+    display: flex;
+    border: 1px solid black;
+}
+.min-div{
+    display: block;
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+.min-div1{
+    display: block;
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+.min-div:nth-child(2n+1){
+    background-color: rgb(91, 219, 241);
+}
+.min-div:nth-child(2n){
+    background-color: rgb(78, 201, 160);
+}
+.min-div:hover:nth-child(2n+1){
+    background-color: rgb(78, 201, 160);
+}
+.min-div:hover:nth-child(2n){
+    background-color: rgb(91, 219, 241);
+}
+
+.f-div:focus{
+    border: 2px solid red;
+    background-color: rgb(246, 40, 3);
+}
+
+h1::after{
+    content: " Prathu";
+    font-size: 25px;
+    color: blue;
+    border: 2px;
+}
+
+h1::before{
+    content: "Prathu ";
+    font-size: 25px;
+    color: blue;
+    border: 2px;
+}
+
+.f-div{
+    box-shadow:  0px 5px red;
+}
+
+h1{ 
+    -webkit-text-stroke: 2px rgba(10, 237, 40, 0.731);
+}
+
+h1{
+    filter: opacity(50%)
+} */
+
+
+
+
+
+/* 
+.container{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 95%;
+}
+
+.hex-colors{
+    text-align: center;
+}
+
+.hex-colors h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation: colorchange 5s infinite alternate;
+}
+
+.hex-colors h2{
+    font-size: 2rem;
+    margin-top: 15%;
+}
+
+
+@keyframes colorchange{
+    0%{
+        color: indigo;
+    }
+    20%{
+        color: blue;
+    }
+    40%{
+        color: green;
+    }
+
+    60%{
+        color: yellow;
+    }
+    80%{
+        color: purple;
+    }
+    100%{
+        color: red;
+    }
+} */
+
+
+
+
+/* 
+
+body{
+    background-color: #fcfc62;
+}
+.container{
+    border: 1px solid black;
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.counter{
+    border: 5px solid black;
+    width: 600px;
+    height: 350px;
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    background-color: #feffea;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+
+
+/* <!-- TIC TAC GAME --> */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #548687;
+    text-align: center;
+}
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    font-size: 8vmin;
+    color: #b0413e;
+}
+
+#reset-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #ffff;
+    border-radius: 1rem;
+    border: none;
+}
