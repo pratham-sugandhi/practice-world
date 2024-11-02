@@ -154,10 +154,10 @@ body{
 *{
     margin: 0;
     padding: 0;
+    background: #548687;
 }
 
 body{
-    background-color: #548687;
     text-align: center;
 }
 
@@ -186,8 +186,11 @@ body{
     box-shadow: 0 0 1rem rgba(0,0,0,0.3);
     font-size: 8vmin;
     color: #b0413e;
+    background-color: #ffffc7;
 }
-
+.main h1{
+    margin-top: 150px;
+}
 #reset-btn{
     padding: 1rem;
     font-size: 1.25rem;
@@ -195,4 +198,26 @@ body{
     color: #ffff;
     border-radius: 1rem;
     border: none;
+}
+
+#new-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #ffff;
+    border-radius: 1rem;
+    border: none;
+}
+
+#msg{
+    color: #ffffc7;
+    font-size: 5vmin;
+}
+
+.msg-container{
+    height: 30vmin;
+}
+
+.hide{
+    display: none;
 }
