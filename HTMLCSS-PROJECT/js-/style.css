@@ -62,13 +62,12 @@ h1{
 
 h1{
     filter: opacity(50%)
-} */
+} 
 
 
 
 
 
-/* 
 .container{
     border: 1px solid black;
     display: flex;
@@ -114,12 +113,9 @@ h1{
     100%{
         color: red;
     }
-} */
+} 
 
-
-
-
-/* 
+ 
 
 body{
     background-color: #fcfc62;
@@ -150,7 +146,8 @@ body{
 
 
 
-/* <!-- TIC TAC GAME --> */
+/* <!-- TIC TAC GAME -->
+
 *{
     margin: 0;
     padding: 0;
@@ -220,4 +217,75 @@ body{
 
 .hide{
     display: none;
+}
+
+*/
+
+
+/* ROCK  PAPER SCISSOR */
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1{
+    color: white;
+    background-color: #081b31;
+    line-height: 5rem;
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.choice:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+img{
+    height: 350px;
+    width: 350px;
+    padding: 50%;
+    border-radius: 50%;
+    background-color: palevioletred;
+    color: white;
+    text-align: center;
+}
+
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.score p{
+    gap: 5rem;
+    font-size: 1rem;
+    gap: 5rem;
+}
+
+#user-score , 
+#comp-score{
+    font-size: 4rem;
+    gap: 10rem;
+}
+
+#msg-contaier{
+    margin-top: 5rem;
+}
+#msg{
+    padding: 1rem;
+    background-color: #081b31;
+    color: white;
+    font-size: 2rem;
+    display: inline;
+    border-radius: 1rem;
 }
