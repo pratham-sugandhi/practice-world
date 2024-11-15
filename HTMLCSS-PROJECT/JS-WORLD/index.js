@@ -74,9 +74,10 @@
 //     console.log("You are not elgible")
 // }
 
-let num=4;
-for(num=4;num%2<=12;num++){
-    console.log("numbers are= ", num);
-}
+// let num=4;
+// for(num=4;num%2<=12;num++){
+//     console.log("numbers are= ", num);
+// }
 
-// // Faulty calci
+// NEW WORK-- Building logics
+console.log("prathu")
