@@ -996,7 +996,7 @@ for (const key in map) {
 }
 */
 
-// FOR EACH-
+// FOR EACH-array
 /*
 const coding = ["js", "rb", "cpp", "java"];
 

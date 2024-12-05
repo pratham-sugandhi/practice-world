@@ -334,5 +334,113 @@ mapping.set('Pak', 'pakistan')
 // console.log(mapping);
 
 for (const [key, value] of mapping){
-    console.log(key, ':' ,value);
+    // console.log(key, ':' ,value);
 }
+
+
+const myObject = {
+    js : "javascript",
+    cpp : "c++",
+    rb : 'ruby'
+ }
+
+ for (const key in myObject){
+    // console.log(`${key} and ${myObject[key]}`);
+    
+ }
+
+ const programms = {
+    pg1:"mcdlm",
+    pg2: "l,flc",
+    pg3:"vkdlmf",
+ }
+
+ for (const pgs in programms){
+    // console.log(`${pgs} and ${programms[pgs]}`);
+    
+ }
+
+ const maping = new Map();
+maping.set('Ind', 'India')
+maping.set('Pak', 'pakistan')
+
+for (const key in maping){
+    // console.log(key);
+    //not iterable
+}
+
+// for each - array
+
+const coding = ["js", "rb", "cpp", "java"];
+coding.forEach ( (item, index, arr) => {
+    // console.log(item, index, arr);
+ })
+
+const programming = ["mcdlm", "lflc","vkdlmf"];
+
+programming.forEach((item, index)=>{
+    // console.log(item, index);    
+})
+
+programming.forEach(function (item){
+    // console.log(item); 
+ });
+
+ programming.forEach((val) =>{
+    // console.log(val);
+ })
+
+ const objj =[
+    {
+        bhb :"jlbj",
+        hhbk : "khj"
+    },
+    {
+        bhb :"jlbj",
+        hhbk : "khj"
+    },
+    {
+        bhb:"jlbj",
+        hhbk : "khj"
+    }
+]
+
+objj.forEach((item) => {
+    // console.log(item.bhb);
+})
+
+//filter 
+const nums = [5,6,7,8,9];
+const newNums = nums.filter((nums) => {
+    return nums > 7 ;
+})
+// console.log(newNums);
+
+
+const myums = [1,2,3,4,5,6,7,8,9,10];
+
+const allums = myums.filter( (ums) => ( ums < 8));
+// console.log(allums);
+
+
+
+// console.log(newNums);
+
+const myNums = [1,2,3,4,5,6,7,8,9,10];
+
+const anoNums = myNums.map( (item) => (item + 10));
+// console.log(anoNums);
+
+const language = ["cnjcb", "zhxvch", "xbvjkbx", "ksdjfhj"];
+
+const allLang = language.map( (lang) => (lang + 10));
+// console.log(allLang);
+
+const myyNums = [1,2,3,4];
+
+const total = myyNums.reduce ( (acc , cur) => {
+    // console.log(`acc : ${acc} and curValue : ${cur}`);
+          return acc + cur;
+          
+} , 3);
+// console.log(total);
