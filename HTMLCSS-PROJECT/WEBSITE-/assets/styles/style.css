@@ -1,0 +1,62 @@
+/* CUSTOM CSS */
+
+:root {
+    /* colors */
+    --spanish-gray : hsl(0, 0%, 60% );
+    --sonic-silver : hsl(0, 0%, 47% );
+    --eerie-black : hsl(0, 0%, 13% );
+    --pink : hsl(353, 100%, 78% );
+    --brown : hsl(29, 90%, 65% );
+    --bittersweet : hsl(0, 100%, 70% );
+    --green : hsl(152, 51%, 52% );
+    --gray : hsl(0, 0%, 33% );
+    --cultured : hsl(0, 0%, 93% );
+    --white : hsl(0, 100%, 100% );
+    --onyx : hsl(0, 0%, 27% );
+
+}
+
+*, *::before, *::after {
+    margin : 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+li { list-style: none;}
+
+img, ion-icon, button, a {
+    display: inline-block;
+}
+
+html {
+    font-family: "poppins", sans-serif;
+}
+
+/* scrollbar */
+body::-webkit-scrollbar{width:15px;}
+
+body::-webkit-scrollbar-track {
+    background: var(--white);
+    border-left: 1px solid var(--cultured);
+}
+
+
+
+/* NEWSLETTER */
+.container-letter{
+    display: flex;
+    justify-content: center;
+}
+ 
+.newsletter-close{
+    margin-left: 95%;
+    color: var(--white);
+    --ionicon-stroke-width: 70px;
+    background-color: var(--pink);
+}
+
+.newsletter{
+    height: 400px;
+    width: 800px;
+    border-radius: 15px;
+}
