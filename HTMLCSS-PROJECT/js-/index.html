@@ -172,6 +172,57 @@
         </div>
      </div>
 
+    <!-- BMI CALCULATOR -->
+     <section class="sec">
+        <div class="container">
+            <h1>BMI Calculator</h1>
+
+            <form>
+                <p><label>Height in cm:</label>
+                    <input type="text" id="height"/>
+                </p>
+                <p><label>weight in kg:</label>
+                    <input type="text" id="weight"/>
+                </p>
+
+                <button>Calculate</button>
+                <div id="results"></div>
+
+            </form>
+
+        </div>
+     </section>
+
+     <!-- DIGITAL CLOCK -->
+      <section class="clock-sec">
+        <div class="centre">
+            <div id="banner"><span>Your local time</span></div>
+            <div id="clock"></div>
+
+        </div>
+      </section>
+
+
+      <!-- GUESS THE NUM -->
+       <section>
+        <div id="wrapper">
+            <h1>Num guessing game</h1>
+            <p>Try and guess a random num b/w 1 to 100</p>
+            <p>You have 10 attempts</p>
+        </br>
+        <form class="form">
+            <label for="guessField" id="guess">Guess a num</label>
+            <input type="text" id="guessField" class="guessField">
+            <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+        </form>
+
+        <div class="resultParas">
+            <p>Previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+        </div>
+       </section>
 
     <script src="script.js"></script>
 </body>

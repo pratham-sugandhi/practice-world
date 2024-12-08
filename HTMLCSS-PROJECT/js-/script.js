@@ -517,3 +517,113 @@ boxes.forEach( function(box){
     });
 });
 
+//BMI CALCULATOR
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function(e){
+    e.preventDefault()
+
+    const height = parseInt(document.querySelector('#height').value);
+    const weight = parseInt(document.querySelector('#weight').value);
+    const results = document.querySelector('#results');
+    
+    if(height === '' || height < 0 || isNaN(height)){
+        results.innerHTML = `Please give a valid height ${height}`;
+    } else if(weight === '' || weight < 0 || isNaN(weight)){
+        results.innerHTML = `"Please give a valid weight" ${weight}`;
+    } else {
+        const bmi = (weight / ((height*height/10000))).toFixed(2);
+        results.innerHTML = `<span>${bmi}<span>`;
+    }
+
+});
+
+
+// DIGITAL CLOCK
+// document.getElementById('clock');
+const clock = document.querySelector('#clock');
+
+
+setInterval(function(){
+    let date = new Date();
+    // console.log(date.toLocaleDateString());
+    clock.innerHTML = date.toLocaleTimeString
+}, 1000)
+
+
+// GUESS A NUMBER
+const randomNum = parseInt(Math.random()*100 +1);
+
+const submit = document.querySelector('#subt');
+const userInp = document.querySelector('#guessField');
+const guessSlot = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const loworHi = document.querySelector('.loworHi');
+const startOver = document.querySelector('.rsultParas');
+
+const p = document.createElement('p')
+
+let prevGuess = [];
+let numGuess =1;
+
+let playGame =true;
+
+if(playGame){
+    submit.addEventListener('click', function(e) {
+        e.preventDefault();
+        const guess = parseInt(userInp.value);
+        console.log(guess);
+        validateGuess(guess);
+        
+    } )
+}
+
+function validateGuess (guess){
+    if(isNaN(guess)){
+        alert('please enter a valid no')
+    } else if(guess < 1){
+        alert('please enter num more than 1')
+    } else if(guess > 100){
+        alert('please enter num less than 100')
+    } else{
+        prevGuess.push(guess)
+        if (numGuess === 11){
+            displayGuess(guess)
+            displayMess(`Game Over. Random no was ${randomNum}`)
+            endGame()
+        } else {
+            displayGuess(guess)
+            checkGuess(guess)
+        }
+    }
+}
+ 
+function checkGuess (guess){
+    if (guess === randomNum){
+        displayMess(`You guessed is right`)
+        endGame()
+    } else if (guess < randomNum){
+        displayMess(`Num is tooo low`)
+    } else if (guess > randomNum){
+        displayMess(`Num is tooo high`)
+    }
+}
+
+function displayGuess(){
+    userInp.value = '';
+    guessSlot.innerHTML += `${guess}  `
+    numGuess++;
+    remaining.innerHTML = `${11- numGuess}`
+}
+ 
+function displayMess(message){
+    loworHi.innerHTML = `<h2>${message}</h2>` 
+}
+
+function newGame(){
+    // 
+}
+
+function endGame(){
+    // 
+}

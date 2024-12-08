@@ -412,3 +412,28 @@ h3{
 #red{
     background-color: red;
 }
+
+/* DIGITAL CLOCK */
+.clock-sec{
+    background-color: black;
+    margin: auto;
+}
+
+.centre{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner p{
+    color: white;
+}
+
+#clock{
+    margin-top: 10px;
+    background-color: orange;
+    padding: 20px 50px;
+    font-size: 40px;
+    border-radius: 10px;
+}
