@@ -238,7 +238,7 @@ const anotherString = gameName.slice(-8,4);
 
 const newstr = " prathu --ds  ";
 // console.log(newstr);
-console.log(newstr.trim);
+// console.log(newstr.trim);
 
 const url = " d rathu";
 // console.log(url.replace('d ','p'));  //prathu
@@ -1176,5 +1176,170 @@ document.getElementById('firstHeading');
 document.getElementById('firstHeading').innerHTML = "<h1> prathu </h1>";
 
 */
+
+
+
+// DAY -11
+// EVENTS--  Runs sequentialy on activity
+// /*
+// attachEvent()
+// jQuery- on
+
+// document.getElementById('owl').onclick = function(){
+//    alert("owl clicked")
+// }
+
+// false- event bubbling(inside-outside)
+// true- event capturing(top-bottom)
+
+/*
+document.getElementById('immages').addEventListener('click', function(e){
+   alert('clicked inside the ul')
+}, false) 
+
+document.getElementById('owl').addEventListener('click', function(e){
+   alert('owl clicked')
+   e.stopPropagation(); //stops bubbling
+}, false) 
+
+/* 
+for false/bubbling-
+1) owl clicked
+2) clicked inside the ul
+
+for true/capturing-
+1) clicked inside the ul
+2) owl clicked
+*/
+
+/*
+document.querySelector('google').addEventListener('click', function(e){
+   console.log("google clicked");
+   e.preventDefault();
+   e.stopPropagation();
+}, false)
+
+document.querySelector('#pak').addEventListener('click', function(e){
+   console.log(e.target.tagName);
+if (e.target.tagName === 'IMG'){
+   console.log(e.target.id);
+   let removeIt = e.target.parentNode;
+   removeIt.remove();
+}     
+   // removeIt.parentNode.removeChild(removeIt);
+})
+*/
+
+// ASYNC JS- setTimeout
+/*
+setTimeout(function(){
+   console.log("pratham");
+}, 2000)
+
+let nameP = function () {
+   console.log("pds");
+}
+setTimeout(nameP, 4000);
+
+const changeText = function(){
+   document.querySelector('h1').innerHTML = "best js series"
+}
+const changeMe = setTimeout(changeText, 2000);
+
+document.querySelector('#stop').
+addEventListener('click', function(){
+   clearTimeout(changeMe);
+   document.querySelector('h1').innerHTML = "DOM LEARNING";
+   console.log("stopped");
+})
+*/
+
+// ASYNC JS- setInterval
+
+setInterval(function(){
+   // console.log("pds");
+}, 10000);
+
+const sayName = function(str){
+   // console.log(str,"pds");
+}
+// let stopName = setInterval (sayName, 10000, "hii");
+// clearInterval(stopName);
+
+
+
+//BUTTONS WORKING
+/*
+const change1 = function(){
+   document.querySelector('h1').innerHTML = "WORKING..";
+}
+
+const stopping = document.querySelector('#start').
+addEventListener('click', function(){
+   setTimeout(change1, 2000);
+})
+
+document.querySelector('#stop').
+addEventListener('click', function(){
+   clearTimeout(stopping);
+   document.querySelector('h1').innerHTML = "DOM LEARNING";
+})
+*/
+/*
+// clearTimeout(stopping);
+// const start = document.querySelector('#start');
+
+// start.addEventListener('click', function(){
+//    setTimeout(change1, 5000);
+//    console.log("on");
+// })
+// const change2 = function(){
+//    document.querySelector('h1').innerHTML = "PAUSED..";
+// }
+// const stop = document.querySelector('#stop');
+// stop.addEventListener('click', function(){
+//    clearTimeout(change2);
+// })
+*/
+
+
+
+
+const randomColor = function(){
+    const hex = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+console.log(randomColor);
+
+let intervalId;
+const startChangingColor = function(){
+   if(!intervalId){
+      intervalId = setInterval(changeBgColor, 1000);
+   }
+   //  intervalId = setInterval(changeBgColor, 1000);
+    
+    function changeBgColor (){
+        document.body.style.backgroundColor = randomColor();
+    }
+};
+
+const stopChangingColor = function(){
+    clearInterval(intervalId);
+    intervalId = null;
+};
+
+document.querySelector('#start')
+.addEventListener('click', startChangingColor);
+
+document.querySelector('#stop')
+.addEventListener('click', stopChangingColor);
+
+
+
+
 
 

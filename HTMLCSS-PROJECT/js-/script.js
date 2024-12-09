@@ -552,6 +552,7 @@ setInterval(function(){
 
 
 // GUESS A NUMBER
+/*
 const randomNum = parseInt(Math.random()*100 +1);
 
 const submit = document.querySelector('#subt');
@@ -627,3 +628,62 @@ function newGame(){
 function endGame(){
     // 
 }
+
+*/
+
+// COLOR GENERATOR
+
+const randomColor = function(){
+    const hex = '0123456789ABCDEF';
+    let colors = '#';
+    for (let i = 0; i < 6; i++) {
+        colors += hex[Math.floor(Math.random() * 16)];
+    }
+    return colors;
+}
+
+let intervalId;
+const startChangingColor = function(){
+    intervalId = setInterval(changeBgColor, 1000);
+    
+    function changeBgColor (){
+        document.body.style.backgroundColor = randomColor();
+    }
+};
+
+const stopChangingColor = function(){
+    clearInterval(intervalId);
+    intervalId = null;
+};
+
+
+document.querySelector('#start').
+addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').
+addEventListener('click', stopChangingColor);
+
+
+// KEY
+
+const insert = document.querySelector('.insert');
+
+window.addEventListener('keydown', function (e){
+    insert.innerHTML =`
+    <div class = 'color'>
+       <table>
+        <tr>
+            <th>key</th>
+            <th>keyCode</th>
+            <th>code</th>
+        </tr>
+        <tr>
+            <td>${e.key === "" ? "space" : e.key}</td>
+            <td>${e.keyCode}</td>
+            <td>${e.code}</td>
+        </tr>
+       </table>
+    </div>
+    `
+})
+
