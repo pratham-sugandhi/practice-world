@@ -322,15 +322,15 @@ const myArr = [ 0,1,2,3,4 ];
 const myArr2 = new Array(1,2,3,4);
  
 // console.log(myArr[0]); //0
+// console.log(myArr2);
 
-// myArr.push(5); //to add
-// myArr.pop();   //to remove last
+myArr.push(5); //to add
+myArr.pop();   //to remove last
 
-// myArr.unshift(9);  //to add first
-// myArr.shift();  //to remove shift
+myArr.unshift(9);  //to add first
+myArr.shift();  //to remove shift
 
-
-// console.log(myArr.includes(3));  //will check presence
+// console.log(myArr.includes(3));  //will check presence returns- true,false
 // console.log(myArr.indexOf(3));   //value 
 
 const newArr = myArr.join();
@@ -1203,15 +1203,14 @@ abcd(1,2,4,3,5);
 
 
 // DAY-10
-// DOM--
-/*
+/* DOM--
    Window-->
             Document-->
                         HTML-->
 
        -> HEAD                         -> BODY
   title         meta                          div   
->text-node    >attribute           >h1        >p       >attribute
+ ->text-node    >attribute           >h1        >p       >attribute
                               attribute   text node
                               text node
 
@@ -1219,13 +1218,26 @@ abcd(1,2,4,3,5);
 document.getElementById('firstHeading');
 document.getElementById('firstHeading').innerHTML = "<h1> prathu </h1>";
 
-*/
 
+// DAY -11
+API request and V8
+const requestUrl = '...';
+const xhr = new XMLHttpRequest();
+xhr.open('GET', requestUrl);
+xhr.onreadystatechange = function(){
+   console.log(xhr.readyState);
+   if (xhr.readyState === 4){
+      const data = JSON.parse(this.responseText); 
+      console.log(typeof data); //string
+      console.log(data.followers);
+   }
+} 
+*/
 
 
 // DAY -11
 // EVENTS--  Runs sequentialy on activity
-// /*
+/*
 // attachEvent()
 // jQuery- on
 
@@ -1440,7 +1452,7 @@ let newarr = names2.filter( (user) => {
 
 
 //MASTER JS--
-
+{
 //HIGHER ORDER FUN,, forEach
 function nameVal(val) {
    
@@ -1520,3 +1532,269 @@ let obj = {age : 24};
 
 let binded = abcd.bind(obj);
 // binded();
+}
+
+
+// PROMISES--
+/*
+const promiseOne = new Promise(function(resolve , reject){
+   //Do any Async task
+   // DB calls, Networkcalls
+   setTimeout(function(){
+      // console.log("Async Task is Completed");
+      resolve();
+   }, 2000)
+})
+
+promiseOne.then(function(){
+   // console.log("Promise Consumed");
+})
+
+
+new Promise(function(resolve,reject){
+   setTimeout(function(){
+      // console.log("Async Task Two");
+      resolve()
+   },1000)
+}).then(function(){
+   // console.log("Async 2 resolved");
+})
+
+
+const promiseThree = new Promise(function(resolve, reject){
+   setTimeout(() => {
+      resolve({userName: "Prathu", class: 12, roll: 24})
+   }, 3000);
+})
+
+promiseThree.then(function(user){
+   // console.log(user);
+})
+
+
+const promiseFour = new Promise(function(resolve, reject){
+   setTimeout(function(){
+      let error = false; //[true code-then , false code-catch]
+      if(!error){
+         resolve({names: "Don", subj: "kemistry", bla:"blaa"})
+      } else {
+         reject("Error: Something went wrong")
+      }
+   },4000)
+})
+
+promiseFour
+.then((user)=>{
+   // console.log(user);
+   return user.username
+})
+.then((userName)=> {
+   // console.log(userName);
+})
+.catch((error) => {
+   // console.log(error);
+})
+.finally(() => {
+   // console.log("The promise is either resolve or rejected");
+})
+
+const promiseFive = new Promise(function(resolve, reject){
+   setTimeout(function(){
+      let error = false; 
+      if(!error){
+         resolve({names: "Don", subj: "kemistry", bla:"blaa"})
+      } else {
+         reject("Error: Something went wrong")
+      }
+   },1000)
+})
+
+async function conumePromiseFive() {
+   try {
+      const response = await promiseFive
+   } catch (error) {
+      console.log(response);
+   }
+}
+
+conumePromiseFive();
+
+/* PROMISE RUNS PARALLEL FOR EX 
+MANY PROMISE WITH 5 SECS TIMEOUT WILL GIVE ALL RESULTS IN SAME TIME--
+P1 TIME 5SEC P2 TIME 5SECS P3 TIME 5SECS 
+THO P1,P2,P3 SATH MAIN CONSOLE HONGE
+
+JABKI ASYNC KE OTHER TASK WAIT KARTE HAI --
+JESE SETTIMEOUT AGAR S1,S2,S3 HAI THO TINO 5SEC WAIT LENGE */
+
+{/*
+//CHAINING
+let p1 = new Promise(function(resolve,reject){
+   setTimeout(function(){
+      console.log("Resolved after 2 sec");
+      resolve(56)
+   },2000)
+})
+
+p1.then(function(value){
+   console.log(value);
+   let p2 = new Promise(function(resolve,reject){
+      setInterval(function(){
+         resolve("promise 2")
+      }, 2000)
+   })
+   return p2;
+})
+.then(function(value){
+   console.log("promise 2 resolved");
+   return 2;
+})
+.then(function(){
+   console.log("completed");
+})
+
+const loadScript = (src) => {
+   let script = document.createElement("script");
+   script.type = "text/javascript";
+   script.src= src;
+   document.body.appendChild(script)
+   script.onload = () => {
+      resolve ("done")
+   }
+   script.onerror = () => {
+      reject("unfinished");
+   }
+}
+
+let p1 = loadScript("https");
+p1.then((val)=>{
+   console.log(val);
+})
+.catch((error) => {
+   console.log("we are sorry error occured");
+   
+})
+
+//HANDLERS
+let p1 = new Promise((resolve,reject)=>{
+   setTimeout(() => {
+       resolve(1);
+   }, 2000)
+})
+
+p1.then(()=>{
+   console.log("Promise is now resolved");
+})
+
+p1.then(()=>{
+   console.log("Hurrayy");
+})
+*/
+}
+
+//METHODS OF PROMISES
+{ /*
+let p1 = new Promise((resolve,reject)=>{
+   setTimeout(() => {
+      //  resolve(1);
+      reject(new Error("Error1"))
+
+   }, 10000)
+})
+
+let p2 = new Promise((resolve,reject)=>{
+   setTimeout(() => {
+       reject(new Error("Error2"))
+      // resolve(2);
+   }, 2000)
+})
+
+let p3 = new Promise((resolve,reject)=>{
+   setTimeout(() => {
+       resolve(1);
+   }, 3000)
+})
+
+p1.then(()=>{
+   console.log("1 resolved");
+})
+p2.then(()=>{
+   console.log("2 resolved");
+})
+p3.then(()=>{
+   console.log("3 resolved");
+})
+
+
+let promise_all  = Promise.all([p1, p2, p3])  //will print all together in an array
+let promise_all  = Promise.allSettled([p1, p2, p3])  //will print value and status- fulfilled/rejected
+let promise_all  = Promise.race([p1, p2, p3])
+let promise_all  = Promise.any([p1, p2, p3]) //aggregate error
+let promise_all  = Promise.resolve(6);
+let promise_all  = Promise.reject(new Error("Error"));
+
+promise_all.then((value)=>{
+   console.log(value); 
+}) 
+*/
+}
+
+//ASYUNC AWAIT
+{ /*
+async function harry() {
+   let p1 = new Promise((resolve,reject) => {
+      setTimeout(() => {
+         // console.log("Indore weather is: 21");//3ii
+         resolve("Indore weather is: 21")
+      }, 2000)
+   })
+   let p2 = new Promise((resolve,reject) => {
+      setTimeout(() => {
+         // console.log("Burhanpur weather is: 19");//2ii
+         resolve("Burhanpur weather is: 19")
+      }, 5000)
+   })
+
+   // p1.then(alert) //2i
+   // p2.then(alert) //3i
+   console.log("Fetching Indore weather...");
+   let indoreW = await p1;
+   console.log("Fetched Weather: ",indoreW);
+   
+   console.log("Fetching Bur weather...");
+   let burW = await p2;
+   console.log("Fetched Weather: ",burW);
+
+   return [indoreW,burW]
+
+// console.log("WELCOME TO WEATHER REPORT");//1
+   
+}
+
+// a.then((value)=>{
+//    console.log(value);
+// })
+
+const  cherry = async ()=>{
+   console.log("Hey i am cherryy,, i am waiting");
+}
+
+let main1 = async ()=>{
+   console.log("Welcome to weather control");
+   let a = await harry()
+   let b = await cherry()
+}
+// main1(); */
+}
+//TRY-CATCH
+try {
+   throw new ReferenceError("Harry is not good")
+} catch (error) {
+   console.log(error.name); //refrence error
+   console.log(error.message);  //name is not defined
+   console.log(error.stack);
+  
+}
+
+//FETCH-
+// The global fetch() method starts the process of fetching a  resources from the network,
