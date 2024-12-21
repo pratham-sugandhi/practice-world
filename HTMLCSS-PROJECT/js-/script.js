@@ -687,3 +687,34 @@ window.addEventListener('keydown', function (e){
     `
 })
 
+
+//CENTER DIV
+
+let rect = document.querySelector("#centre");
+
+rect.addEventListener("mousemove", function(details){
+    let rectLocation = rect.getBoundingClientRect();   //location X,Y,top,width
+    let insideRect = details.clientx - rectLocation.left;   //mouselocation - rectlocation
+
+    if(insideRect < rectLocation.width/2){
+        // console.log("left");
+        let redColor = gsap.utils.mapRange(0, rectLocation.width/2, 255, 0, insideRect);
+        gsap.to(rect, {
+            backgroundColor : `rgb(${redColor}, 0 , 0)`,
+            ease: Power4
+        });
+    } else {
+        // console.log("right");
+        let blueColor = gsap.utils.mapRange(rectLocation.width/2, rectLocation.width, 0, 255, insideRect);
+        gsap.to(rect, {
+            backgroundColor : `rgb( 0 , 0, ${redColor})`,
+            ease: Power4
+        });
+    }
+})
+
+rect.addEventListener("mouseleave", function (){
+    gsap.to(rect, {
+        backgroundColor: "white"
+    })
+})

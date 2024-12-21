@@ -811,7 +811,7 @@ switch (month) {
 // "0", "false", " ", [], {}, function(){}
 
 // FALSY VALUE-
-// 0, -0, false, BigInt 0n, "", null, undefined, NaN
+// 0, -0, false, BigInt 0n, "", null, undefined, NaN, document.all
 /*
 
 const userEmail = "prAthu";
@@ -1044,35 +1044,35 @@ myCoding.forEach( (item) => {
 
 
 // DAY-9
-// FILTERS--
+// FILTERS-- (filter karna)
 /*
 const coding = ["js","ruby", "java", "python"];
 
 const values = coding.forEach ((item) => {
    console.log(item);
-   // return item; --undefined hai
+   // return item; // --undefined hai
 })
 
-// console.log(values);  --undefined hai
+// console.log(values);  //--undefined hai
 
-// const myNums = [1,2,3,4,5,6,7,8,9];
+const myNums = [1,2,3,4,5,6,7,8,9];
 
-// let newNums = myNums.filter( (num) => num > 4);
-// // console.log(newNums);
+let newNums = myNums.filter( (num) => num > 4);
+// console.log(newNums);
 
 //har value ka each axsis kiyajayega,, 
 //then jo condition ko satisfy karenge,, voh var main jayenge! 
 
-const myNums = [1,2,3,4,5,6,7,8,9];
+const myNums1 = [1,2,3,4,5,6,7,8,9];
 
-// let newNums = myNums.filter( (num) => {
-//    return num > 4  //scope--return
-// });
+let newNums2 = myNums1.filter( (num) => {
+   return num > 4  //scope--return
+});
 
-const newNums = [];
+const newNums3 = [];
 myNums.forEach ( (num) => {
    if (num > 4) {
-      newNums.push(num);
+      newNums3.push(num);
    }
 })
 
@@ -1094,15 +1094,24 @@ userBooks = books.filter ( (bk) =>
 
 */
 
-// MAP--
+// MAP-- ek arr se --> dusra arr
 /*
 const myNums = [1,2,3,4,5,6,7,8,9,10];
-
 const newNums = myNums.map ( (num) => num + 10);
-console.log(newNums);
+// console.log(newNums);   [11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
+
+
+const mNums = [1,2,3,4,5];
+let marr = mNums.map(function(value){
+   return 1;
+})
+// console.log(marr);  [ 1, 1, 1, 1, 1 ]
+
+*/
+
 
 //for each-hw
-
+/*
 const myNums2 = [1,2,3,4,5,6,7,8,9,10];
 
 const newNums2 = myNums2
@@ -1116,17 +1125,18 @@ const newNums2 = myNums2
 // console.log(newNums2);
 */
 
+
 // REDUCE--
 /*  
 // (accumulator, currentValue) => accumulator + currentValue, initialValue;
 
 const myNums = [1,2,3,4];
 
-// const myTotal = myNums.reduce( (acc,curValue) => 
-//    {
-//       console.log(`acc : ${acc} and curValue : ${curValue}`);
-//       return acc + curValue}, 3
-// );
+const myTotal = myNums.reduce( (acc,curValue) => 
+   {
+      console.log(`acc : ${acc} and curValue : ${curValue}`);
+      return acc + curValue}, 3
+);
 
 const myTotal = myNums.reduce( (acc , curr) => acc + curr ,3);
 
@@ -1153,6 +1163,40 @@ const shoppingCart = [
 
 const totalPrice = shoppingCart.reduce( (acc, item) => acc + item.price, 0);
 console.log(totalPrice);
+
+*/
+
+
+// DESTRUCTURING--
+/*
+user.address.zipCode
+let {zipCode} = user.address
+console.log(zipCode);
+
+let [first, second] = user.roles;
+console.log(first,second);
+*/
+
+
+//SPREAD & REST--
+/*
+const nmess = ["kmskc", "dncjnds", "jnmdn", "dispatchEvent",];
+const copyNames = [...nmess];
+console.log(copyNames);
+
+const smallObj = {
+   name : "dcl",
+   class : 9, 
+   mck : "cs"
+}
+const newObjj = {...smallObj}
+console.log(newObjj);
+
+
+function abcd (a,b,...rest){
+   console.log(a,b,rest);
+}
+abcd(1,2,4,3,5);
 
 */
 
@@ -1211,7 +1255,6 @@ for true/capturing-
 1) clicked inside the ul
 2) owl clicked
 */
-
 /*
 document.querySelector('google').addEventListener('click', function(e){
    console.log("google clicked");
@@ -1255,7 +1298,7 @@ addEventListener('click', function(){
 */
 
 // ASYNC JS- setInterval
-
+/*
 setInterval(function(){
    // console.log("pds");
 }, 10000);
@@ -1304,7 +1347,7 @@ addEventListener('click', function(){
 
 
 
-
+/*
 const randomColor = function(){
     const hex = '0123456789ABCDEF';
     let color = '#';
@@ -1337,9 +1380,143 @@ document.querySelector('#start')
 
 document.querySelector('#stop')
 .addEventListener('click', stopChangingColor);
+*/
+
+//quess--
+/*
+const namse = ["John", "Doe", "Jane", "Smith"];
+const lastname = ["Williams", "Smith", "Johnsons", "Doeing"];
+
+const fullName = [...namse, ...lastname];
+// console.log(fullName);
 
 
+const products = [
+   {name : "Laptop" , price : 100},
+   {name : "Phone" , price : 10},
+   {name : "Tablet" , price : 50},
+   {name : "Monitor" , price : 20}
+]
+let pricess= products.filter(function(prod) { 
+   return prod.price >= 20;
+} )
+// console.log(pricess);
 
 
+const names = [
+   { name: "john", role: "admin"},
+   { name: "jane", role: "user"},
+   { name: "lane", role: "admin"}
+];
+
+let obj ={};
+
+names.forEach( (user) => {
+   if( obj[user.role]) {
+      // console.log(user, "done");
+      obj[user.role].push(user);
+      
+   } else {
+      obj[user.role] = [];
+      obj[user.role].push(user);
+   }
+})
+
+// console.log(obj,"yoss");
 
 
+const names2 = [
+   { name: "john", role: "admin"},
+   { name: "jane", role: "user"},
+   { name: "lane", role: "admin"}
+];
+
+let newarr = names2.filter( (user) => {
+   return user.role !== "user";
+})
+
+// console.log(newarr);
+*/
+
+
+//MASTER JS--
+
+//HIGHER ORDER FUN,, forEach
+function nameVal(val) {
+   
+}
+
+nameVal(function(){});
+
+function myArr(val){
+   return function(){};
+}
+
+myArr();
+
+//CONSTRUCTOR FUNCTION
+function circularbtn (color){
+      this.radius = 4;
+      this.color = color;
+      this.pressable = true;   
+}
+
+var redbtn = new circularbtn("red");
+let greenbtn = new circularbtn("green");
+
+// console.log(redbtn, greenbtn);
+
+//FIRST CLASS FUN,, setTimeout
+/* fun are treated as varibales, 
+u can save,pass them as arguments to another fun */
+
+//IIFE- immediately ivoked function execution
+let ans = (function (){
+   let privateVal = 12;
+
+   return {
+      getter : function(){
+         console.log(privateVal);
+      },
+      setter : function(val){
+         privateVal = val;
+      }
+   }
+})();
+
+
+// ans.getter();  //12
+// ans.setter(24);  //undefined
+// ans.getter(); //24
+
+
+//PROTOTYPAL INHERITANCE
+let human = {
+   canFly : false,
+   canTalk : true,
+   canWalk : true,
+}
+
+let stds = {
+   amazingMindsets : true,
+   hopes : true, 
+   talents : true
+}
+
+stds.__proto__ = human;
+
+// console.log(stds);
+// console.log(stds.canFly);
+
+
+//CALL APPLY BIND
+function abcd(val1, val2,  val3) {
+   console.log(this,val1, val2, val3);
+}
+let obj = {age : 24};
+
+// abcd.call(obj,1,2,3); 
+// abcd.apply(obj, [1,2,3]);
+
+let binded = abcd.bind(obj);
+// binded();
