@@ -1,5 +1,5 @@
 // DAY-1;
-
+{
 // VARIABLES--
 /*
 // console.log("prathu");
@@ -125,11 +125,11 @@ let gameCounter = 100;
 gameCounter++;  // ++gameCounter
 // console.log(gameCounter); //101
 }
-
-
+}
 
 
 // DAY-2;
+{
 {// CONVERSION--
 
 // console.log("2" > 1);  //true
@@ -312,10 +312,11 @@ newDate.toLocaleString('default',{
 });
 
 }
-
+}
 
 
 // DAY-3
+{
 { //ARRAYS-- collection of multiple item in single variable
 
 const myArr = [ 0,1,2,3,4 ];
@@ -380,10 +381,11 @@ let score3 = 300;
 
 // console.log(Array.of(score1, score2, score3));
 }
-
+}
 
 
 //DAY-4
+{
 { //OBJECT-
 
 //SINGLETON --constructor
@@ -543,10 +545,11 @@ const {courseInstructor: instructor} = course;
 */
 }
 }
+}
 
 
-
-// DAY-5 
+// DAY-5
+{ 
 { //FUNCTIONS--
 
 function sayName (){
@@ -633,11 +636,11 @@ function retArray(getArray) {
 // console.log(retArray([200, 400, 600, 8000])); 
 
 }
-
-
+}
 
 
 // DAY-6
+{
 {//ARROW FUNCTION--
 
 const user={
@@ -725,12 +728,11 @@ const fullName = (name, surname) =>
    two()      two()
    three()    one()
 */
-
-
-
+}
 
 
 // DAY 7
+{
 // CONTROL FLOW-
 /*  IF ELSE-
 
@@ -922,12 +924,14 @@ do {
 } while (score <= 10);
 
 */
+}
 
 
 //----REVISED---- //
 
 
 // DAY 8
+{
 // FOR-OF
 /*
 // ["", "", ""]
@@ -1040,10 +1044,11 @@ myCoding.forEach( (item) => {
 })
 
 */
-
+}
 
 
 // DAY-9
+{
 // FILTERS-- (filter karna)
 /*
 const coding = ["js","ruby", "java", "python"];
@@ -1109,7 +1114,6 @@ let marr = mNums.map(function(value){
 
 */
 
-
 //for each-hw
 /*
 const myNums2 = [1,2,3,4,5,6,7,8,9,10];
@@ -1124,7 +1128,6 @@ const newNums2 = myNums2
 
 // console.log(newNums2);
 */
-
 
 // REDUCE--
 /*  
@@ -1166,7 +1169,6 @@ console.log(totalPrice);
 
 */
 
-
 // DESTRUCTURING--
 /*
 user.address.zipCode
@@ -1176,7 +1178,6 @@ console.log(zipCode);
 let [first, second] = user.roles;
 console.log(first,second);
 */
-
 
 //SPREAD & REST--
 /*
@@ -1199,10 +1200,11 @@ function abcd (a,b,...rest){
 abcd(1,2,4,3,5);
 
 */
-
+}
 
 
 // DAY-10
+{
 /* DOM--
    Window-->
             Document-->
@@ -1220,6 +1222,7 @@ document.getElementById('firstHeading').innerHTML = "<h1> prathu </h1>";
 
 
 // DAY -11
+
 API request and V8
 const requestUrl = '...';
 const xhr = new XMLHttpRequest();
@@ -1233,11 +1236,12 @@ xhr.onreadystatechange = function(){
    }
 } 
 */
+}
 
 
-// DAY -11
+// DAY -11 
+{
 // EVENTS--  Runs sequentialy on activity
-/*
 // attachEvent()
 // jQuery- on
 
@@ -1246,8 +1250,10 @@ xhr.onreadystatechange = function(){
 // }
 
 // false- event bubbling(inside-outside)
-// true- event capturing(top-bottom)
+// true- event capturing(top-bottom) 
+}
 
+{
 /*
 document.getElementById('immages').addEventListener('click', function(e){
    alert('clicked inside the ul')
@@ -1287,6 +1293,16 @@ if (e.target.tagName === 'IMG'){
 
 // ASYNC JS- setTimeout
 /*
+SYNC FUNCTION-
+SYNCHRONOUS ACTIONS ARE THE ACTION THAT INITIATE AND RUNS ONE BY ONE,
+
+let a = prompt("What is your Name");
+let b = prompt("What is your age");
+console.log(`name is ${a} and age is ${b}`)
+
+ASYNC FUNCTION-
+ASYNCHRONOUS ACTION WILL RETURN ACTION THAT WE INITIATED AND THEY FINISHED LATER,
+
 setTimeout(function(){
    console.log("pratham");
 }, 2000)
@@ -1358,7 +1374,6 @@ addEventListener('click', function(){
 */
 
 
-
 /*
 const randomColor = function(){
     const hex = '0123456789ABCDEF';
@@ -1393,7 +1408,9 @@ document.querySelector('#start')
 document.querySelector('#stop')
 .addEventListener('click', stopChangingColor);
 */
+}
 
+{
 //quess--
 /*
 const namse = ["John", "Doe", "Jane", "Smith"];
@@ -1533,99 +1550,156 @@ let obj = {age : 24};
 let binded = abcd.bind(obj);
 // binded();
 }
-
-
-// PROMISES--
-/*
-const promiseOne = new Promise(function(resolve , reject){
-   //Do any Async task
-   // DB calls, Networkcalls
-   setTimeout(function(){
-      // console.log("Async Task is Completed");
-      resolve();
-   }, 2000)
-})
-
-promiseOne.then(function(){
-   // console.log("Promise Consumed");
-})
-
-
-new Promise(function(resolve,reject){
-   setTimeout(function(){
-      // console.log("Async Task Two");
-      resolve()
-   },1000)
-}).then(function(){
-   // console.log("Async 2 resolved");
-})
-
-
-const promiseThree = new Promise(function(resolve, reject){
-   setTimeout(() => {
-      resolve({userName: "Prathu", class: 12, roll: 24})
-   }, 3000);
-})
-
-promiseThree.then(function(user){
-   // console.log(user);
-})
-
-
-const promiseFour = new Promise(function(resolve, reject){
-   setTimeout(function(){
-      let error = false; //[true code-then , false code-catch]
-      if(!error){
-         resolve({names: "Don", subj: "kemistry", bla:"blaa"})
-      } else {
-         reject("Error: Something went wrong")
-      }
-   },4000)
-})
-
-promiseFour
-.then((user)=>{
-   // console.log(user);
-   return user.username
-})
-.then((userName)=> {
-   // console.log(userName);
-})
-.catch((error) => {
-   // console.log(error);
-})
-.finally(() => {
-   // console.log("The promise is either resolve or rejected");
-})
-
-const promiseFive = new Promise(function(resolve, reject){
-   setTimeout(function(){
-      let error = false; 
-      if(!error){
-         resolve({names: "Don", subj: "kemistry", bla:"blaa"})
-      } else {
-         reject("Error: Something went wrong")
-      }
-   },1000)
-})
-
-async function conumePromiseFive() {
-   try {
-      const response = await promiseFive
-   } catch (error) {
-      console.log(response);
-   }
 }
 
-conumePromiseFive();
 
-/* PROMISE RUNS PARALLEL FOR EX 
-MANY PROMISE WITH 5 SECS TIMEOUT WILL GIVE ALL RESULTS IN SAME TIME--
-P1 TIME 5SEC P2 TIME 5SECS P3 TIME 5SECS 
-THO P1,P2,P3 SATH MAIN CONSOLE HONGE
+// DAY -12
+//CALLBACKS--
+// {
+// SYNC FUNCTION-
+// SYNCHRONOUS ACTIONS ARE THE ACTION THAT INITIATE AND RUNS ONE BY ONE,
 
-JABKI ASYNC KE OTHER TASK WAIT KARTE HAI --
-JESE SETTIMEOUT AGAR S1,S2,S3 HAI THO TINO 5SEC WAIT LENGE */
+// let a = prompt("What is your Name");
+// let b = prompt("What is your age");
+// console.log(`name is ${a} and age is ${b}`)
+
+// ASYNC FUNCTION-
+// ASYNCHRONOUS ACTION WILL RETURN ACTION THAT WE INITIATED AND THEY FINISHED LATER,
+
+// console.log("Start") //1
+// setTimeout(function(){   //3
+//    console.log("pratham");
+// }, 2000)
+// console.log("End")//2
+
+// function loadScript(SRC, Callback){
+//    let script = document.createElement("script");
+//    script.src = SRC;
+//    script.onload = function () {
+//       console.log("Loaded script with SRC: " + SRC);
+//       Callback(56,SRC); //callback main bahar wale function ki value aayegi
+//    }
+//    script.onerror = function(){
+//       console.log("Error: " + SRC);
+//       Callback(new Error("Src got some error")) 
+//    }
+//    document.body.appendChild(script)
+// }
+// // loadScript("script.js",helloo);
+// loadScript("https://dgd", (error, value)=>{
+//    alert("Script is loaded"+ value)
+// })
+
+// function helloo(){
+//    alert("HELLO WORLD!");
+// }
+// }
+
+// PROMISES--
+{
+// {
+// const promiseOne = new Promise(function(resolve , reject){
+//    //Do any Async task
+//    // DB calls, Networkcalls
+//    setTimeout(function(){
+//       // console.log("Async Task is Completed");
+//       resolve();
+//    }, 2000)
+// })
+
+// promiseOne.then(function(){
+//    // console.log("Promise Consumed");
+// })
+
+
+// new Promise(function(resolve,reject){
+//    setTimeout(function(){
+//       // console.log("Async Task Two");
+//       resolve()
+//    },1000)
+// }).then(function(){
+//    // console.log("Async 2 resolved");
+// })
+
+
+// const promiseThree = new Promise(function(resolve, reject){
+//    setTimeout(() => {
+//       resolve({userName: "Prathu", class: 12, roll: 24})
+//    }, 3000);
+// })
+
+// promiseThree.then(function(user){
+//    // console.log(user);
+// })
+
+
+// const promiseFour = new Promise(function(resolve, reject){
+//    setTimeout(function(){
+//       let error = false; //[true code-then , false code-catch]
+//       if(!error){
+//          resolve({names: "Don", subj: "kemistry", bla:"blaa"})
+//       } else {
+//          reject("Error: Something went wrong")
+//       }
+//    },4000)
+// })
+
+// promiseFour
+// .then((user)=>{
+//    // console.log(user);
+//    return user.username
+// })
+// .then((userName)=> {
+//    // console.log(userName);
+// })
+// .catch((error) => {
+//    // console.log(error);
+// })
+// .finally(() => {
+//    // console.log("The promise is either resolve or rejected");
+// })
+
+// const promiseFive = new Promise(function(resolve, reject){
+//    setTimeout(function(){
+//       let error = false; 
+//       if(!error){
+//          resolve({names: "Don", subj: "kemistry", bla:"blaa"})
+//       } else {
+//          reject("Error: Js went wrong")
+//       }
+//    },1000)
+// })
+
+// async function conumePromiseFive() {
+//    try {
+//       const response = await promiseFive
+//       console.log(response);
+//    } catch (error) {
+//       console.log(response);
+//    }
+// }
+// // conumePromiseFive();
+
+// async function getAllUser() {
+//    try {
+//       const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//       const data = await response.json();
+//       console.log(data);
+//    } catch (error) {
+//       console.log("E :", error);
+//    }
+// }
+// // getAllUser();
+
+
+// /* PROMISE RUNS PARALLEL FOR EX 
+// MANY PROMISE WITH 5 SECS TIMEOUT WILL GIVE ALL RESULTS IN SAME TIME--
+// P1 TIME 5SEC P2 TIME 5SECS P3 TIME 5SECS 
+// THO P1,P2,P3 SATH MAIN CONSOLE HONGE
+
+// JABKI ASYNC KE OTHER TASK WAIT KARTE HAI --
+// JESE SETTIMEOUT AGAR S1,S2,S3 HAI THO TINO 5SEC WAIT LENGE */
+// }
 
 {/*
 //CHAINING
@@ -1741,6 +1815,9 @@ promise_all.then((value)=>{
 
 //ASYUNC AWAIT
 { /*
+async functions se kisi bhi promise ko roka ja sakta hai(await),,
+aur easy syntax compare to then & catch.
+
 async function harry() {
    let p1 = new Promise((resolve,reject) => {
       setTimeout(() => {
@@ -1786,15 +1863,365 @@ let main1 = async ()=>{
 }
 // main1(); */
 }
-//TRY-CATCH
-try {
-   throw new ReferenceError("Harry is not good")
-} catch (error) {
-   console.log(error.name); //refrence error
-   console.log(error.message);  //name is not defined
-   console.log(error.stack);
+//TRY-CATCH Finally
+// {
+// try {
+//    let age = prompt("Enter your age");
+//    age = Number.parseInt(age);
+//    if(age > 150){
+//       throw new ReferenceError("Age is probably not true")
+//    }
+// } catch (error) {
+//    console.log(error.name); //refrence error
+//    console.log(error.message);  //name is not defined
+//    console.log(error.stack);
   
-}
+// }
+// console.log("script i Running");
+
+// const fun = () => {
+//    try {
+//       let a =0;
+//       console.log(pg);
+//       console.log("Programm runs");
+//       return
+//    } catch (error) {
+//       console.log("Error occured");
+//       console.log(pg);
+//    } finally {
+//       console.log("Work is almost done");
+//       // close the file
+//       // Exit  the loop
+//       // write to the log file
+//    }
+// }
+// fun();
+// }
 
 //FETCH-
-// The global fetch() method starts the process of fetching a  resources from the network,
+// The global fetch() method starts the process of fetching a resources from the network,
+{ 
+// fetch('https://jsonplaceholder.typicode.com/users')
+//    .then((response)=> {
+//       return response.json()
+//    })
+//    .then((data)=>{
+//       console.log(data);
+//    })
+//    .catch((error)=>{
+//       console.log(error);
+//    })
+
+
+// GET REQUEST
+// const data1 = async ()=>{
+//    let p = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+//    let response = await p.json()
+//    return response
+// }
+// const minfun = async () => {
+//    let todo = await data1()
+//    console.log(todo);
+// }
+// minfun()
+
+
+//POST REQUEST
+// const data = async (todo) => {
+//    let options = {
+//       methods : "POST",
+//       headers: {
+//          "Content-type": "application"
+//       },
+//       body: JSON.stringify({
+//          title: 'Harry',
+//          body: 'bhai',
+//          userId: 1100,
+//       }),
+//    }
+//    let p = await fetch('https://jsonplaceholder.typicode.com/posts', options)
+//    let response = await p.json()
+//    return response
+// }
+
+// const mainfun = async () => {
+//    let tod0 = await data()
+//    console.log(tod0);
+// }
+// mainfun()
+
+{
+// const data = async (todo) => {
+//    let options = {
+//       methods : "POST",
+//       headers: {
+//          "Content-type": "application"
+//       },
+//       body: JSON.stringify(todo),
+//    }
+//    let p = await fetch('https://jsonplaceholder.typicode.com/posts', options)
+//    let response = await p.json()
+//    return response
+// }
+
+// const getTodo = async (id) => {
+//    let response = await fetch('https://jsonplaceholder.typicode.com/todos'+id)
+//    let r = await response.json()
+//    return r
+// }
+
+// const mainfun = async () => {
+//    let todo = {
+//       title : "Pratham",
+//       body : "bur",
+//       userId : 1100,
+//    }
+//    let tod0 = await data(todo)
+//    console.log(tod0);
+//    console.log(await getTodo(5));
+
+// }
+// mainfun()
+}
+}
+}
+
+
+// DAY -13
+//OOPS- code likhne ka str
+/*
+Classes were introduced in js with ES6. However, Js is prototype-based language,
+and its classes are syntactic sugar over existingg prototype based inheritance mechanisms
+
+object- collection of functions,,ex:promises, toLowerCase
+
+4 pillars
+Abstraction-fetch
+Encapsulation(wrapper)
+Inheritance
+Polymorphism
+*/
+
+// {
+// //Object Literal
+// const user = {
+//    username : "hitesh",
+//    userLogin : 8,
+//    signedIn : true,
+
+//    getDetails : function (){
+//       // console.log("Details fetched");
+//       // console.log(`username: ${this.username}`);
+//       // console.log(this);
+//    }
+// }
+// // console.log(user.getDetails());
+
+// // Constructor fun: Object ka refrence deta hai
+// // new-- ek obj literal se multiple instances
+// // new -> empty obj = instance -> constructor fun call honga -> this,, se inject hojate hai 
+// // new-- copy deta hai taki code overwrite na ho!
+
+// function Account(username, userLogin, isLoggedIn) {
+//       this.userName = username,
+//       this.userLogin = userLogin,
+//       this.isLoggedIn = isLoggedIn;
+
+//       this.greeting = function(){
+//          console.log(`Welcome ${this.username}`);
+//       }
+
+//       return this; //implicit define
+// }
+// const userOne = new Account("hitesh", true, true)
+// const userTwo = new Account("Pratham", true, false)
+
+// // console.log(userTwo); 
+// // console.log(userOne.constructor);  //[Function: Account]
+// // console.log(userOne instanceof Account);  //true 
+
+// //Instanceof
+// function car(madeIn, model, year){
+//    this.madeIn = madeIn,
+//    this.model = model,
+//    this.year = year
+
+//    return this;
+// }
+// const auto = new car('India', 20, 2025)
+
+// // console.log(auto);
+// // console.log(auto.constructor);
+// // console.log(auto instanceof car); //true
+// }
+
+
+
+// DAY -14
+// PROTOTYPE 
+// --> new, classes, this, prototypial-inheritance
+
+// {
+// function createUser (username, score){
+//    this.username = username
+//    this.score = score
+// }
+
+// createUser.prototype.increment = function(){
+//    this.score++
+// }
+
+// createUser.prototype.printMe = function(){
+//    // console.log(`price is ${this.score}`);
+// }
+
+// const chai = new createUser("chai", 25)
+// const tea = new createUser("tea", 250)
+
+// // chai.printMe()
+
+// let myHero = [ "throw", "spiddy"];
+
+// let heroPower = {
+//    username : "prathu",
+//    __proto__: myHero
+// }
+
+// let allHeroes = (val)=> {
+//    return val;
+// }
+
+// Array.prototype.heyPratham = () => {
+//    // console.log(`pratham says hello`);
+// }
+
+// Object.prototype.pratham = () => {
+//    // console.log(`pratham is present in all objects`);
+// }
+
+// // myHero.pratham()
+// // myHero.heyPratham()
+// // heroPower.pratham()
+// // allHeroes.pratham()
+// }
+
+{
+// function setuser (username) {
+//    this.username;
+//    // console.log("called"); //current execution ko dusre ko pass kardeta hai
+   
+// }
+
+// function createUser (username, email, password){
+//    setuser.call(this, username)
+   
+//    this.email
+//    this.password
+// }
+
+// const chai2 = new createUser("chai", "chai@fb.com", "9303");
+// // console.log(chai2);
+
+// //Class constructor-
+
+// class user7{
+//    constructor (username, email, password){
+//       this.username = username;
+//       this.email = email;
+//       this.password = password;
+//    }
+
+//    encryptPassword (){
+//       return `${this.password}abc`
+//    }
+
+//    userName (){
+//       return `${this.username.toUpperCase()}`
+//    }
+// }
+// const tea0 = new user7("tea", "tea@gmail.com", "123");
+
+// // console.log(tea0.encryptPassword());
+// // console.log(tea0.userName());
+
+// //Behind the scene
+// function user00(username, email, password){
+//    this.username = username;
+//    this.email = email;
+//    this.password = password;
+// }
+
+// user00.prototype.encryptPassword =  ()=>{
+//    return `${this.password}abc`
+// }
+
+// // user00.prototype.changeuserName = ()=>{
+// //    return `${this.username.toUpperCase()}`
+// // }
+
+// const tea1 = new user00("tea", "tea@gmail.com", "123");
+
+// console.log(tea1.encryptPassword());
+// // console.log(tea1.changeuserName());
+}
+
+// {
+// //super keywords
+// class user1 {
+//    constructor(username){
+//       this.username = username
+//    }
+
+//    logMe (){
+//       // console.log(`USERNAME IS ${this.username}`);
+//    }
+// }
+
+// class Teacher extends user1{
+//    constructor(username, email, password){
+//       super(username)
+//       this.email = email;
+//       this.password = password;
+//    }
+//    adcourses(){
+//       // console.log(`new course ${this.username}`);
+//    }
+// }
+
+// const chai09 = new Teacher ("chai","chai@fb.com","123");
+// // chai09.adcourses()
+
+// const masalaChai = new user1 ("masalachai")
+// // masalaChai.logMe()
+
+
+// class user01 {
+//    constructor (username){
+//       this.username = username;
+//    }
+
+//    logMe (){
+//       // console.log(`USERNAME IS ${this.username}`);
+//    }
+
+//    static createId(){  //static will not allow access
+//       return `123`;
+//    }
+// }
+
+// const hitesh = new user01 ("pratham");
+// // console.log(hitesh.createId());  //error
+
+// class Teacher2 extends user01 {
+//    constructor(username, email){
+//       super(username);
+//       this.email = email
+//    }
+// }
+
+// const iphone = new Teacher2 ("iphone", "iphone@email.com")
+// // iphone.logMe();
+// // console.log(iphone.createId());  //error
+// }
+
+
