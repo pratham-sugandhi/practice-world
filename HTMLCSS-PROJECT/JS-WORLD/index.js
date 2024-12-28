@@ -2058,8 +2058,11 @@ Polymorphism
 
 
 // DAY -14
-// PROTOTYPE 
-// --> new, classes, this, prototypial-inheritance
+// PROTOTYPE - contains many helper properties and methods which we can use to complete our task
+// Every created object gets a property called prototype, 
+// which means whenever you create an obj it gets prototype property automatically
+// --> new, classes, this, 
+// prototypal-inheritance --to pass parents properties to children, js with the help of prototype(extra property) is called prototypal inheritance.
 
 // {
 // function createUser (username, score){
@@ -2165,7 +2168,7 @@ Polymorphism
 // // console.log(tea1.changeuserName());
 }
 
-// {
+{
 // //super keywords
 // class user1 {
 //    constructor(username){
@@ -2222,6 +2225,184 @@ Polymorphism
 // const iphone = new Teacher2 ("iphone", "iphone@email.com")
 // // iphone.logMe();
 // // console.log(iphone.createId());  //error
+}
+
+
+// DAY-15
+// Class Constructor
+// jab aapke pass aisa koi bhi mauka ho ke jaisi waale bahut sare 
+// elements banane hai us waqt aap constructor fun use kar sakte ho 
+
+{
+// class React{
+//    constructor(){
+//       this.library = "React";
+//       this.server = "https://localhost:300"
+
+//       document
+//          .querySelector('button')
+//          .addEventListener('click', this.handleclick.bind(this))
+//    }
+//    handleclick(){
+//       console.log("button clicked");
+//       console.log(this);
+//    }
+// }
+
+// const chai = {
+//    name: 'ginger chai',
+//    price: 250,
+//    isAvailable: true
+// }
+
+// console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+
+// Object.defineProperty(chai,"name", {
+//    writable: false,
+//    enumerable: false
+// })
+
+// console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+
+// for (let [key, value] of Object.entries(chai)){
+//    if (typeof value !== "function"){
+//       console.log(`${key} : ${value}`);
+//    }
 // }
 
 
+// getter setter
+
+// class useer {
+//    constructor(email, password){
+//       this.email = email;
+//       this.password = password
+//    }
+
+//    get email (){
+//       return this._email.toUpperCase()
+//    }
+
+//    set email (val){
+//       this._email = val.toUpperCase()
+//    }
+
+//    get password(){
+//       // return this._password.toUpperCase()
+//       return `${this._password}pratham`  //always return
+//    }
+
+//    set password(value){
+//       this._password = value.toUpperCase();  //no return
+//    }
+// }
+
+// const pratham = new useer("p@p.ai", "abc");
+// console.log(pratham.password);
+// console.log(pratham.email);
+
+// function userOne (email, password){
+//    this.email = email;
+//    this.password = password;
+
+//    Object.defineProperty(this, 'email', {
+//       get: function(){
+//          return this._email.toUpperCase();
+//       },
+//       set : function (val){
+//          this._email = val
+//       }
+//    })
+
+//    Object.defineProperty(this, 'password', {
+//       get: function(){
+//          return this._password.toUpperCase();
+//       },
+//       set : function (val){
+//          this._password = val
+//       }
+//    })
+// }
+
+// const chaiuser = new userOne("chai@gmail", "chai");
+// console.log(chaiuser.email);
+// console.log(chaiuser.password);
+
+// const user0 = {
+//    _email: 'p@pc.com',
+//    _password: 'abcd',
+
+//    get email(){
+//       return this._email.toUpperCase()
+//    },
+//    set email(val){
+//       this._email = val
+//    }
+// }
+
+
+// const tea = Object.create(user0)
+// console.log(tea.email);
+}
+
+
+// DAY -16
+// CLOSURES-
+{
+// Lexical scoping- inner fun has outer fun scope access
+function outer(){
+   let username = "pratham";
+   // console.log(secret);   //false
+   
+   function inner(){
+      let secret = "my123";
+      console.log("inner",username);
+   }
+   function innertwo(){
+      console.log("innertwo",username);
+      // console.log(secret);    //false
+      
+   }
+
+   inner()
+   innertwo()
+}
+// outer()
+
+function makeFun (){
+   const name = "Mozilla";
+   function displayName(){
+      console.log(name);
+   }
+   return displayName;
+}
+
+const myFun = makeFun();
+// myFun()   
+// agar return innerfun,, kiya tho sirf innerfun nhi balki outer fun ka pura lexical scope return hota hai- closure
+
+
+   // document.getElementById("orange").onclick = function ()
+   // {
+   //    document.body.style.backgroundColor = `orange`
+   // }
+   // document.getElementById("green").onclick = function ()
+   // {
+   //    document.body.style.backgroundColor = `green`
+   // }
+
+   // 2 baar possible 10,0000 baar nhi
+
+
+function clickHandler(color){
+   // document.body.style.backgroundColor = `${color}`
+
+   return function(){
+      document.body.style.backgroundColor = `${color}`
+   }
+}
+
+// document.getElementById("orange").onclick = clickHandler("orange");
+// document.getElementById("green").onclick = clickHandler("green");
+
+}

@@ -487,16 +487,17 @@ function erase() {
 
 
 // COLOR CHANGER
+{
 const boxes = document.querySelectorAll('.box');
-console.log(boxes);
+// console.log(boxes);
 
-const body =document.querySelector("body");
+const body = document.querySelector("body");
 
 boxes.forEach( function(box){
-    console.log(box);
+    // console.log(box);
 
     box.addEventListener('click', function(e){
-        console.log(e);
+        // console.log(e);
         console.log(e.target);
         
         if (e.target.id === 'gray'){
@@ -516,12 +517,17 @@ boxes.forEach( function(box){
         }
     });
 });
+}
+
 
 //BMI CALCULATOR
+{
 const form = document.querySelector('form');
-
+// this will give you empty value
+// const height = parseInt(document.querySelector('#height').value);
+    
 form.addEventListener('submit', function(e){
-    e.preventDefault()
+    e.preventDefault() //action rokho
 
     const height = parseInt(document.querySelector('#height').value);
     const weight = parseInt(document.querySelector('#weight').value);
@@ -529,49 +535,53 @@ form.addEventListener('submit', function(e){
     
     if(height === '' || height < 0 || isNaN(height)){
         results.innerHTML = `Please give a valid height ${height}`;
-    } else if(weight === '' || weight < 0 || isNaN(weight)){
+    }
+     else if (weight === '' || weight < 0 || isNaN(weight)){
         results.innerHTML = `"Please give a valid weight" ${weight}`;
-    } else {
+    }
+     else {
         const bmi = (weight / ((height*height/10000))).toFixed(2);
         results.innerHTML = `<span>${bmi}<span>`;
     }
 
 });
+}
 
 
 // DIGITAL CLOCK
-// document.getElementById('clock');
-const clock = document.querySelector('#clock');
-
+{
+document.getElementById('clock');
+// const clock = document.querySelector('#clock');
 
 setInterval(function(){
     let date = new Date();
     // console.log(date.toLocaleDateString());
-    clock.innerHTML = date.toLocaleTimeString
+    clock.innerHTML = date.toLocaleTimeString();
 }, 1000)
+}
 
 
 // GUESS A NUMBER
-/*
-const randomNum = parseInt(Math.random()*100 +1);
+{
+let randomNum = parseInt(Math.random()*100 +1);
 
 const submit = document.querySelector('#subt');
 const userInp = document.querySelector('#guessField');
 const guessSlot = document.querySelector('.guesses');
 const remaining = document.querySelector('.lastResult');
-const loworHi = document.querySelector('.loworHi');
+const lowOrHi = document.querySelector('.lowOrHi');
 const startOver = document.querySelector('.rsultParas');
 
 const p = document.createElement('p')
 
 let prevGuess = [];
-let numGuess =1;
+let numGuess = 1;
 
-let playGame =true;
+let playGame = true;
 
 if(playGame){
     submit.addEventListener('click', function(e) {
-        e.preventDefault();
+        e.preventDefault();  //stop karo 
         const guess = parseInt(userInp.value);
         console.log(guess);
         validateGuess(guess);
@@ -579,7 +589,8 @@ if(playGame){
     } )
 }
 
-function validateGuess (guess){
+// to validate value
+function validateGuess (guess){   
     if(isNaN(guess)){
         alert('please enter a valid no')
     } else if(guess < 1){
@@ -599,40 +610,59 @@ function validateGuess (guess){
     }
 }
  
+// value == random num
 function checkGuess (guess){
     if (guess === randomNum){
         displayMess(`You guessed is right`)
-        endGame()
+        endGame();
     } else if (guess < randomNum){
-        displayMess(`Num is tooo low`)
+        displayMess("Num is tooo low");
     } else if (guess > randomNum){
-        displayMess(`Num is tooo high`)
+        displayMess("Num is tooo high");
     }
 }
 
+// clean, guesses update
 function displayGuess(){
     userInp.value = '';
-    guessSlot.innerHTML += `${guess}  `
+    guessSlot.innerHTML += `${guess},  `
     numGuess++;
     remaining.innerHTML = `${11- numGuess}`
 }
  
+// to print message
 function displayMess(message){
-    loworHi.innerHTML = `<h2>${message}</h2>` 
-}
-
-function newGame(){
-    // 
+    lowOrHi.innerHTML = `${message}`;
 }
 
 function endGame(){
-    // 
+    userInp.value = '';
+    userInp.setAttribute('disabled', '')
+    p.classList.add('button');
+    p.innerHTML`<h2 id="newGame">start new game</h2>`
+    startOver.appendChild(p)
+    playGame = false;
+    newGame()
 }
 
-*/
+function newGame(){
+    const newgamebtn = document.querySelector("#newGame");
+    newgamebtn.addEventListener('vlivk', function(e){
+        let randomNum = parseInt(Math.random()*100 +1);
+        prevGuess = [];
+        numGuess = 1;
+        guessSlot.innerHTML = '';
+        remaining.innerHTML = `${11- numGuess}`
+        userInp.removeAttribute('disabled');
+        startOver.removeChild(p)
+        playGame = true;
+    })
+}
+}
+
 
 // COLOR GENERATOR
-
+{
 const randomColor = function(){
     const hex = '0123456789ABCDEF';
     let colors = '#';
@@ -662,10 +692,10 @@ addEventListener('click', startChangingColor);
 
 document.querySelector('#stop').
 addEventListener('click', stopChangingColor);
-
+}
 
 // KEY
-
+{
 const insert = document.querySelector('.insert');
 
 window.addEventListener('keydown', function (e){
@@ -686,10 +716,10 @@ window.addEventListener('keydown', function (e){
     </div>
     `
 })
-
+}
 
 //CENTER DIV
-
+{
 let rect = document.querySelector("#centre");
 
 rect.addEventListener("mousemove", function(details){
@@ -713,8 +743,9 @@ rect.addEventListener("mousemove", function(details){
     }
 })
 
-rect.addEventListener("mouseleave", function (){
-    gsap.to(rect, {
-        backgroundColor: "white"
-    })
-})
+// rect.addEventListener("mouseleave", function (){
+//     gsap.to(rect, {
+//         backgroundColor: "white"
+//     })
+// })
+}
