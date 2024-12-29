@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const countriesContainer = document.querySelector('.countries-container')
 
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const countryCard = document.createElement('a');
                 countryCard.classList.add('country-card');
-                countryCard.href = `\country.html.html?name=${country.name.common}`;
+                countryCard.href = `/FRONTENED-PROJ/flag-api/country.html?name=${country.name.common}`;
 
                 const cardImg = document.createElement('img')
                 cardImg.src = "https://flagcdn.com/is.svg"
@@ -17,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
                 countryCard.innerHTML = `
-                <img src="${country.flags.svg}" alt="flag">
+                <img src="${country.flags.svg}" alt="${country.name.common} flag">
                 <div class="card-text">
                     <h3 class="card-title">${country.name.common}</h3>
-                    <p><b>Population: </b>${country.population.toLocaleString('en-IN')}</p>            <p><b>Region: </b>Europe</p>
+                    <p><b>Population: </b>${country.population.toLocaleString('en-IN')}</p>
                     <p><b>Region: </b>${country.region}</p>
                     <p><b>Capital: </b>${country.capital?.[0]}</p>
                 </div>

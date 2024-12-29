@@ -32,7 +32,7 @@ a{
     margin-top: 16px;
 
     display: flex;
-    gap: 64px;
+    /* gap: 64px; */
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -76,4 +76,49 @@ main{
     font-size: 24px;
     font-weight: 800;
     margin-block: 16px;
+}
+
+/* country-html */
+
+.back-btn{
+    padding: 6px 24px;
+    box-shadow: 0 0 4px 0px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    margin-bottom: 32px;
+    color: black;
+    text-decoration: none;
+}
+
+.container{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.country-details{
+    margin-top: 64px;
+}
+
+.country-img img{
+    width: 100%;
+}
+
+.details-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    column-gap: 64px;
+    max-height: 180px;
+    flex-wrap: wrap;
+}
+
+.details-text p {
+    margin: 0;
+}
+
+/* Responsivness */
+@media(max-width:700){
+    .countries-container{
+        display: flex;
+        justify-content: center;
+    }
 }
