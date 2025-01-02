@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then((res) => res.json())
         .then((data) => {
             data.forEach((country) => {
-                // console.log(country.flags.svg);
+                // console.log(country);
 
                 const countryCard = document.createElement('a');
                 countryCard.classList.add('country-card');
