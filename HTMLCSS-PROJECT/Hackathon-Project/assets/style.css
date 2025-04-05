@@ -1,0 +1,119 @@
+
+
+/* 
+
+Header/Banner	MediCare Navy	#2C3E50	
+Navigation	MediCare Teal	    #18BC9C
+Background	MediCare Smoke	    #F5F5F5
+MainText    MediCareCharcoal	#333333
+Footer	    MediCare Asphalt	#34495E
+Alerts/CTA	MediCare Alizarin	#E74C3C
+
+*/
+
+body {
+    font-family: Arial, sans-serif;  /*    #F5F5F5; */
+    color: #333333;
+    background-color: #343537!important;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #343537;
+    color: #FFFFFF;
+    stroke-width: 700;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* NAV */
+.navbar .navbar-brand{
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: rgba(255, 0, 0, 0.9) !important;
+}
+
+.navbar-brand img{
+    padding: 5px;
+    background-color: #333333;
+}
+
+.btn-outline-success {
+    color: #3a3f3d;
+    border-color: #171b19;
+}
+
+
+/* CAROUSEL */
+.carousel-caption {
+    bottom: 13.5rem !important;
+    position: absolute;
+    top: 50%;
+}
+.carousel-title{
+    font-size: 66px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin: 8px;
+}
+.carousel-subtitle{
+    color: black !important;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1;
+}
+.carousel-item .carousel-btn:hover{
+    color: black;
+    border-color: rgba(255, 0, 0, 0.9);
+    background-color: rgba(255, 0, 0, 0.9);
+}
+.carousel-item img{
+    width: 100%;
+}
+
+/*  */
+.cardf{
+    height: 370px;
+    background-color: #131313a7;
+    border-radius: 30px;
+}
+.cards{
+    margin: 5px;
+    height: 182.5px;
+    background-color: #131313a7;
+    border: #FFFFFF;
+    border-radius: 30px;
+}
+.cardl{
+    margin: auto;
+    padding: 5px;
+    height: 280px;
+    background-color: #131313a7;
+    border-radius: 24px;
+}
+.cardu{
+    color: rgb(0, 0, 0);
+    height: 200px;
+}
+
+/*  */
+.careHub .col-6{
+    color: rgba(255, 255, 255, 0.65);
+    stroke-width: 700;
+}
+
+/*  */
+footer {
+    background-color: #a7a3a3;
+    color: #FFFFFF;
+    stroke-width: 700;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
