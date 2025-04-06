@@ -1,0 +1,318 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Dynamic Element Creation with Bootstrap
+  </title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+ <body class="bg-gray-100">
+  <div class="container-fluid h-100">
+   <div class="row h-100">
+    <!-- Sidebar -->
+    <div class="col-md-2 bg-white p-4 d-flex flex-column align-items-center">
+     <div class="mb-8">
+      <img alt="Logo" class="rounded-circle" height="50" src="https://storage.googleapis.com/a1aa/image/Jd6X9KT0IjHJAtNJrZf0jXUu959rJrGhOXS5G6iceXM.jpg" width="50"/>
+     </div>
+     <div class="d-flex flex-column">
+      <button class="btn btn-link text-blue-500" onclick="showSection('home')">
+       <i class="fas fa-home">
+       </i>
+      </button>
+      <button class="btn btn-link text-gray-500" onclick="showSection('profile')">
+       <i class="fas fa-user">
+       </i>
+      </button>
+      <button class="btn btn-link text-gray-500" onclick="showSection('calendar')">
+       <i class="fas fa-calendar">
+       </i>
+      </button>
+      <button class="btn btn-link text-gray-500" onclick="showSection('settings')">
+       <i class="fas fa-cog">
+       </i>
+      </button>
+     </div>
+    </div>
+
+
+    <!-- Main Content -->
+        <div class="col-md-10 p-4">
+        <!-- Header -->
+            <div class="bg-white p-4 rounded-lg shadow d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                <img alt="Profile Picture" class="rounded-circle" height="50" src="https://storage.googleapis.com/a1aa/image/SkXvkj8ke424OmE5r82ruyr1LtDipIadr-mvsco_bl8.jpg" width="50"/>
+                <div class="ml-4">
+                    <h1 class="h4 font-weight-bold">
+                    Julia Smith
+                    </h1>
+                    <p class="text-gray-500">
+                    Active, 01.28.94
+                    </p>
+                </div>
+                </div>
+                <div class="d-flex align-items-center">
+                <button class="btn btn-link text-gray-500">
+                    <i class="fas fa-envelope">
+                    </i>
+                </button>
+                <button class="btn btn-link text-gray-500">
+                    <i class="fas fa-bell">
+                    </i>
+                </button>
+                <button class="btn btn-link text-gray-500">
+                    <i class="fas fa-cog">
+                    </i>
+                </button>
+                <button class="btn btn-link text-blue-500">
+                    <i class="fas fa-phone">
+                    </i>
+                </button>
+                </div>
+                <div class="text-right">
+                <p class="text-gray-500 mb-0">
+                    Primary provider
+                </p>
+                <p class="font-weight-bold mb-0">
+                    Dr. Wilson Vaccaro
+                </p>
+                <p class="text-gray-500 mb-0">
+                    Phone number
+                </p>
+                <p class="font-weight-bold mb-0">
+                    (888) 452 1505
+                </p>
+                </div>
+                <div class="text-right">
+                <p class="text-gray-500 mb-0">
+                    Primary insurance
+                </p>
+                <p class="font-weight-bold mb-0">
+                    Active until 06.22
+                </p>
+                <p class="text-gray-500 mb-0">
+                    Secondary insurance
+                </p>
+                <p class="font-weight-bold mb-0">
+                    Expired on 07.21
+                </p>
+                </div>
+                <div class="text-right">
+                <p class="text-gray-500 mb-0">
+                    Last visit
+                </p>
+                <p class="font-weight-bold mb-0">
+                    12.11.22
+                </p>
+                <p class="text-gray-500 mb-0">
+                    Next date
+                </p>
+                <p class="font-weight-bold mb-0">
+                    Set date
+                </p>
+                </div>
+            </div>
+
+        <!-- Navigation Tabs -->
+            <div class="bg-white mt-4 p-4 rounded-lg shadow d-flex align-items-center overflow-auto" id="nav-tabs">
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('general')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            General
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('photos')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            Photos
+            </button>
+            <button class="btn btn-link text-blue-500 font-weight-bold" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('charts')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            Charts
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('eclaims')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            eClaims
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('ledger')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            Ledger
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('inpatient')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            Inpatient
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('smile')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            Smile
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('checklists')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            Checklists
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('lab')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            Lab
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('imaging')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            Imaging
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('docs')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+            Docs
+            </button>
+            </div>
+
+        <!-- Sub Navigation Tabs -->
+        <div class="bg-white mt-4 p-4 rounded-lg shadow d-flex align-items-center overflow-auto">
+        <button class="btn btn-link text-blue-500 font-weight-bold" onclick="showSection('overview')">
+        Overview
+        </button>
+        <button class="btn btn-link text-gray-500" onclick="showSection('quickselect')">
+        Quickselect
+        </button>
+        <button class="btn btn-link text-gray-500" onclick="showSection('periodontal')">
+        Periodontal Probing
+        </button>
+        <button class="btn btn-link text-gray-500" onclick="showSection('ai')">
+        AI Analysis
+        </button>
+        </div>
+
+
+        <!-- Main Content Area -->
+        <div class="bg-white mt-4 p-4 rounded-lg shadow" id="main-content">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="h4 font-weight-bold">
+            Charts
+        </h2>
+        <div class="d-flex">
+            <button class="btn btn-link text-blue-500" onclick="showSection('dentis')">
+            Dentis
+            </button>
+            <button class="btn btn-link text-gray-500" onclick="showSection('perio')">
+            Perio
+            </button>
+            <button class="btn btn-link text-gray-500" onclick="showSection('endo')">
+            Endo
+            </button>
+            <button class="btn btn-link text-gray-500" onclick="showSection('all')">
+            All
+            </button>
+        </div>
+        </div>
+        <div class="position-relative">
+        <img alt="X-ray image of teeth with AI analysis overlay" class="img-fluid rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/zh_H11cIGDG0Kbtcq0SAYYALf7akfrqzjJPQvJfduI0.jpg" width="800"/>
+        <div class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center text-white" style="top: 0; left: 0;">
+            <h3 class="h2 font-weight-bold">
+            AI Analysis
+            </h3>
+            <p>
+            1 problem found
+            </p>
+        </div>
+        </div>
+        </div>
+        </div>
+
+   </div>
+  </div>
+
+  <script>
+   // Function to create a new button element
+        function createButton(text, isActive) {
+            const button = document.createElement('button');
+            button.className = isActive ? 'btn btn-link text-blue-500 font-weight-bold' : 'btn btn-link text-gray-500';
+            button.style.setProperty('--darkreader-inline-outline', 'var(--darkreader-border-1846db, #1234a4)');
+            button.style.setProperty('--darkreader-inline-bgcolor', 'var(--darkreader-background-bfcbf5, #2d3133)');
+            button.setAttribute('data-darkreader-inline-outline', '');
+            button.setAttribute('data-darkreader-inline-bgcolor', '');
+            button.textContent = text;
+            button.onclick = () => showSection(text.toLowerCase().replace(' ', ''));
+            return button;
+        }
+
+        // Add new buttons to the navigation tabs
+        const navTabs = document.getElementById('nav-tabs');
+        navTabs.appendChild(createButton('New Tab 1', false));
+        navTabs.appendChild(createButton('New Tab 2', true));
+
+        // Function to show different sections
+        function showSection(section) {
+            const mainContent = document.getElementById('main-content');
+            let content = '';
+
+            switch(section) {
+                case 'home':
+                    content = `<h2 class="h4 font-weight-bold">Home</h2><p>Welcome to the home page.</p>`;
+                    break;
+                case 'profile':
+                    content = `<h2 class="h4 font-weight-bold">Profile</h2><p>Profile details go here.</p>`;
+                    break;
+                case 'calendar':
+                    content = `<h2 class="h4 font-weight-bold">Calendar</h2><p>Calendar details go here.</p>`;
+                    break;
+                case 'settings':
+                    content = `<h2 class="h4 font-weight-bold">Settings</h2><p>Settings details go here.</p>`;
+                    break;
+                case 'general':
+                    content = `<h2 class="h4 font-weight-bold">General</h2><p>General information goes here.</p>`;
+                    break;
+                case 'photos':
+                    content = `<h2 class="h4 font-weight-bold">Photos</h2><p>Photos go here.</p>`;
+                    break;
+                case 'charts':
+                    content = `<h2 class="h4 font-weight-bold">Charts</h2><p>Charts go here.</p>`;
+                    break;
+                case 'eclaims':
+                    content = `<h2 class="h4 font-weight-bold">eClaims</h2><p>eClaims details go here.</p>`;
+                    break;
+                case 'ledger':
+                    content = `<h2 class="h4 font-weight-bold">Ledger</h2><p>Ledger details go here.</p>`;
+                    break;
+                case 'inpatient':
+                    content = `<h2 class="h4 font-weight-bold">Inpatient</h2><p>Inpatient details go here.</p>`;
+                    break;
+                case 'smile':
+                    content = `<h2 class="h4 font-weight-bold">Smile</h2><p>Smile details go here.</p>`;
+                    break;
+                case 'checklists':
+                    content = `<h2 class="h4 font-weight-bold">Checklists</h2><p>Checklists go here.</p>`;
+                    break;
+                case 'lab':
+                    content = `<h2 class="h4 font-weight-bold">Lab</h2><p>Lab details go here.</p>`;
+                    break;
+                case 'imaging':
+                    content = `<h2 class="h4 font-weight-bold">Imaging</h2><p>Imaging details go here.</p>`;
+                    break;
+                case 'docs':
+                    content = `<h2 class="h4 font-weight-bold">Docs</h2><p>Docs go here.</p>`;
+                    break;
+                case 'overview':
+                    content = `<h2 class="h4 font-weight-bold">Overview</h2><p>Overview details go here.</p>`;
+                    break;
+                case 'quickselect':
+                    content = `<h2 class="h4 font-weight-bold">Quickselect</h2><p>Quickselect details go here.</p>`;
+                    break;
+                case 'periodontal':
+                    content = `<h2 class="h4 font-weight-bold">Periodontal Probing</h2><p>Periodontal Probing details go here.</p>`;
+                    break;
+                case 'ai':
+                    content = `<h2 class="h4 font-weight-bold">AI Analysis</h2><p>AI Analysis details go here.</p>`;
+                    break;
+                case 'dentis':
+                    content = `<h2 class="h4 font-weight-bold">Dentis</h2><p>Dentis details go here.</p>`;
+                    break;
+                case 'perio':
+                    content = `<h2 class="h4 font-weight-bold">Perio</h2><p>Perio details go here.</p>`;
+                    break;
+                case 'endo':
+                    content = `<h2 class="h4 font-weight-bold">Endo</h2><p>Endo details go here.</p>`;
+                    break;
+                case 'all':
+                    content = `<h2 class="h4 font-weight-bold">All</h2><p>All details go here.</p>`;
+                    break;
+                default:
+                    content = `<h2 class="h4 font-weight-bold">Charts</h2><p>Charts go here.</p>`;
+            }
+
+            mainContent.innerHTML = content;
+        }
+  </script>
+ </body>
+</html>

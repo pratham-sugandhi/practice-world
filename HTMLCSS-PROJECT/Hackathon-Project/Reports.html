@@ -1,0 +1,322 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   MediConnect
+  </title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="bg-gray-800 text-white">
+
+    <header class="p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <i class="fas fa-plus-circle text-white mr-2"></i>
+            <span class="text-xl font-bold">MediCareHub</span>
+        </div>
+
+        <nav class="space-x-4">
+            <a class="text-white" href="#">Medical History</a>
+            <a class="text-white" href="#">First Aid</a>
+            <a class="text-white" href="#">Search Hospitals</a>
+        </nav>
+    </header>
+
+<main class="p-4 space-y-4">
+
+        <section class="bg-gray-700 p-4 rounded-lg">
+            <h2 class="text-xl font-bold mb-4">
+                Upload New Report
+            </h2>
+            <div class="border-2 border-gray-500 border-dashed rounded-lg p-8 flex flex-col items-center justify-center">
+                <p class="mb-4">
+                    Drag and drop files here
+                </p>
+                <button class="bg-black text-white py-2 px-4 rounded">
+                    Browse Files
+                </button>
+            </div>
+        </section>
+
+        <section class="bg-gray-700 p-4 rounded-lg">
+
+            <!-- Navigation Tabs -->
+            <div class="bg-dark mt-4 p-4 rounded-lg shadow d-flex align-items-center overflow-auto" id="nav-tabs">
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('general')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    General
+                </button>
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('photos')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    Photos
+                </button>
+                <button class="btn btn-link text-blue-500 font-weight-bold" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('charts')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    Charts
+                </button>
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('eclaims')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    eClaims
+                </button>
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('ledger')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    Ledger
+                </button>
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('inpatient')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    Inpatient
+                </button>
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('smile')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    Smile
+                </button>
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('checklists')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    Checklists
+                </button>
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('lab')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    Lab
+                </button>
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('imaging')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    Imaging
+                </button>
+                <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('docs')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                    Docs
+                </button>
+            </div>
+    
+            <!-- Sub Navigation Tabs -->
+            <div class="bg-dark mt-4 p-4 rounded-lg shadow d-flex align-items-center overflow-auto">
+                <button class="btn btn-link text-blue-500 font-weight-bold" onclick="showSection('overview')">
+                    Overview
+                </button>
+                <button class="btn btn-link text-gray-500" onclick="showSection('quickselect')">
+                    Quickselect
+                </button>
+                <button class="btn btn-link text-gray-500" onclick="showSection('periodontal')">
+                    Periodontal Probing
+                </button>
+                <button class="btn btn-link text-gray-500" onclick="showSection('ai')">
+                    AI Analysis
+                </button>
+            </div>
+    
+    
+            <!-- Main Content Area -->
+            <div class="bg-dark mt-4 p-4 rounded-lg shadow" id="main-content">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="h4 font-weight-bold">
+                        Charts
+                    </h2>
+                <div class="d-flex">
+                    <button class="btn btn-link text-blue-500" onclick="showSection('dentis')">
+                        Dentis
+                    </button>
+                    <button class="btn btn-link text-gray-500" onclick="showSection('perio')">
+                        Perio
+                    </button>
+                    <button class="btn btn-link text-gray-500" onclick="showSection('endo')">
+                        Endo
+                    </button>
+                    <button class="btn btn-link text-gray-500" onclick="showSection('all')">
+                        All
+                    </button>
+                </div>
+            </div>
+            <div class="position-relative">
+            <img alt="X-ray image of teeth with AI analysis overlay" class="img-fluid rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/zh_H11cIGDG0Kbtcq0SAYYALf7akfrqzjJPQvJfduI0.jpg" width="400"/>
+            <div class="position-absolute w-50 h-50 d-flex flex-column align-items-center justify-content-center text-white" style="top: 0; left: 0;">
+                <h3 class="h2 font-weight-bold">
+                    AI Analysis
+                </h3>
+                <p>
+                    1 problem found
+                </p>
+            </div>
+            </div>
+            </div>
+
+        </section>
+
+        <section class="bg-gray-700 p-4 rounded-lg">
+            <h2 class="text-xl font-bold mb-4">Saved Reports</h2>
+            <div class="flex justify-between items-center mb-4">
+                <input class="bg-gray-600 text-white p-2 rounded-lg w-full max-w-xs" placeholder="Search reports..." type="text"/>
+                <button class="bg-gray-500 text-white py-2 px-4 rounded ml-2">
+                    Search
+                </button>
+            </div>
+
+            <div class="grid grid-cols-3 md:grid-cols-5 gap-4">
+                <div class="bg-gray-600 p-4 rounded-lg">
+                    <img alt="Blood Test Report" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/alZBLNQm1-KAtKa6d5wR7PKj0juJy43YpNU9WXJZxzI.jpg" width="300"/>
+                    <p>Blood Test Report - 12/10/2023</p>
+                    <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                        Add Note
+                    </button>
+                </div>
+                <div class="bg-gray-600 p-4 rounded-lg">
+                    <img alt="MRI Scan" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/SsovyAca219fbJ0j1Wi51ZjKImp5bHEyUbquqFQoWRU.jpg" width="300"/>
+                    <p>MRI Scan - 09/09/2023</p>
+                    <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                        Add Note
+                    </button>
+                </div>
+                <div class="bg-gray-600 p-4 rounded-lg">
+                    <img alt="X-ray" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/NFRnJs877RHRym-WbzGdFQX9O_nKVnp-OvGTGfyxFgA.jpg" width="300"/>
+                    <p>X-ray - 15/08/2023</p>
+                    <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                        Add Note
+                    </button>
+                </div>
+                <div class="bg-gray-600 p-4 rounded-lg">
+                    <img alt="Blood Test Report" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/alZBLNQm1-KAtKa6d5wR7PKj0juJy43YpNU9WXJZxzI.jpg" width="300"/>
+                    <p>Blood Test Report - 12/10/2023</p>
+                    <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                        Add Note
+                    </button>
+                </div>
+                <div class="bg-gray-600 p-4 rounded-lg">
+                    <img alt="MRI Scan" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/SsovyAca219fbJ0j1Wi51ZjKImp5bHEyUbquqFQoWRU.jpg" width="300"/>
+                    <p>MRI Scan - 09/09/2023</p>
+                    <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                        Add Note
+                    </button>
+                </div>
+            </div>
+        </section>
+
+   <aside class="bg-gray-700 mb-4 p-4 rounded-lg">
+    <h2 class="text-xl font-bold mb-4">
+     Quick Access
+    </h2>
+    <div class="mb-4">
+     <h3 class="font-bold">
+      Recently Viewed
+     </h3>
+     <ul class="list-disc list-inside">
+      <li>Blood Test Report - 12/10/2023  </li>
+      <li>MRI Scan - 09/09/2023      </li>
+      <li>X-ray - 15/08/2023    </li>
+      <li></li>
+      <li></li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="font-bold">User Settings</h3>
+     <button class="bg-gray-500 text-white py-2 px-4 rounded mt-2">
+      Manage Account
+     </button>
+    </div>
+   </aside>
+
+</main>
+
+    <footer class="mt-3">
+        <p>&copy; 2025 MediCareHub Medical. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        // Function to create a new button element
+             function createButton(text, isActive) {
+                 const button = document.createElement('button');
+                 button.className = isActive ? 'btn btn-link text-blue-500 font-weight-bold' : 'btn btn-link text-gray-500';
+                 button.style.setProperty('--darkreader-inline-outline', 'var(--darkreader-border-1846db, #1234a4)');
+                 button.style.setProperty('--darkreader-inline-bgcolor', 'var(--darkreader-background-bfcbf5, #2d3133)');
+                 button.setAttribute('data-darkreader-inline-outline', '');
+                 button.setAttribute('data-darkreader-inline-bgcolor', '');
+                 button.textContent = text;
+                 button.onclick = () => showSection(text.toLowerCase().replace(' ', ''));
+                 return button;
+             }
+     
+             // Add new buttons to the navigation tabs
+             const navTabs = document.getElementById('nav-tabs');
+             navTabs.appendChild(createButton('New Tab 1', false));
+             navTabs.appendChild(createButton('New Tab 2', true));
+     
+             // Function to show different sections
+             function showSection(section) {
+                 const mainContent = document.getElementById('main-content');
+                 let content = '';
+     
+                 switch(section) {
+                     case 'home':
+                         content = `<h2 class="h4 font-weight-bold">Home</h2><p>Welcome to the home page.</p>`;
+                         break;
+                     case 'profile':
+                         content = `<h2 class="h4 font-weight-bold">Profile</h2><p>Profile details go here.</p>`;
+                         break;
+                     case 'calendar':
+                         content = `<h2 class="h4 font-weight-bold">Calendar</h2><p>Calendar details go here.</p>`;
+                         break;
+                     case 'settings':
+                         content = `<h2 class="h4 font-weight-bold">Settings</h2><p>Settings details go here.</p>`;
+                         break;
+                     case 'general':
+                         content = `<h2 class="h4 font-weight-bold">General</h2><p>General information goes here.</p>`;
+                         break;
+                     case 'photos':
+                         content = `<h2 class="h4 font-weight-bold">Photos</h2><p>Photos go here.</p>`;
+                         break;
+                     case 'charts':
+                         content = `<h2 class="h4 font-weight-bold">Charts</h2><p>Charts go here.</p>`;
+                         break;
+                     case 'eclaims':
+                         content = `<h2 class="h4 font-weight-bold">eClaims</h2><p>eClaims details go here.</p>`;
+                         break;
+                     case 'ledger':
+                         content = `<h2 class="h4 font-weight-bold">Ledger</h2><p>Ledger details go here.</p>`;
+                         break;
+                     case 'inpatient':
+                         content = `<h2 class="h4 font-weight-bold">Inpatient</h2><p>Inpatient details go here.</p>`;
+                         break;
+                     case 'smile':
+                         content = `<h2 class="h4 font-weight-bold">Smile</h2><p>Smile details go here.</p>`;
+                         break;
+                     case 'checklists':
+                         content = `<h2 class="h4 font-weight-bold">Checklists</h2><p>Checklists go here.</p>`;
+                         break;
+                     case 'lab':
+                         content = `<h2 class="h4 font-weight-bold">Lab</h2><p>Lab details go here.</p>`;
+                         break;
+                     case 'imaging':
+                         content = `<h2 class="h4 font-weight-bold">Imaging</h2><p>Imaging details go here.</p>`;
+                         break;
+                     case 'docs':
+                         content = `<h2 class="h4 font-weight-bold">Docs</h2><p>Docs go here.</p>`;
+                         break;
+                     case 'overview':
+                         content = `<h2 class="h4 font-weight-bold">Overview</h2><p>Overview details go here.</p>`;
+                         break;
+                     case 'quickselect':
+                         content = `<h2 class="h4 font-weight-bold">Quickselect</h2><p>Quickselect details go here.</p>`;
+                         break;
+                     case 'periodontal':
+                         content = `<h2 class="h4 font-weight-bold">Periodontal Probing</h2><p>Periodontal Probing details go here.</p>`;
+                         break;
+                     case 'ai':
+                         content = `<h2 class="h4 font-weight-bold">AI Analysis</h2><p>AI Analysis details go here.</p>`;
+                         break;
+                     case 'dentis':
+                         content = `<h2 class="h4 font-weight-bold">Dentis</h2><p>Dentis details go here.</p>`;
+                         break;
+                     case 'perio':
+                         content = `<h2 class="h4 font-weight-bold">Perio</h2><p>Perio details go here.</p>`;
+                         break;
+                     case 'endo':
+                         content = `<h2 class="h4 font-weight-bold">Endo</h2><p>Endo details go here.</p>`;
+                         break;
+                     case 'all':
+                         content = `<h2 class="h4 font-weight-bold">All</h2><p>All details go here.</p>`;
+                         break;
+                     default:
+                         content = `<h2 class="h4 font-weight-bold">Charts</h2><p>Charts go here.</p>`;
+                 }
+     
+                 mainContent.innerHTML = content;
+             }
+    </script>
+</body>
+</html>

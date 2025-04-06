@@ -1,0 +1,109 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.navbar {
+    background-color: #6c757d;
+}
+.navbar .navbar-brand {
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.navbar-brand img {
+    padding: 5px;
+    background-color: #343a40;
+}
+
+.btn-outline-success {
+    color: #ffffff;
+    border-color: #ffc107;
+}
+
+.carousel-inner {
+    margin: 50px;
+}
+.carousel-inner img {
+    border-radius: 20px;
+}
+.carousel-caption {
+    top: 30%;
+    right: 50% !important;
+}
+.carousel-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 8px;
+    color: #ffffff;
+}
+.carousel-item .carousel-btn:hover {
+    color: #ffffff;
+    background-color: #dc3545;
+}
+.carousel-options {
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #6c757d;
+}
+
+.symptoms-text {
+    display: inline-block;
+    color: #ffffff;
+    padding: 10px;
+    background-color: #6c757d;
+    border-radius: 25px;
+}
+.cardf {
+    height: 370px;
+    background-color: #495057;
+    border-radius: 30px;
+}
+.cards {
+    margin: 5px;
+    height: 182.5px;
+    background-color: #495057;
+    border: none;
+    border-radius: 30px;
+}
+.cardl {
+    margin: auto;
+    padding: 5px;
+    height: 280px;
+    background-color: #495057;
+    border-radius: 24px;
+}
+.cardu {
+    color: #ffffff;
+    height: 200px;
+}
+
+.careHub .col-6 {
+    color: #ffffff;
+}
+
+footer {
+    background-color: #6c757d;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

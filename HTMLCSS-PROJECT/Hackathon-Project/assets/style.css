@@ -136,6 +136,8 @@ header {
     color: rgba(255, 255, 255, 0.65);
     stroke-width: 700;
 }
+/*  */
+
 
 /*  */
 footer {
@@ -145,4 +147,8 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
