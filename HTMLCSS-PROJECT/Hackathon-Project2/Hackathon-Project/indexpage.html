@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical System</title>
+    <link rel="stylesheet" href="assets/index.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#test">
+                <i class="fas fa-heartbeat me-2"></i>Pulse Point
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/first.html">First Aid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#symp">Symptoms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#test">Testimonials</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <a href="/login2.html" class="btn btn-outline-light">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Your Health is Our Priority</h1>
+            <p class="lead mb-5">Access quality healthcare services from the comfort of your home</p>
+
+            <div class="card mx-auto mb-4" style="max-width: 800px;">
+                <div class="card-body p-4">
+                    <h4 class="mb-3">Find Hospitals Near You</h4>
+                    <form action="/map2.html" method="get" class="row g-2"> 
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </span>
+                                <input type="text" class="form-control form-control-lg pac-target-input" 
+                                       id="location-autocomplete" name="location" 
+                                       placeholder="Enter city or zip code" required autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-search me-2"></i> Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="/user.html" class="btn btn-primary btn-lg px-4 gap-3">Get Started</a>
+                <a href="#services" class="btn btn-outline-light btn-lg px-4">Our Services</a>
+            </div>
+
+            <div class="map-container">
+                <h4 class="mb-3">Hospitals in Indore</h4>
+                <div id="indore-map"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5" id="services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Services</h2>
+                <p class="lead text-muted">Comprehensive healthcare solutions</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4 class="card-title">Online Appointments</h4>
+                            <p class="card-text">Book appointments with specialists at your convenience.</p>
+                            <a href="/appoint2.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-pills"></i>
+                            </div>
+                            <!-- <h4 class="card-title">Medication Reminders</h4> -->
+                            <h4 class="card-title">Medication Reports</h4>
+                            <!-- <p class="card-text">Never miss a dose with our smart reminder system.</p> -->
+                            <p class="card-text">All your Reports at one place.</p>
+                            <a href="/Reports.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h4 class="card-title">Virtual Consultations</h4>
+                            <p class="card-text">Connect with doctors via secure video calls.</p>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="symp" class="mt-4 Symptoms">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Symptoms</h2>
+                <p class="lead text-muted">Select below..</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4 class="card-title">Dengue
+                            </h4>
+                            <p class="card-text">Book appointments with specialists at your convenience.</p>
+                            <a href="/sym01.html" class="btn btn-outline-primary" > More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-pills"></i>
+                            </div><h4 class="card-title">DIABETES</h4>
+                            <p class="card-text">Book appointments with specialists at your convenience.</p>
+                            <a href="/sym02.html" class="btn btn-outline-primary" > More Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-hover">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h4 class="card-title">CPR</h4>
+                            <p class="card-text">Book appointments with specialists at your convenience.</p>
+                            <a href="/sym03.html" class="btn btn-outline-primary" > More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+    <!-- About Section -->
+    <section class="mt-5 py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">About Our Medical System</h2>
+                    <p class="lead">We provide innovative healthcare solutions to improve patient outcomes.</p>
+                    <p>Our platform integrates cutting-edge technology with medical expertise to deliver personalized care. With features like appointment scheduling, medication tracking, and telemedicine, we're revolutionizing healthcare access.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <div>
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            <span>Secure</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            <span>Convenient</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            <span>Affordable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                         class="img-fluid rounded shadow" alt="Medical Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="test" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">What Our Patients Say</h2>
+                <p class="lead text-muted">Trusted by thousands of patients worldwide</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"The medication reminders have been a lifesaver! I never miss a dose anymore."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="50" alt="Patient">
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">Diabetes Patient</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"Scheduling appointments online saves me so much time. Highly recommended!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="50" alt="Patient">
+                                <div>
+                                    <h6 class="mb-0">Michael Chen</h6>
+                                    <small class="text-muted">Cardiology Patient</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="card-text mb-4">"The virtual consultation feature helped me get medical advice during lockdown."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" alt="Patient">
+                                <div>
+                                    <h6 class="mb-0">Emma Rodriguez</h6>
+                                    <small class="text-muted">Pediatrics Patient</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Ready to Take Control of Your Health?</h2>
+            <p class="lead mb-5">Join thousands of satisfied patients using our platform</p>
+            <a href="/user.html" class="btn btn-light btn-lg px-4 me-2">Sign Up Free</a>
+            <a href="/login2.html" class="btn btn-outline-light btn-lg px-4">Login</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <h5 class="fw-bold mb-4">MediCare</h5>
+                    <p>Innovative healthcare solutions for better patient outcomes.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Doctors</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Appointments</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="fw-bold mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Online Appointments</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Medication Reminders</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Virtual Consultations</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Health Records</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Prescription Refills</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Medical Drive, Health City</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@medicare.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 MediCare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form validation example
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value;
+            if (!email.includes('@')) {
+                e.preventDefault();
+                alert('Please enter a valid email address');
+            }
+        });
+    </script>
+</body>
+</html>

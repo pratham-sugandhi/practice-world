@@ -1,0 +1,54 @@
+
+
+/* 
+
+Header/Banner	MediCare Navy	#2C3E50	
+Navigation	MediCare Teal	    #18BC9C
+Background	MediCare Smoke	    #F5F5F5
+MainText    MediCareCharcoal	#333333
+Footer	    MediCare Asphalt	#34495E
+Alerts/CTA	MediCare Alizarin	#E74C3C
+
+
+/*  */
+.symptoms-text {
+    display: inline;
+    color: #454343;
+    padding: 10px;
+    background-color: #abaaaaea;
+    border-radius: 25px;
+}
+.cardf{
+    height: 370px;
+    background-color: #131313a7;
+    border-radius: 30px;
+}
+.cards{
+    margin: 5px;
+    height: 182.5px;
+    background-color: #131313a7;
+    border: #FFFFFF;
+    border-radius: 30px;
+}
+.cardl{
+    margin: auto;
+    padding: 5px;
+    height: 280px;
+    background-color: #131313a7;
+    border-radius: 24px;
+}
+.cardu{
+    color: rgb(0, 0, 0);
+    height: 200px;
+}
+.card-img{
+    height: 300px;
+    width: auto;
+}
+
+/*  */
+.careHub .col-6{
+    color: rgba(255, 255, 255, 0.65);
+    stroke-width: 700;
+}
+/*  */

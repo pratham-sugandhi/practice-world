@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP Hospital Locator</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link href="/static/css/tailwind.css" rel="stylesheet">
+    <link href="/static/css/fontawesome.min.css" rel="stylesheet">
+
+    <!-- <style>
+        /* #map {
+            height: 500px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+        .search-container {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border: 1px solid #e2e8f0;
+        }
+        .hospital-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid #4299e1;
+        }
+        .hospital-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        } */
+
+
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+            border: 1px solid #dee2e6;
+        }
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        .search-box {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .hospital-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 1rem;
+        }
+        .hospital-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.15);
+        }
+        .hospital-icon {
+            background-color: #0d6efd20;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style> -->
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+            border: 1px solid #dee2e6;
+        }
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        .search-box {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .hospital-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #0d6efd;
+            margin-bottom: 1rem;
+        }
+        .hospital-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.15);
+        }
+        .hospital-icon {
+            background-color: #0d6efd20;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-gray-50 min-h-screen p-6">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Find Hospitals in Madhya Pradesh</h1>
+            <p class="text-gray-600">Search hospitals by ZIP code or select a district on the map</p>
+        </div>
+        
+        <div class="search-container">
+            <div class="flex items-center">
+                <div class="relative flex-grow">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-map-marker-alt text-gray-400"></i>
+                    </div>
+                    <input type="text" id="zipCode" placeholder="Enter ZIP code (e.g. 450331)"
+                        class="pl-10 w-full p-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <button id="searchBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-r-lg transition duration-200 flex items-center">
+                    <i class="fas fa-search mr-2"></i>
+                    Search
+                </button>
+            </div>
+        </div>
+        
+        <div id="map" class="mb-4"></div>
+        
+        <div id="results" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+    </div>
+
+    <script>
+        // Initialize map centered on Madhya Pradesh
+        var map = L.map('map').setView([23.5, 78.5], 7);
+        var hospitalMarkers = [];
+        
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Handle search button click
+        document.getElementById('searchBtn').addEventListener('click', function() {
+            const zipCode = document.getElementById('zipCode').value.trim();
+            if (zipCode) {
+                searchHospitals(zipCode);
+            }
+        });
+
+        // Function to search hospitals by zip code
+        async function searchHospitals(zipCode) {
+            try {
+                // Clear previous markers
+                clearHospitalMarkers();
+                document.getElementById('results').innerHTML = '';
+                
+                // Fetch hospital data (mock - replace with actual API call)
+                const hospitals = await fetchHospitals(zipCode);
+                
+                // Display results
+                displayHospitals(hospitals);
+                
+            } catch (error) {
+                console.error('Error searching hospitals:', error);
+                alert('Error finding hospitals. Please try again.');
+            }
+        }
+
+        // Mock hospital data - replace with actual API call
+        async function fetchHospitals(zipCode) {
+            // This would be replaced with: const response = await fetch(`/api/hospitals?zip=${zipCode}`);
+            // For demo, return mock data for Indore (450331)
+            if (zipCode === '452001' || zipCode === '450331') {
+                return [
+                    {
+                        name: "Apollo Hospital",
+                        address: "MR-10, Indore",
+                        phone: "0731-1234567",
+                        coords: [22.7196, 75.8577],
+                        distance: "2.5"
+                    },
+                    {
+                        name: "CHL Hospital",
+                        address: "AB Road, Indore", 
+                        phone: "0731-2345678",
+                        coords: [22.725, 75.862],
+                        distance: "3.1"
+                    }
+                ];
+            }
+            return [];
+        }
+
+        // Display hospitals on map and in results list
+        function displayHospitals(hospitals) {
+            const resultsContainer = document.getElementById('results');
+            
+            hospitals.forEach(hospital => {
+                // Add marker to map
+                const marker = L.marker(hospital.coords).addTo(map)
+                    .bindPopup(`<b>${hospital.name}</b><br>${hospital.address}`);
+                hospitalMarkers.push(marker);
+                
+                // Add to results list
+                resultsContainer.innerHTML += `
+                    <div class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="font-bold text-lg">${hospital.name}</h3>
+                        <p class="text-gray-600">${hospital.address}</p>
+                        <p class="text-gray-600">Phone: ${hospital.phone}</p>
+                        <p class="text-blue-600 font-medium">Distance: ${hospital.distance} km</p>
+                    </div>
+                `;
+            });
+            
+            // Zoom to show all hospitals if any
+            if (hospitals.length > 0) {
+                const group = new L.featureGroup(hospitalMarkers);
+                map.fitBounds(group.getBounds().pad(0.2));
+            }
+        }
+
+        // Clear existing hospital markers
+        function clearHospitalMarkers() {
+            hospitalMarkers.forEach(marker => map.removeLayer(marker));
+            hospitalMarkers = [];
+        }
+        
+        // District data with coordinates
+        var districts = [
+            { name: "Agar Malwa", coords: [23.711, 76.014] },
+            { name: "Alirajpur", coords: [22.305, 74.355] },
+            { name: "Anuppur", coords: [23.103, 81.691] },
+            { name: "Ashoknagar", coords: [24.573, 77.731] },
+            { name: "Balaghat", coords: [21.812, 80.184] },
+            { name: "Barwani", coords: [22.032, 74.899] },
+            { name: "Betul", coords: [21.902, 77.898] },
+            { name: "Bhind", coords: [26.566, 78.787] },
+            { name: "Bhopal", coords: [23.2599, 77.4126] },
+            { name: "Burhanpur", coords: [21.307, 76.231] },
+            { name: "Chhatarpur", coords: [24.916, 79.582] },
+            { name: "Chhindwara", coords: [22.0574, 78.9382] },
+            { name: "Damoh", coords: [23.839, 79.442] },
+            { name: "Datia", coords: [25.672, 78.461] },
+            { name: "Dewas", coords: [22.9676, 76.0534] },
+            { name: "Dhar", coords: [22.601, 75.303] },
+            { name: "Dindori", coords: [22.943, 81.073] },
+            { name: "Guna", coords: [24.646, 77.316] },
+            { name: "Gwalior", coords: [26.2183, 78.1828] },
+            { name: "Harda", coords: [22.338, 77.093] },
+            { name: "Hoshangabad", coords: [22.747, 77.727] },
+            { name: "Indore", coords: [22.7196, 75.8577] },
+            { name: "Jabalpur", coords: [23.1815, 79.9864] },
+            { name: "Jhabua", coords: [22.766, 74.593] },
+            { name: "Katni", coords: [23.836, 80.391] },
+            { name: "Khandwa", coords: [21.825, 76.352] },
+            { name: "Khargone", coords: [21.831, 75.614] },
+            { name: "Mandla", coords: [22.59, 80.372] },
+            { name: "Mandsaur", coords: [24.072, 75.069] },
+            { name: "Morena", coords: [26.496, 77.999] },
+            { name: "Narsinghpur", coords: [22.949, 79.194] },
+            { name: "Neemuch", coords: [24.47, 74.872] },
+            { name: "Panna", coords: [24.719, 80.186] },
+            { name: "Raisen", coords: [23.33, 77.793] },
+            { name: "Rajgarh", coords: [23.866, 76.732] },
+            { name: "Ratlam", coords: [23.331, 75.037] },
+            { name: "Rewa", coords: [24.5362, 81.3041] },
+            { name: "Sagar", coords: [23.8388, 78.7378] },
+            { name: "Satna", coords: [24.5734, 80.8322] },
+            { name: "Sehore", coords: [23.203, 77.085] },
+            { name: "Seoni", coords: [22.086, 79.544] },
+            { name: "Shahdol", coords: [23.278, 81.354] },
+            { name: "Shajapur", coords: [23.428, 76.277] },
+            { name: "Sheopur", coords: [25.666, 76.7] },
+            { name: "Shivpuri", coords: [25.432, 77.65] },
+            { name: "Sidhi", coords: [24.416, 81.883] },
+            { name: "Singrauli", coords: [24.201, 82.667] },
+            { name: "Tikamgarh", coords: [24.746, 78.837] },
+            { name: "Ujjain", coords: [23.1793, 75.7849] },
+            { name: "Umaria", coords: [23.524, 80.838] },
+            { name: "Vidisha", coords: [23.525, 77.807] }
+        ];
+
+        // Add markers for each district
+        districts.forEach(district => {
+            L.marker(district.coords).addTo(map)
+                .bindPopup(`<b>${district.name}</b>`)
+                .on('click', function() {
+                    // You can add click handlers here to link to district-specific pages
+                    console.log(`${district.name} clicked`);
+                });
+        });
+
+        // Add zoom controls
+        L.control.zoom({
+            position: 'topright'
+        }).addTo(map);
+    </script>
+</body>
+</html>

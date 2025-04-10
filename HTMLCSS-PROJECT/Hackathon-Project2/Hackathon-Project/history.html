@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediTrack - Medical History Manager</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .nav-pills .nav-link.active {
+            background-color: #0d6efd;
+        }
+        .medical-card {
+            transition: transform 0.3s;
+        }
+        .medical-card:hover {
+            transform: translateY(-5px);
+        }
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-heartbeat me-2"></i>Pulse Point
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/dash.html"><i class="fas fa-home me-1"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile.html"><i class="fas fa-user me-1"></i> Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/result.html"><i class="fas fa-cog me-1"></i> Result</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Medical Categories</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-pills flex-column" id="categoryTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#general" type="button">
+                                    <i class="fas fa-file-medical me-2"></i>General
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="allergies-tab" data-bs-toggle="pill" data-bs-target="#allergies" type="button">
+                                    <i class="fas fa-allergies me-2"></i>Allergies
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="medications-tab" data-bs-toggle="pill" data-bs-target="#medications" type="button">
+                                    <i class="fas fa-pills me-2"></i>Medications
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="immunizations-tab" data-bs-toggle="pill" data-bs-target="#immunizations" type="button">
+                                    <i class="fas fa-syringe me-2"></i>Immunizations
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="labresults-tab" data-bs-toggle="pill" data-bs-target="#labresults" type="button">
+                                    <i class="fas fa-flask me-2"></i>Lab Results
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="col-md-9">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">Medical History</h5>
+                        <button class="btn btn-primary btn-sm" id="addRecordBtn">
+                            <i class="fas fa-plus me-1"></i>Add Record
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="categoryTabsContent">
+                            <!-- General Tab -->
+                            <div class="tab-pane fade show active" id="general" role="tabpanel">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Condition</th>
+                                                <th>Doctor</th>
+                                                <th>Notes</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="generalRecords">
+                                            <!-- Records will be loaded here via JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Allergies Tab -->
+                            <div class="tab-pane fade" id="allergies" role="tabpanel">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Allergen</th>
+                                                <th>Reaction</th>
+                                                <th>Severity</th>
+                                                <th>First Observed</th>
+      <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('inpatient')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+       Inpatient
+      </button>
+      <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('smile')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+       Smile
+      </button>
+      <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('checklists')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+       Checklists
+      </button>
+      <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('lab')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+       Lab
+      </button>
+      <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('imaging')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+       Imaging
+      </button>
+      <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('docs')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+       Docs
+      </button>
+     </div>
+     <!-- Sub Navigation Tabs -->
+     <div class="bg-white mt-4 p-4 rounded-lg shadow d-flex align-items-center overflow-auto">
+      <button class="btn btn-link text-blue-500 font-weight-bold" onclick="showSection('overview')">
+       Overview
+      </button>
+      <button class="btn btn-link text-gray-500" onclick="showSection('quickselect')">
+       Quickselect
+      </button>
+      <button class="btn btn-link text-gray-500" onclick="showSection('periodontal')">
+       Periodontal Probing
+      </button>
+      <button class="btn btn-link text-gray-500" onclick="showSection('ai')">
+       AI Analysis
+      </button>
+     </div>
+     <!-- Main Content Area -->
+     <div class="bg-white mt-4 p-4 rounded-lg shadow" id="main-content">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+       <h2 class="h4 font-weight-bold">
+        Charts
+       </h2>
+       <div class="d-flex">
+        <button class="btn btn-link text-blue-500" onclick="showSection('dentis')">
+         Dentis
+        </button>
+        <button class="btn btn-link text-gray-500" onclick="showSection('perio')">
+         Perio
+        </button>
+        <button class="btn btn-link text-gray-500" onclick="showSection('endo')">
+         Endo
+        </button>
+        <button class="btn btn-link text-gray-500" onclick="showSection('all')">
+         All
+        </button>
+       </div>
+      </div>
+      <div class="position-relative">
+       <img alt="X-ray image of teeth with AI analysis overlay" class="img-fluid rounded-lg" height="400" src="https://storage.googleapis.com/a1aa/image/zh_H11cIGDG0Kbtcq0SAYYALf7akfrqzjJPQvJfduI0.jpg" width="800"/>
+       <div class="position-absolute w-100 h-100 d-flex flex-column align-items-center justify-content-center text-white" style="top: 0; left: 0;">
+        <h3 class="h2 font-weight-bold">
+         AI Analysis
+        </h3>
+        <p>
+         1 problem found
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   // Function to create a new button element
+        function createButton(text, isActive) {
+            const button = document.createElement('button');
+            button.className = isActive ? 'btn btn-link text-blue-500 font-weight-bold' : 'btn btn-link text-gray-500';
+            button.style.setProperty('--darkreader-inline-outline', 'var(--darkreader-border-1846db, #1234a4)');
+            button.style.setProperty('--darkreader-inline-bgcolor', 'var(--darkreader-background-bfcbf5, #2d3133)');
+            button.setAttribute('data-darkreader-inline-outline', '');
+            button.setAttribute('data-darkreader-inline-bgcolor', '');
+            button.textContent = text;
+            button.onclick = () => showSection(text.toLowerCase().replace(' ', ''));
+            return button;
+        }
+
+        // Add new buttons to the navigation tabs
+        const navTabs = document.getElementById('nav-tabs');
+        navTabs.appendChild(createButton('New Tab 1', false));
+        navTabs.appendChild(createButton('New Tab 2', true));
+
+        // Function to show different sections
+        function showSection(section) {
+            const mainContent = document.getElementById('main-content');
+            let content = '';
+
+            switch(section) {
+                case 'home':
+                    content = `<h2 class="h4 font-weight-bold">Home</h2><p>Welcome to the home page.</p>`;
+                    break;
+                case 'profile':
+                    content = `<h2 class="h4 font-weight-bold">Profile</h2><p>Profile details go here.</p>`;
+                    break;
+                case 'calendar':
+                    content = `<h2 class="h4 font-weight-bold">Calendar</h2><p>Calendar details go here.</p>`;
+                    break;
+                case 'settings':
+                    content = `<h2 class="h4 font-weight-bold">Settings</h2><p>Settings details go here.</p>`;
+                    break;
+                case 'general':
+                    content = `<h2 class="h4 font-weight-bold">General</h2><p>General information goes here.</p>`;
+                    break;
+                case 'photos':
+                    content = `<h2 class="h4 font-weight-bold">Photos</h2><p>Photos go here.</p>`;
+                    break;
+                case 'charts':
+                    content = `<h2 class="h4 font-weight-bold">Charts</h2><p>Charts go here.</p>`;
+                    break;
+                case 'eclaims':
+                    content = `<h2 class="h4 font-weight-bold">eClaims</h2><p>eClaims details go here.</p>`;
+                    break;
+                case 'ledger':
+                    content = `<h2 class="h4 font-weight-bold">Ledger</h2><p>Ledger details go here.</p>`;
+                    break;
+                case 'inpatient':
+                    content = `<h2 class="h4 font-weight-bold">Inpatient</h2><p>Inpatient details go here.</p>`;
+                    break;
+                case 'smile':
+                    content = `<h2 class="h4 font-weight-bold">Smile</h2><p>Smile details go here.</p>`;
+                    break;
+                case 'checklists':
+                    content = `<h2 class="h4 font-weight-bold">Checklists</h2><p>Checklists go here.</p>`;
+                    break;
+                case 'lab':
+                    content = `<h2 class="h4 font-weight-bold">Lab</h2><p>Lab details go here.</p>`;
+                    break;
+                case 'imaging':
+                    content = `<h2 class="h4 font-weight-bold">Imaging</h2><p>Imaging details go here.</p>`;
+                    break;
+                case 'docs':
+                    content = `<h2 class="h4 font-weight-bold">Docs</h2><p>Docs go here.</p>`;
+                    break;
+                case 'overview':
+                    content = `<h2 class="h4 font-weight-bold">Overview</h2><p>Overview details go here.</p>`;
+                    break;
+                case 'quickselect':
+                    content = `<h2 class="h4 font-weight-bold">Quickselect</h2><p>Quickselect details go here.</p>`;
+                    break;
+                case 'periodontal':
+                    content = `<h2 class="h4 font-weight-bold">Periodontal Probing</h2><p>Periodontal Probing details go here.</p>`;
+                    break;
+                case 'ai':
+                    content = `<h2 class="h4 font-weight-bold">AI Analysis</h2><p>AI Analysis details go here.</p>`;
+                    break;
+                case 'dentis':
+                    content = `<h2 class="h4 font-weight-bold">Dentis</h2><p>Dentis details go here.</p>`;
+                    break;
+                case 'perio':
+                    content = `<h2 class="h4 font-weight-bold">Perio</h2><p>Perio details go here.</p>`;
+                    break;
+                case 'endo':
+                    content = `<h2 class="h4 font-weight-bold">Endo</h2><p>Endo details go here.</p>`;
+                    break;
+                case 'all':
+                    content = `<h2 class="h4 font-weight-bold">All</h2><p>All details go here.</p>`;
+                    break;
+                default:
+                    content = `<h2 class="h4 font-weight-bold">Charts</h2><p>Charts go here.</p>`;
+            }
+
+            mainContent.innerHTML = content;
+        }
+  </script>
+ </body>
+</html>

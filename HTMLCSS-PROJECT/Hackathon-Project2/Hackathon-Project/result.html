@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediHub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <header>
+        <div class="logo"><i class="fas fa-heartbeat me-2"></i> Pulsepoint</div>
+            <nav>
+                <a href="/indexpage.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="/history.html"><i class="fa-solid fa-file-waveform"></i> Medical History</a>
+                <a href=""><i class="fa-solid fa-kit-medical"></i> First Aid</a>
+                <a href="#">Contact</a>
+            </nav>
+  </header> 
+
+  <main class="container">
+    <aside class="filters">
+      <h2>Search Filters</h2>
+      <div class="container">
+        <pre style="padding-left: 5px;"><label for="rangeInput">Select a Budget:</label>
+        <input type="range"  id="rangeInput" min="0" max="100000" value="0" oninput="updateValue(this.value)">
+        <div class="value-display">Value: <span id="rangeValue">0</span></div>
+      </pre>
+    </div>
+
+    <script>
+        function updateValue(val) {
+            document.getElementById('rangeValue').textContent = val;
+        }
+    </script>
+      <label>Preferred Location</label>
+      <input type="text" placeholder="Enter location">
+      <button>Search</button>
+    </aside>
+
+    <section class="results">
+      <h2>Hospital Results</h2>
+      <div class="hospital-card">
+        <img src="OIP (1).jpg" alt="City Health Hospital" />
+        <div class="hospital-info">
+
+          <h3>City Health Hospital</h3>
+          <p>Offering emergency, surgical, and outpatient services.</p>
+          <p>Rating: 4.5/5</p>
+          <button>More Details</button>
+        </div>
+      </div>
+
+      <div class="hospital-card">
+        <img src="OIP (2).jpg" alt="Green Valley Medical Center" />
+        <div class="hospital-info">
+
+          <h3>Green Valley Medical Center</h3>
+          <p>Specializes in pediatric and geriatric care.</p>
+          <p>Rating: 4.2/5</p>
+          <button>More Details</button>
+        </div>
+      </div>
+
+      <div class="hospital-card">
+        <img src="OIP.jpg" alt="Downtown Clinic" />
+        <div class="hospital-info">
+
+          <h3>Downtown Clinic</h3>
+          <p>Known for cardiology and neurology specialties.</p>
+          <p>Rating: 4.8/5</p>
+          <button>More Details</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <strong><i class="fas fa-heartbeat me-2"></i>PulsePoint</strong><br />
+      Your trusted partner in healthcare search.
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email:<a href="mailto:support@medicarehub.com">@xyz.com</a></p>
+      <p>Phone: 1010101010</p>
+    </div>
+  </footer>
+
+</body>
+</html>

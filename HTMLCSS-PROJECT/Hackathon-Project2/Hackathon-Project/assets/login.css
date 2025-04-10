@@ -1,0 +1,128 @@
+body {
+    /* background-image: url(op1.png.jpg); */
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header{  
+    height: 40px;
+    padding: 15px 20px;
+    background: white;
+    display: flex;
+    align-content: center;
+}
+
+header h1{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.Wraper{
+    width: 420px;
+    background: #151515;;  
+    padding: 30px 40px;  
+    border: 4px solid rgb(0, 0, 0); 
+    border-radius: 20px; 
+    margin-left: 540px;
+    margin-top: 90px;
+    background: transparent;
+}
+.Wraper h1{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    margin-top: 0%;
+}
+
+.Wraper .input-box{
+    width: 100%;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: none;
+    font-weight: 300;
+    padding: 20px 45px 20px 20px;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+.input-box input:hover{
+    background: transparent;
+    border: 2px solid rgb(243, 202, 24);
+    color: rgb(0, 0, 0);
+}
+.input-box i{
+    position: absolute;
+    right: 550px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.509);
+}
+.input-box input::placeholder{
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+.remember-forgot{
+    display: flex;
+    justify-content: space-between; 
+    padding: 5px 5px; 
+    padding: 10px 0px 10px 0px;
+    color: rgb(0, 0, 0);
+}
+.remember-forgot a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    
+}    
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.Wraper .btn{
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 30px ;
+    background: transparent;
+    color: rgb(2, 2, 2);
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+    font-weight: 600;
+} 
+.Wraper .btn:hover{
+    background: transparent;
+    border: 2px solid rgb(243, 202, 24);
+    color: rgb(0, 0, 0);
+}
+.register-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px 30px 0px;
+}
+.register-link p{
+    display: inline;   
+    color: black;
+    padding-top: 5px;
+}
+.register-link a{
+    margin: 4px 0px 2px 2px;
+    color: rgb(246, 79, 60);
+    text-decoration: underline;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Medical Dashboard</title>
+  <link rel="stylesheet" href="/assets/dash.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+</head>
+<body>
+
+  <header>
+    <p><i class="fas fa-heartbeat me-2"></i> Pulsepoint</p>
+    <nav class="navbar">
+        <i class="fa-solid fa-house"></i>
+        <a href="Home-code.html/">Home</a>
+        <i class="fa-solid fa-user"></i>
+        <a href="#">User</a>
+    </nav>
+  </header>
+
+  <div class="dashboard">
+
+    <aside class="sidebar">
+      <h3><i class="fa-solid fa-bars"></i> Menu</h3>
+      <a href="#timeline">Health Timeline</a>
+      <a href="#specialist">Find Specialist</a>
+      <a href="#analytics">Analytics</a>
+    </aside>
+
+    <main class="content">
+
+       <section class="section" id="timeline">
+            <h2>Health Timeline</h2>
+            <div class="timeline-item"><span>2025-03-10:</span> Annual Checkup - Normal</div>
+            <div class="timeline-item"><span>2024-11-22:</span> Blood Test - High Cholesterol</div>
+            <div class="timeline-item"><span>2024-08-15:</span> MRI Scan - Clear</div>
+      </section>
+
+      <section class="section" id="specialist">
+            <h2>Find a Specialist</h2>
+            <input class="search-input" type="text" placeholder="Search by name or specialty..." />
+         <div class="specialist-list">
+            <div class="specialist-item">Dr. Angela Lee - Cardiologist</div>
+            <div class="specialist-item">Dr. Raj Mehta - Neurologist</div>
+            <div class="specialist-item">Dr. Emily Zhang - General Physician</div>
+         </div>
+      </section>
+
+      <section class="section" id="analytics">
+        <h2>Health Analytics</h2>
+        <div class="chart-container">
+          <div class="bar-chart">
+            <div>
+              <div class="bar" style="height: 120px;">80</div>
+              <div class="bar-label">Heart Rate</div>
+            </div>
+            <div>
+              <div class="bar" style="height: 180px;">120</div>
+              <div class="bar-label">BP</div>
+            </div>
+            <div>
+              <div class="bar" style="height: 90px;">70</div>
+              <div class="bar-label">Cholesterol</div>
+            </div>
+            <div>
+              <div class="bar" style="height: 140px;">95</div>
+              <div class="bar-label">Glucose</div>
+            </div>
+          </div>
+        </div>
+      
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>

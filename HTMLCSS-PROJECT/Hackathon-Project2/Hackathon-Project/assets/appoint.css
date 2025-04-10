@@ -1,0 +1,158 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1E1E1E;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-buttons button, input[type="text"] {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.nav-buttons button:hover{
+    background-color: #444;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    color: #ffffff;
+    padding: 8px 12px;
+    width: 200px;
+}
+
+input[type="email"]{
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+input[type="text"]:hover{
+    background-color: black;
+}
+
+input[type="email"]:hover{
+    background-color: black;
+}
+
+/* Main Section */
+main {
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.left-section {
+    width: 50%;
+}
+
+.right-section {
+    width: 40%;
+}
+
+/* Cards */
+.card, .summary {
+    color: black;
+    background: #f3f3f3be;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card h2, .summary h2 {
+    margin-bottom: 15px;
+}
+
+.patient {
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 5px ;
+    background: #333333;
+    border: 1px solid #444;
+    color: white;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row input {
+    width: 50%;
+}
+
+/* Right Section (Summary) */
+.summary p {
+    margin: 5px 0;
+}
+
+/* Button */
+.confirm-btn {
+    width: 100%;
+    padding: 12px;
+    background: #ff00ff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.confirm-btn:hover {
+    border-radius: 2px solid black; ;
+    background: #cc00ccb2;
+    color: black;
+}
+
+/* Footer */
+footer {
+    background: #c7c79f;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.footer-right a {
+    color: black;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulsePoint Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-blue-500">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+            <h1 class="text-2xl font-bold text-center mb-6">User Registration</h1>
+            
+            <form id="hospitalSignupForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">User Name</label>
+                    <input type="text" name="hospital_name" required 
+                           class="mt-1 gry block w-full rounded-md border-black-500 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" name="email" required 
+                           class="mt-1 block gry w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" name="password" required 
+                           class="mt-1 block gry w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Address</label>
+                    <input type="text" name="address" required 
+                           class="mt-1 block gry w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">City</label>
+                        <input type="text" name="city" required 
+                               class="mt-1 gry block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">State</label>
+                        <input type="text" name="state" required 
+                               class="mt-1 block gry w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">ZIP Code</label>
+                    <input type="text" name="zip" required 
+                           class="mt-1 block gry w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="tel" name="phone" required 
+                           class="mt-1 block gry w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Specialties (comma separated)</label>
+                    <textarea name="specialties" rows="3" 
+                              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" 
+                            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Register Hospital
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('hospitalSignupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+        
+        // Get form elements
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const spinner = document.getElementById('spinner');
+        const errorContainer = document.getElementById('errorContainer');
+        const errorMessage = document.getElementById('errorMessage');
+        
+        // Validate password match
+        if (e.target.password.value !== e.target.confirm_password.value) {
+            errorMessage.textContent = 'Passwords do not match';
+            errorContainer.classList.remove('hidden');
+            return;
+        }
+
+        // Show loading state
+        submitBtn.disabled = true;
+        btnText.textContent = 'Registering...';
+        spinner.classList.remove('hidden');
+        errorContainer.classList.add('hidden');
+
+        const formData = {
+            email: e.target.email.value,
+            password: e.target.password.value,
+            is_hospital: true,
+            hospital_name: e.target.hospital_name.value,
+            hospital_address: e.target.address.value,
+            hospital_city: e.target.city.value,
+            hospital_state: e.target.state.value,
+            hospital_zip: e.target.zip.value,
+            hospital_phone: e.target.phone.value,
+            hospital_specialties: e.target.specialties.value
+        };
+
+            try {
+                const response = await fetch('/api/auth/hospital-register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    window.location.href = '/hospital-dashboard';
+                } else {
+                    errorMessage.textContent = data.error || 'Registration failed';
+                    errorContainer.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.textContent = 'An error occurred during registration';
+                errorContainer.classList.remove('hidden');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.textContent = 'Register Hospital';
+                spinner.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

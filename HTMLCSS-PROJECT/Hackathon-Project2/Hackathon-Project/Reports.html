@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediConnect</title>
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <!-- Bootstrap CSS for additional styles -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-gray-700 text-white">
+
+    <!-- Header Section -->
+    <header class="p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <i class="fas fa-heartbeat me-2"></i>
+            <span class="text-xl font-bold">Pulse Point</span>
+        </div>
+        <nav class="space-x-4">
+            <a class="text-white" href="/indexpage.html">Home</a>
+            <a class="text-white" href="/history.html">Medical History</a>
+            <a class="text-white" href="/map2.html">Search Hospitals</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="p-4 space-y-4">
+
+        <!-- Form Section for Uploading Report -->
+        <section class="bg-blue-600 p-6 rounded-lg">
+            <h2 class="text-xl font-bold mb-4">Upload New Report</h2>
+            <form id="uploadForm" enctype="multipart/form-data" class="flex flex-col items-center justify-center">
+                <div class="mb-4">
+                    <label for="reportType" class="block text-lg">Report Type:</label>
+                    <input type="text" id="reportType" name="type" required class="p-2 rounded bg-gray-600 text-white w-80"/>
+                </div>
+                <div class="mb-4">
+                    <label for="img" class="block text-lg">Choose Image:</label>
+                    <input type="file" id="img" name="img" accept="image/*" required class="p-2 rounded bg-gray-600 text-white w-80"/>
+                </div>
+                <button type="submit" class="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+                    Upload Report
+                </button>
+                <div id="errorMessage" class="error mt-4 text-red-500" style="display:none;"></div>
+            </form>
+        </section>
+
+        <!-- Display Uploaded Reports -->
+        <section class="bg-gray-500 p-6 rounded-lg">
+            <h2 class="text-xl font-bold mb-4">Uploaded Reports</h2>
+            <div id="reports" class="grid grid-cols-3 gap-4">
+                <!-- Dynamic Report Cards Will be Displayed Here -->
+            </div>
+        </section>
+
+         <section class="bg-blue-600 p-4 rounded-lg">
+
+
+        <div class="bg-dark mt-4 p-4 rounded-lg shadow d-flex align-items-center overflow-auto" id="nav-tabs">
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('general')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                General
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('photos')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                Photos
+            </button>
+            <button class="btn btn-link text-blue-500 font-weight-bold" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('charts')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                Charts
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('eclaims')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                eClaims
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('ledger')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                Ledger
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('inpatient')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                Inpatient
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('smile')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                Smile
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('checklists')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                Checklists
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('lab')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                Lab
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('imaging')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                Imaging
+            </button>
+            <button class="btn btn-link text-gray-500" data-darkreader-inline-bgcolor="" data-darkreader-inline-outline="" onclick="showSection('docs')" style="--darkreader-inline-outline: var(--darkreader-border-1846db, #1234a4); --darkreader-inline-bgcolor: var(--darkreader-background-bfcbf5, #2d3133);">
+                Docs
+            </button>
+        </div>
+
+
+        <div class="bg-dark mt-4 p-4 rounded-lg shadow d-flex align-items-center overflow-auto">
+            <button class="btn btn-link text-blue-500 font-weight-bold" onclick="showSection('overview')">
+                Overview
+            </button>
+            <button class="btn btn-link text-gray-500" onclick="showSection('quickselect')">
+                Quickselect
+            </button>
+            <button class="btn btn-link text-gray-500" onclick="showSection('periodontal')">
+                Periodontal Probing
+            </button>
+            <button class="btn btn-link text-gray-500" onclick="showSection('ai')">
+                AI Analysis
+            </button>
+        </div>
+
+
+        <div class="bg-dark mt-4 p-4 rounded-lg shadow" id="main-content">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h4 font-weight-bold">
+                    Charts
+                </h2>
+            <div class="d-flex">
+                <button class="btn btn-link text-blue-500" onclick="showSection('dentis')">
+                    Dentis
+                </button>
+                <button class="btn btn-link text-gray-500" onclick="showSection('perio')">
+                    Perio
+                </button>
+                <button class="btn btn-link text-gray-500" onclick="showSection('endo')">
+                    Endo
+                </button>
+                <button class="btn btn-link text-gray-500" onclick="showSection('all')">
+                    All
+                </button>
+            </div>
+        </div>
+        <div class="position-relative">
+        <img alt="X-ray image of teeth with AI analysis overlay" class="img-fluid rounded-lg" height="200" src="https://storage.googleapis.com/a1aa/image/zh_H11cIGDG0Kbtcq0SAYYALf7akfrqzjJPQvJfduI0.jpg" width="400"/>
+        <div class="position-absolute w-50 h-50 d-flex flex-column align-items-center justify-content-center text-white" style="top: 0; left: 0;">
+            <h3 class="h2 font-weight-bold">
+                AI Analysis
+            </h3>
+            <p>
+                1 problem found
+            </p>
+        </div>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="bg-blue-600 p-4 rounded-lg">
+        <h2 class="text-xl font-bold mb-4">Saved Reports</h2>
+        <div class="flex justify-between items-center mb-4">
+            <input class="bg-gray-600 text-white p-2 rounded-lg w-full max-w-xs" placeholder="Search reports..." type="text"/>
+            <button class="bg-gray-500 text-white py-2 px-4 rounded ml-2">
+                Search
+            </button>
+        </div>
+
+        <div class="grid grid-cols-3 md:grid-cols-5 gap-4">
+            <div class="bg-gray-600 p-4 rounded-lg">
+                <img alt="Blood Test Report" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/alZBLNQm1-KAtKa6d5wR7PKj0juJy43YpNU9WXJZxzI.jpg" width="300"/>
+                <p>Blood Test Report - 12/10/2023</p>
+                <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                    Add Note
+                </button>
+            </div>
+            <div class="bg-gray-600 p-4 rounded-lg">
+                <img alt="MRI Scan" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/SsovyAca219fbJ0j1Wi51ZjKImp5bHEyUbquqFQoWRU.jpg" width="300"/>
+                <p>MRI Scan - 09/09/2023</p>
+                <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                    Add Note
+                </button>
+            </div>
+            <div class="bg-gray-600 p-4 rounded-lg">
+                <img alt="X-ray" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/NFRnJs877RHRym-WbzGdFQX9O_nKVnp-OvGTGfyxFgA.jpg" width="300"/>
+                <p>X-ray - 15/08/2023</p>
+                <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                    Add Note
+                </button>
+            </div>
+            <div class="bg-gray-600 p-4 rounded-lg">
+                <img alt="Blood Test Report" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/alZBLNQm1-KAtKa6d5wR7PKj0juJy43YpNU9WXJZxzI.jpg" width="300"/>
+                <p>Blood Test Report - 12/10/2023</p>
+                <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                    Add Note
+                </button>
+            </div>
+            <div class="bg-gray-600 p-4 rounded-lg">
+                <img alt="MRI Scan" class="rounded-lg mb-2" height="200" src="https://storage.googleapis.com/a1aa/image/SsovyAca219fbJ0j1Wi51ZjKImp5bHEyUbquqFQoWRU.jpg" width="300"/>
+                <p>MRI Scan - 09/09/2023</p>
+                <button class="bg-black text-white py-1 px-2 rounded mt-2">
+                    Add Note
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-gray-500 mb-4 p-4 rounded-lg">
+        <h2 class="text-xl font-bold mb-4">
+        Quick Access
+        </h2>
+        <div class="mb-4">
+        <h3 class="font-bold">
+        Recently Viewed
+        </h3>
+        <ul class="list-disc list-inside">
+        <li>Blood Test Report - 12/10/2023  </li>
+        <li>MRI Scan - 09/09/2023      </li>
+        <li>X-ray - 15/08/2023    </li>
+        <li></li>
+        <li></li>
+        </ul>
+        </div>
+        <div>
+        <h3 class="font-bold">User Settings</h3>
+        <button class="bg-gray-500 text-white py-2 px-4 rounded mt-2">
+        Manage Account
+        </button>
+        </div>
+    </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="p-4 bg-gray-900 text-center">
+        <p>&copy; 2025 MediCareHub Medical. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Handling -->
+    <script>
+        // Form submit handler
+        document.getElementById('uploadForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData();
+            const reportType = document.getElementById('reportType').value;
+            const fileInput = document.getElementById('img');
+
+            // Validation
+            if (!reportType || !fileInput.files[0]) {
+                document.getElementById('errorMessage').innerText = 'Please select a file and enter the report type.';
+                document.getElementById('errorMessage').style.display = 'block';
+                return;
+            }
+
+            document.getElementById('errorMessage').style.display = 'none';
+
+            // Append data to FormData
+            formData.append('type', reportType);
+            formData.append('img', fileInput.files[0]);
+
+            // Send data to the server
+            fetch('http://localhost:5000/upload', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === 'Image uploaded successfully') {
+                    alert('File uploaded successfully!');
+                    loadReports();
+                } else {
+                    alert('Upload failed. Try again.');
+                }
+            })
+            .catch(err => {
+                console.error('Error uploading image:', err);
+                alert('There was an error uploading the image.');
+            });
+        });
+
+        // Load and display uploaded reports
+        function loadReports() {
+            fetch('http://localhost:5000/reports')
+                .then(response => response.json())
+                .then(data => {
+                    const reportsContainer = document.getElementById('reports');
+                    reportsContainer.innerHTML = '';
+
+                    data.forEach(report => {
+                        const reportCard = document.createElement('div');
+                        reportCard.classList.add('bg-gray-600', 'p-4', 'rounded-lg');
+                        reportCard.innerHTML = `
+                            <img src="data:image/jpeg;base64,${report.img_data}" alt="${report.type}" class="rounded-lg mb-2" />
+                            <p>${report.type}</p>
+                            <button class="bg-black text-white py-1 px-2 rounded mt-2">Add Note</button>
+                        `;
+                        reportsContainer.appendChild(reportCard);
+                    });
+                })
+                .catch(err => console.error('Error loading reports:', err));
+        }
+
+        // Load reports when the page loads
+        window.onload = loadReports;
+    </script>
+
+</body>
+</html>
