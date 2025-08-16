@@ -1,5 +1,5 @@
 // scripting lang- js
-// console.log("Hello world..")
+// console.log("Hello world..");
 
 // keywords- special words with means
 // var let const
@@ -282,3 +282,153 @@
     // Object.entries(course).forEach(function (val) {
     //     console.log(val[0]+": "+val[1]);
     // });
+
+// DOM-
+    // 1) HTML SELECT -
+        // let abs = document.getElementById("abs");
+        // console.dir(abs);
+        // document.getElementsByClassName("pds");
+
+        // let abc = document.querySelector("h1");
+        // let abc = document.querySelectorAll("h1");
+        // console.dir(abc);
+
+    // TEXT MANIPULATION -
+        // let h1 = document.querySelector("h1");
+        // h1.textContent = "Hello kaise ho";
+        // h1.innerHTML = "<i> Hello html kaise ho </i>";
+        // h1.innerText = "Hello text kaise ho";
+
+    // ATTRIBUTE MANIPULATION -
+        // let a = document.querySelector("a");
+        // a.href = "https://google.com";
+        // a.setAttribute("href", "https://google.com");
+
+        // let img = document.querySelector("img");
+        // img.setAttribute("src", "fjnvjknmz");
+        // console.log(a.getAttribute("href"));
+
+        // a.removeAttribute("href");
+
+    // DYNAMIC DOM MANIPULATION -
+        // let h1 = document.createElement("h1");
+        // h1.textContent = "Hellloooo";
+        // document.body.append(h1);
+        // document.body.prepend(h1);
+
+        // h1.style.color = "red";
+        // h1.style.fontFamily = "gilroy";
+
+        // h1.classList.add("hulu");
+        // h1.classList.remove("hulu");
+        // h1.classList.toggle("hulu");
+
+    // EVENT LISTENER -
+        // let p = document.querySelector("p");
+        // p.addEventListener("click", function () {
+        //     p.style.color = "green";
+        // });
+
+        // let p = document.querySelector("p");
+        // function dblclick () {
+        //     p.style.color = "red";
+        // }
+        // p.addEventListener("dblclick", dblclick);
+        // p.removeEventListener("dblclick", dblclick);
+
+        // let input = document.querySelector("input");
+        // input.addEventListener("input", function (dets) {
+        //     if (dets.data !== null) {
+        //     console.log("data :-", dets.data);
+        //     }
+        // });
+
+        // let sel = document.querySelector("select");
+        // let device = document.querySelector("#device");
+
+        // sel.addEventListener("change", function (dets) {
+        //     device.textContent = `${dets.target.value} Device selected`;
+        //     console.log(dets.target.value);
+        // });
+
+
+
+// PRACTICE - DOM
+    // let lis = document.querySelectorAll("li");
+    // lis.forEach(function (val) {
+    //     console.log(val.textContent);
+    // })
+    // for(let i=0; i<lis.length; i++){
+    //     console.log(lis[i].textContent);
+    // }
+
+// PROJECT - 
+
+// let h1 = document.querySelector("h1");
+
+// window.addEventListener("keydown", function (dets) {
+//     // console.log(dets.key);
+//     if(dets.key === " "){
+//         h1.textContent = "SPC";
+//     } else 
+//     h1.textContent = dets.key;
+// });
+    
+// input
+// let btn = document.querySelector("#btn");
+// let fileinp = document.querySelector("#fileinp");
+
+// btn.addEventListener("click", function(){
+//     fileinp.click();
+// });
+
+// fileinp.addEventListener("change", function(dets){
+//     const file = dets.target.files[0];
+//     if(file){
+//         btn.textContent = file.name;
+//     }
+// })
+
+// form-
+let form = document.querySelector("form");
+let inputs = document.querySelectorAll("input");
+let main = document.querySelector("#main");
+
+form.addEventListener("submit", function(dets){
+    dets.preventDefault();
+
+    // console.log(inputs[0].value,inputs[1].value,inputs[2].value, inputs[3].value);
+
+    let card = document.createElement("div");
+    card.classList.add("card");
+
+    let profile = document.createElement("div");
+    profile.classList.add("profile");
+
+    let img = document.createElement("img");
+    img.setAttribute("src", inputs[0].value);
+
+    let h3 = document.createElement("h3");
+    h3.textContent = inputs[1].value;
+    let h5 = document.createElement("h5");
+    h5.textContent = inputs[2].value;
+    let p = document.createElement("p");
+    p.textContent = inputs[3].value;
+
+
+    profile.appendChild(img);
+    card.appendChild(profile);
+    card.appendChild(h3);
+    card.appendChild(h5);
+    card.appendChild(p);
+
+    main.appendChild(card);
+
+    inputs.forEach(function(inp){
+        if(inp.type !== "submit"){
+           inp.value = "";
+        }
+    });
+});
+
+
