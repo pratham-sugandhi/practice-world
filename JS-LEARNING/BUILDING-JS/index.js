@@ -364,71 +364,363 @@
 
 // PROJECT - 
 
-// let h1 = document.querySelector("h1");
+    // let h1 = document.querySelector("h1");
 
-// window.addEventListener("keydown", function (dets) {
-//     // console.log(dets.key);
-//     if(dets.key === " "){
-//         h1.textContent = "SPC";
-//     } else 
-//     h1.textContent = dets.key;
-// });
+    // window.addEventListener("keydown", function (dets) {
+    //     // console.log(dets.key);
+    //     if(dets.key === " "){
+    //         h1.textContent = "SPC";
+    //     } else 
+    //     h1.textContent = dets.key;
+    // });
     
 // input
-// let btn = document.querySelector("#btn");
-// let fileinp = document.querySelector("#fileinp");
+    // let btn = document.querySelector("#btn");
+    // let fileinp = document.querySelector("#fileinp");
 
-// btn.addEventListener("click", function(){
-//     fileinp.click();
-// });
+    // btn.addEventListener("click", function(){
+    //     fileinp.click();
+    // });
 
-// fileinp.addEventListener("change", function(dets){
-//     const file = dets.target.files[0];
-//     if(file){
-//         btn.textContent = file.name;
-//     }
-// })
+    // fileinp.addEventListener("change", function(dets){
+    //     const file = dets.target.files[0];
+    //     if(file){
+    //         btn.textContent = file.name;
+    //     }
+    // })
 
 // form-
-let form = document.querySelector("form");
-let inputs = document.querySelectorAll("input");
-let main = document.querySelector("#main");
+    // let form = document.querySelector("form");
+    // let inputs = document.querySelectorAll("input");
+    // let main = document.querySelector("#main");
 
-form.addEventListener("submit", function(dets){
-    dets.preventDefault();
+    // form.addEventListener("submit", function(dets){
+    //     dets.preventDefault();
 
-    // console.log(inputs[0].value,inputs[1].value,inputs[2].value, inputs[3].value);
+    //     // console.log(inputs[0].value,inputs[1].value,inputs[2].value, inputs[3].value);
 
-    let card = document.createElement("div");
-    card.classList.add("card");
+    //     let card = document.createElement("div");
+    //     card.classList.add("card");
 
-    let profile = document.createElement("div");
-    profile.classList.add("profile");
+    //     let profile = document.createElement("div");
+    //     profile.classList.add("profile");
 
-    let img = document.createElement("img");
-    img.setAttribute("src", inputs[0].value);
+    //     let img = document.createElement("img");
+    //     img.setAttribute("src", inputs[0].value);
 
-    let h3 = document.createElement("h3");
-    h3.textContent = inputs[1].value;
-    let h5 = document.createElement("h5");
-    h5.textContent = inputs[2].value;
-    let p = document.createElement("p");
-    p.textContent = inputs[3].value;
+    //     let h3 = document.createElement("h3");
+    //     h3.textContent = inputs[1].value;
+    //     let h5 = document.createElement("h5");
+    //     h5.textContent = inputs[2].value;
+    //     let p = document.createElement("p");
+    //     p.textContent = inputs[3].value;
 
 
-    profile.appendChild(img);
-    card.appendChild(profile);
-    card.appendChild(h3);
-    card.appendChild(h5);
-    card.appendChild(p);
+    //     profile.appendChild(img);
+    //     card.appendChild(profile);
+    //     card.appendChild(h3);
+    //     card.appendChild(h5);
+    //     card.appendChild(p);
 
-    main.appendChild(card);
+    //     main.appendChild(card);
 
-    inputs.forEach(function(inp){
-        if(inp.type !== "submit"){
-           inp.value = "";
-        }
-    });
-});
+    //     inputs.forEach(function(inp){
+    //         if(inp.type !== "submit"){
+    //            inp.value = "";
+    //         }
+    //     });
+    // });
 
+
+// mouseover-
+    // let abcd = document.querySelector("#abcd");
+
+    // abcd.addEventListener("mouseover", function(){
+    //     abcd.style.backgroundColor = "yellow";
+    // });
+    // abcd.addEventListener("mouseout", function(){
+    //     abcd.style.backgroundColor = "red";
+    // });
+
+// mousemove -
+    // let abcd  = document.querySelector("#abcd");
+
+    // window.addEventListener("mousemove", function(dets){
+    //     // console.log(dets.clientX, dets.clientY);
+    //     abcd.style.top = dets.clientY + "px";
+    //     abcd.style.left = dets.clientX + "px";
+    // });
+
+// Event bubling - parent se listener lekr apply karna 
+    // let ul = document.querySelector("ul");
+
+    // ul.addEventListener("click", function(dets){
+    //     // console.log(dets.target);
+    //     // dets.target.style.textDecoration = "line-through";
+
+    //     dets.target.classList.toggle("lt");
+    // });
+
+// Event capturing - 
+    // jab bhi eventhota hai flow do phase me hota hai-
+    // 1) top lvl se neeche aayega
+    // 2) raised Element se parent ki taraf (bubling)
+
+    // let a = document.querySelector(".a");
+    // let b = document.querySelector(".b");
+    // let c = document.querySelector(".c");
+    // let btn = document.querySelector("button");
+
+    // btn.addEventListener("click", function(){
+    //     console.log("button clicked");
+    // });         //bubling phase (2)
+    // c.addEventListener("click", function(){
+    //     console.log("c clicked");
+    // });         //bubling phase (3)
+    // b.addEventListener("click", function(){
+    //     console.log("b clicked");
+    // });         //bubling phase (4)
+    // a.addEventListener("click", function(){
+    //     console.log("a clicked");
+    // }, true);   //capture phase (!)
+
+// charactercounter -- 
+
+    // let inp = document.querySelector("input");
+    // let span = document.querySelector("span");
+
+    // inp.addEventListener("input", function(){
+    //     // console.log(inp.value.length);
+
+    //     let left = 20 - inp.value.length;
+    //     span.textContent = left;
+
+    //     if(left < 0){
+    //         span.style.color = "red";
+    //     }
+    //     else {
+    //         span.style.color = "white";
+    //     }
+    // });
+
+// FORMS MANIPULATION - 
+    // let nm  = document.querySelector("#name");
+    // let form  = document.querySelector("form");
+
+    // form.addEventListener("submit", function(dets){
+    //     dets.preventDefault();
+
+    //     if(nm.ariaValueMax.length <= 2){
+    //         document.querySelector("#hide").style.display = "initial";
+    //     } else{
+    //         document.querySelector("#hide").style.display = "none";
+    //     }
+    // });
+
+// inline validations - required, minlength , maxlength
+// pattern validation - pattern ="[a-z]{3,8}";"
+
+// regex code
+    // form.addEventListener("submit", function(dets){
+        // dets.preventDefault();
+
+        // const regex = /^[];
+        // let ans = regex.test("pdsug@gmail.com");
+        // console.log(ans);    //true
+    // });
+
+// handle password and email-
+
+    // <!-- Timers and Intervals -->
+
+    // let tm = setTimeout(function (){
+    //    console.log("hello");
+    // }, 5000);
+    // clearTimeout(tm);
+
+    // setInterval(function (){
+    //    console.log("hello");
+    // }, 5000);
+    // clearInterval(tm);
+
+    // let count = 10;
+    // let interval = setInterval(function(){
+    //     if(count >= 0){
+    //         count-- ;
+    //         console.log(count);
+    //     } else {
+    //         clearInterval(interval);
+    //     }
+    // }, 1000);
+
+// task -2 downloader(5:09)
+// auto hide banner after 3secs
+
+// localStorage - browser me store krna jo dekete nhi honga
+    // store-
+        // localStorage.setItem("name", "prathu");
+    // fetch-
+        // let val = localStorage.getItem("name");
+    // remove-
+        // localStorage.removeItem("name");
+    // update-
+        // localStorage.setItem("name", "pratham");
+
+    // localStorage.setItem("friends", JSON.stringify(["amarsh","mayur","bla blba"]));
+    // let fr = JSON.parse(localStorage.getItem("friends"));
+    // console.log(fr);
+
+// sessionStorage - temproray storage
+
+    // store-
+        // sessionStorage.setItem("name", "prathu");
+    // fetch-
+        // let val = sessionStorage.getItem("name");
+    // remove-
+        // sessionStorage.removeItem("name");
+    // update-
+        // sessionStorage.setItem("name", "pratham");
+
+
+// cookies - data storage for small data upto (4kb)
+// save data - page reload par server me jayega 
+    // document.cookie = "email=prathu@test.com";
+
+// DARK MODE -
+    // function setDarkorLight () {
+    //     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    //         document.body.classList.add("dark");
+    //         document.body.classList.remove("light");
+    //     } else {
+    //         document.body.classList.add("light");
+    //         document.body.classList.remove("dark");
+    //     }
+    // };
+
+    // if (localStorage.getItem("theme")) {
+    //     document.body.classList.add(localStorage.getItem("theme"));
+    // } else {
+    //     setDarkorLight();
+    // }
+
+    // window.matchMedia('(prefers-color-scheme: dark)')
+    //     .addEventListener("change", function(){
+    //         if (!localStorage.getItem("theme")) {
+    //             setDarkorLight();
+    //         }
+    //     });
+
+    // let btn = document.querySelector("button");
+    // btn.addEventListener("click",function(){
+    //     if(document.body.classList.contains("dark")){
+    //         document.body.classList.remove("dark");
+    //         document.body.classList.add("light");
+
+    //         localStorage.setItem("theme", "light");
+    //     } else{
+    //         document.body.classList.add("dark");
+    //         document.body.classList.remove("light");
+
+    //         localStorage.setItem("theme", "dark");
+    //     }
+    // });
+
+    // document.body.classList.add(localStorage.getItem("theme"));
+
+
+
+// search-filter ->
+    // let users = [
+    // {
+    //     name: "amisha rathore",
+    //     pic: "https://i.pinimg.com/736x/cd/9b/1c/cd9b1cf5b96e8300751f952488d6c002.jpg",
+    //     bio: "silent chaos in a loud world 🌑🖤 | not for everyone",
+    // },
+    // {
+    //     name: "amita mehta",
+    //     pic: "https://i.pinimg.com/736x/1f/2f/85/1f2f856bf3a020ed8ee9ecb3306ae074.jpg",
+    //     bio: "main character energy 🎬 | coffee > everything ☕✨",
+    // },
+    // {
+    //     name: "isha oberoi",
+    //     pic: "https://i.pinimg.com/736x/23/48/7e/23487ef1268cfe017047a0640318c0d0.jpg",
+    //     bio: "walking through dreams in doc martens 💭🖤 | late night thinker",
+    // },
+    // {
+    //     name: "Ojin Oklawa",
+    //     pic: "https://i.pinimg.com/736x/01/be/94/01be94b0b5bf03a50b5d6c4bfec78063.jpg",
+    //     bio: "too glam to give a damn 💅 | filter free soul",
+    // },
+    // {
+    //     name: "diya bansal",
+    //     pic: "https://i.pinimg.com/736x/74/b0/67/74b067e6c5ece09d99f68c42c5f6754e.jpg",
+    //     bio: "a little chaos, a lot of art 🎨✨ | just vibes",
+    // },
+    // {
+    //     name: "tanay rawat",
+    //     pic: "https://i.pinimg.com/736x/9b/78/b9/9b78b95425278ee37e88869b8c5fb2c6.jpg",
+    //     bio: "don’t text, just vibe 🪩 | soft heart, sharp mind",
+    // },
+    // {
+    //     name: "mohit chhabra",
+    //     pic: "https://i.pinimg.com/736x/22/8b/cf/228bcf5a0800f813cd1744d4ccbf01ea.jpg",
+    //     bio: "aesthetic overload 📸🕊️ | living in lowercase",
+    // },
+    // ];
+
+    // function showUsers(arr) {
+    // arr.forEach(function (user) {
+    //     // Create outer card div
+    //     const card = document.createElement("div");
+    //     card.classList.add("card");
+
+    //     // Create image
+    //     const img = document.createElement("img");
+    //     img.src = user.pic;
+    //     img.classList.add("bg-img");
+
+    //     // Create blurred-layer div
+    //     const blurredLayer = document.createElement("div");
+    //     blurredLayer.style.backgroundImage = `url(${user.pic})`;
+    //     blurredLayer.classList.add("blurred-layer");
+
+    //     // Create content div
+    //     const content = document.createElement("div");
+    //     content.classList.add("content");
+
+    //     // Create h3 and paragraph
+    //     const heading = document.createElement("h3");
+    //     heading.textContent = user.name;
+
+    //     const para = document.createElement("p");
+    //     para.textContent = user.bio;
+
+    //     // Append heading and paragraph to content
+    //     content.appendChild(heading);
+    //     content.appendChild(para);
+
+    //     // Append all to card
+    //     card.appendChild(img);
+    //     card.appendChild(blurredLayer);
+    //     card.appendChild(content);
+
+    //     // Finally, append card to the body or any container
+    //     document.querySelector(".cards").appendChild(card);
+    // });
+    // }
+
+    // showUsers(users);
+
+    // let inp = document.querySelector(".inp");
+    // inp.addEventListener("input", function () {
+    // let newUsers = users.filter((user) => {
+    //     return user.name.startsWith(inp.value);
+    // });
+
+    // document.querySelector(".cards").innerHTML = "";
+    // showUsers(newUsers);
+    // });
+
+
+// CALL BOOK-
 

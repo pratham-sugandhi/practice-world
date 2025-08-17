@@ -1,9 +1,12 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>learn-js</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
         *{
             margin: 0;
@@ -11,11 +14,36 @@
             font-family: "Gilroy";
             box-sizing: border-box;
         }
+        /* Base styles for body */
+
         html,body{
             width: 100%;
             height: 100%;
         }
-        #main{
+        body{
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+        }
+        small{
+            color: red;
+            font-size: 12px;
+        }
+        #hide{
+            display: none;
+        }
+
+        /* #abcd{
+            position: absolute;
+            transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+        .lt{
+            text-decoration: line-through;
+        } */
+/**        #main{
             width: 100%;
             height: 100%;
             display: flex;
@@ -70,11 +98,14 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
+        } **/
     </style>
+
 </head>
+
 <body>
-    <!-- <h1 id="abs" class="pds">heyhey kaise ho</h1>
+    
+     <h1 id="abs" class="pds">heyhey kaise ho</h1> 
     <h1 class="pds">heyhey kaise ho</h1>
     <h1 class="pds">heyhey kaise ho</h1>
     <a href="">brooo hiis</a>
@@ -85,10 +116,10 @@
         <option value="samsung">Samsung</option>
         <option value="xiomi">Mi</option>
         <option value="apple">Apple</option>
-    </select> -->
+    </select> 
 
-    <!-- //project- -->
-     <!-- <div id="main">
+     //project- 
+     <div id="main">
         <h1>p</h1>
     </div>
 
@@ -97,6 +128,7 @@
         <div id="btn">Upload file</div>
     </div> -->
 
+    <!-- form- 
     <div id="main"> 
         <form action="">
             <input type="text" placeholder="profile pic">
@@ -106,7 +138,7 @@
             <input type="submit">
         </form>
         
-        <!-- <div class="card">
+        <div class="card">
             <div class="profile">
                 <img src="" alt="fkcmvldvkv">
             </div>
@@ -114,10 +146,255 @@
                 <h5>gbsgg</h5>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div> -->
-    </div>
+    <!-- </div> 
+ 
+    <div id="abcd"></div> -->
 
+    <!-- <ul>
+        <li>apple</li>
+        <li>mango</li>
+        <li>banana</li>
+        <li>guava</li>
+    </ul> -->
 
+<!-- // charactercounter -- 
+
+     <input type="text" placeholder="write anything" >
+    <h1>Max character : <span>20</span> </h1> -->
+
+<!-- FORM MANIPULATION 
+     <form>
+        <input required minlength="3" maxlength="10" id="name" type="text" placeholder="name"><br>
+        // <input pattern="[a-z]{3,8}" required id="name" type="text" placeholder="name"><br>
+
+            <div id="hide">
+                <small> your name should be greater than 2 characters</small> 
+            </div> <br><br>
+        <input type="email" placeholder="email"> <br><br>
+        <input type="password" placeholder="password"> <br> <br>
+        <select>
+            <option value="male">male</option> <br>
+            <option value="female">female</option> <br>
+            <option value="others">others</option> <br><br>
+        </select>
+        <br><br>
+        <textarea placeholder="Tell us about you.."></textarea><br><br>
+        <input type="submit">
+    </form> 
+    
+    <!-- Timers and Intervals 
+    
+
+    dark mode game 
     <script src="sript.js"></script>
+    <script src="index.js"></script>
+
+</body>  
+
+</html> 
+-->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn-js</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Light mode */
+        body.light-mode {
+        background-color: #ffffff;
+        color: #000000;
+        }
+
+        /* Dark mode */
+        body.dark-mode {
+        background-color: #121212;
+        color: #ffffff;
+        }
+
+        /* search filter */
+        .input-container {
+            margin-bottom: 20px;
+        }
+body {
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blurred-layer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: bottom;
+  filter: blur(10px);
+  z-index: 1;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+}
+
+.content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.content p {
+  font-size: 14px;
+  color: #ddd;
+  line-height: 1.4;
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="flex flex-col gap-10 items-center">
+        <input class="inp px-5 py-5 rounded outline-none bg-[#111] text-[#888]" type="text" placeholder="Search...">
+        <div class="cards flex gap-10">
+
+        </div>
+    </div>
+  <script src="index.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Note Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin-bottom: 30px;
+    }
+
+    .form-container input, .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .note-container {
+      display: flex;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .left-icons, .stack, .right-colors {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .left-icons {
+      background-color: #e3f2fd;
+    }
+
+    .stack {
+      background-color: #fce4ec;
+    }
+
+    .right-colors {
+      background-color: #e8f5e9;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Create a Note</h2>
+    <form>
+      <input type="text" placeholder="Title" name="title" required>
+      <textarea placeholder="Write your note here..." name="note" rows="5" required></textarea>
+      <button type="submit">Save Note</button>
+    </form>
+  </div>
+
+  <div class="note-container">
+    <div class="left-icons">
+      <button><i class="ri-add-line"></i></button>
+      <button ><i class="ri-add-line"></i></button>
+      <button><i class="ri-add-line"></i></button>
+    </div>
+    <div class="stack">
+      <h3>Note Stack</h3>
+      <!-- Add note content or list here -->
+    </div>
+    <div class="right-colors">
+      <h3>Colors</h3>
+      <!-- Add color options or palette here -->
+    </div>
+  </div>
+
     <script src="index.js"></script>
 </body>
 </html>
