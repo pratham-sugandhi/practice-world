@@ -1,68 +1,104 @@
-@media (max-width:1030px){
-    /* Home Css */
-    .home .home-banner-1,
-    .home .home-banner-2{
-        background-position: 65% center;
-        min-height: 550px;
-    }
-    .home .home-banner .home-banner-text{
-        transform: translate(-80%, -50%);
-    }
+/* Base styles already defined above */
 
-    /* Offer Css */
-    .offers .offer-box .offer-info .heading-bigger{
-        font-size: 3rem;
-    }
-    /* Special Css */
+/* Small devices (up to 330px) */
+@media (max-width: 330px) {
+  .home .home-banner .home-banner-text h2 {
+    font-size: 1rem;
+  }
 }
-@media (max-width:991px){
-    /* Home Css */
-    .home .home-banner .home-banner-text{
-        transform: translate(-66%, -50%);
-    }
-    /* testimonial css */
-    .testimonial .carousel-control-prev{
-        left: -1.75rem;
-    }
-    .testimonial .carousel-control-next{
-        right: -1.75rem;
-    }
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  /* Home Section */
+  .home .home-banner-1,
+  .home .home-banner-2 {
+    background-position: center;
+    min-height: 450px;
+  }
+  .home .home-banner .home-banner-text {
+    text-align: center;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    padding: 0 1rem;
+  }
+  .home .home-banner .home-banner-text h1 {
+    font-size: 3rem;
+  }
+  .home .home-banner .home-banner-text h2 {
+    font-size: 1.2rem;
+  }
+  .home .home-banner .home-banner-text .btn-danger {
+    padding: 0.5rem 1.5rem;
+  }
+
+  /* Product Section */
+  .products .up_to_content h2 {
+    font-size: 0.725rem;
+  }
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Testimonial Section */
+  .testimonial .carousel-control-prev,
+  .testimonial .carousel-control-next {
+    display: none;
+  }
+
+  /* Contact Section */
+  .contact .form-control,
+  .contact .textarea {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Footer */
+  .copyright p {
+    font-size: 0.75rem;
+  }
 }
-@media (max-width:767px){
-    /* Home Css */
-    .home .home-banner-1,
-    .home .home-banner-2{
-        background-position: 50% center;
-        min-height: 450px;
-    }
-    .home .home-banner .home-banner-text{
-        text-align: center;
-        width: 100%;
-        transform: translate(-50%, -50%);
-    }
-    .home .home-banner .home-banner-text h1{
-        font-size: 3rem;
-    }
-    .home .home-banner .home-banner-text h2{
-        font-size: 1.2rem;    
-    }
-    .home .home-banner .home-banner-text .btn-danger{
-        padding: 0.5rem 1.5rem;
-    }
-    /* product css */
-    .products .up_to_content h2{
-        font-size: 0.725rem;
-    }
-    /* testimonial css */
-    .testimonial .carousel-control-prev,
-    .testimonial .carousel-control-next{
-        display: none;
-    }
+
+/* Tablets (up to 991px) */
+@media (max-width: 991px) {
+  /* Home Section */
+  .home .home-banner .home-banner-text {
+    transform: translate(-66%, -50%);
+  }
+
+  /* Testimonial Section */
+  .testimonial .carousel-control-prev {
+    left: -1.75rem;
+  }
+  .testimonial .carousel-control-next {
+    right: -1.75rem;
+  }
+
+  /* Navbar */
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
 }
-@media (max-width:330px){
-    /* Home Css */
-    .home .home-banner .home-banner-text h2{
-        font-size: 1rem;
-    }
-    /* Special Css */
+
+/* Small desktops/laptops (up to 1030px) */
+@media (max-width: 1030px) {
+  /* Home Section */
+  .home .home-banner-1,
+  .home .home-banner-2 {
+    background-position: 65% center;
+    min-height: 550px;
+  }
+  .home .home-banner .home-banner-text {
+    transform: translate(-80%, -50%);
+  }
+
+  /* Offer Section */
+  .offers .offer-box .offer-info .heading-bigger {
+    font-size: 3rem;
+  }
 }

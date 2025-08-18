@@ -37,7 +37,7 @@ a:hover{
 p{
     margin: 0;
 }
-.btn .btn-danger{
+/* .btn .btn-danger{
     background: var(--bg-danger);
     border-color: var(--bg-danger);
     padding: 0.8rem 1.5rem;
@@ -47,8 +47,18 @@ p{
 .btn .btn-danger:hover{
     color: var(--text-danger);
     background:transparent;
+} */
+.btn-danger {
+    background: var(--bg-danger);
+    border-color: var(--bg-danger);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
-
+.btn-danger:hover {
+    color: var(--text-danger);
+    background: transparent;
+}
 
 
 
@@ -64,6 +74,9 @@ p{
 #header .navbar-nav .nav-item .nav-link:hover,
 #header .navbar-nav .nav-item .nav-link.active{
     color: var(--bg-danger);
+}
+.collapse.navbar-collapse {
+  transition: height 0.3s ease;
 }
 
 

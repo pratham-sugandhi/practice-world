@@ -724,3 +724,358 @@
 
 // CALL BOOK-
 
+//
+// - Change Text on Button Click
+    // let btn = document.querySelector("button .change");
+    // let h1 = document.querySelector("h1");
+    // btn.addEventListener("click", function(){
+    //     h1.textContent = "Changed";
+    // });
+
+// Create a button that, when clicked, changes the text of a <p> element to "Hello, DOM!".
+    // let btn2 = document.querySelector("button #btn2");
+    // let p = document.querySelector("p");
+    // btn2.addEventListener("click", function(){
+    //     p.textContent = "Changed";
+    // });
+
+// - Toggle Background Color
+    // let toggleBtn = document.querySelector("#toggle-button");
+    // let isLight = true;
+
+    // bg.addEventListener("click", function(){
+    //     if(isLight){
+    //         document.body.style.backgroundColor = "blue";
+    //     } else {
+    //         document.body.style.backgroundColor = "red";
+    //     }
+    // });
+
+// Build a toggle switch that changes the background color of the page between light and dark modes.
+    // let bgc = document.querySelector("toggle-mode");
+    // let isDark = false;
+    // bgc.addEventListener("click", function(){
+    //     if(isDark){
+    //         document.body.style.backgroundColor = "white";
+    //         document.body.style.color = "black";
+
+    //     } else {
+    //         document.body.style.backgroundColor = "black";
+    //         document.body.style.color = "white";
+    //     }
+    // });
+
+// - Add and Remove Elements
+    // let h3 = document.createElement("h3");
+    // h3.textContent = "Hello, world";
+
+// Create a button that adds a new <li> to a list. Add another button that removes the last <li>.
+    // let addBtn = document.querySelector("#add");
+    // let removeBtn = document.querySelector("#remove");
+    // let list = document.querySelector("#list");
+
+    // addBtn.addEventListener("click", function () {
+    //     let li = document.createElement("li");
+    //     li.textContent = "New Item";
+    //     list.appendChild(li);
+    // });
+
+    // removeBtn.addEventListener("click", function () {
+    //     if (list.lastElementChild) {
+    //         list.removeChild(list.lastElementChild);
+    //     }
+    // });
+
+
+// - Form Validation
+// Build a form with a name and email field. On submit, validate that both fields are filled and show an error message if not.
+    // let form = document.querySelector("#myForm");
+    // let nameInput = document.querySelector("#name");
+    // let emailInput = document.querySelector("#email");
+    // let errorMsg = document.querySelector("#error");
+
+
+    // form.addEventListener("submit", function(dets){
+    //     dets.preventDefault();
+        
+    //     if (nameInput.value === "" || emailInput.value === "") {
+    //         errorMsg.textContent = "Please fill in both fields.";
+    //     } else {
+    //         errorMsg.textContent = "";
+    //         alert("Form submitted successfully!");
+    //         form.reset();
+    //     }
+    // });
+
+
+
+// - Image Gallery Hover Effect
+// When you hover over an image, display its caption below it.
+    // let cards = document.querySelectorAll(".card");
+
+    // cards.forEach(card => {
+    // let caption = card.querySelector(".caption");
+
+    // card.addEventListener("mouseenter", () => {
+    //     caption.style.display = "block";
+    // });
+
+    // card.addEventListener("mouseleave", () => {
+    //     caption.style.display = "none";
+    // });
+    // });
+
+
+// - Accordion Menu
+// Create a list of questions. When a question is clicked, show the answer below it and hide others.
+        // let que = document.querySelectorAll("#questions");
+
+        // que.forEach(q => {
+        //     q.addEventListener("click", function () {
+        //         document.querySelectorAll(".answer").forEach(ans => {
+        //             ans.syle.display = "none";
+        //         });
+
+        //         let answer = q.nextElementSibling;
+        //         answer.style.display = "block";
+        //     });
+        // });
+
+// EXECUTION CONTEXT -
+    // JS execution context - global execution context, function execution context, eval execution context
+    // global execution context - global scope - window object
+    // function execution context - function scope - function object
+    // eval execution context - eval function scope - eval object
+    // execution context - function ke andar jo bhi variable hai wo uske andar hi access hoga
+    // execution context - function ke andar jo bhi variable hai wo uske calling location se access hoga
+
+    // function dekh kr -> js execution context banta hai,
+    // process - which works in diff phases - memory phase & execution phase
+
+// LEXICAL SCOPING - (JS)
+    // lexical scoping - function ke andar jo bhi variable hai wo uske andar hi access hoga
+    // function outer() {
+        //     let a = 10;  // outer function scope     
+        //     function inner() {
+        //         let b = 20;  // inner function scope
+        //         console.log(a + b);  // a is accessible here 
+        //     }
+        //     inner();
+        // }
+        // outer();  // 30  
+
+// DYNAMIC SCOPING -
+    // dynamic scoping - function ke andar jo bhi variable hai wo uske calling location se access hoga
+        // let a = 10;  // global scope
+        // function outer() {
+        //     let a = 20; 
+        //     function inner() {
+        //         console.log(a);  // a is accessible here 
+        //     }
+        //     inner();
+        // }
+        // outer();  // 20
+
+    // non dynamic scoping - (lexical scoping)
+        // let b = 30;  // global scope
+        // function abcd(){
+        //     console.log(b);  // b is accessible here
+        // }
+
+        // function xyz() {
+        //     let b = 40;  // local scope
+        //     abcd();  // calls the global b
+        // }
+        // xyz();  // 30
+
+
+// CLOSURE - fun returns function
+    // parent function ke andar jo bhi variable hai wo uske child function se access hoga
+
+    // closure - parent function ke andar jo bhi variable hai wo uske calling location se access hoga
+        // function outer() {
+        //     let a = 10;  // outer function scope
+        //     function inner() {
+        //         let b = 20;  // inner function scope     
+        //         console.log(a + b);  // a is accessible here
+        //         return a + b;  // returns the sum of a and b
+        //     }
+        //     return inner;  // returns the inner function 
+        // }
+
+        // function abcd(){
+        //     let a = 10;  // outer function scope
+        //     return function () {
+        //         console.log(a);  // a is accessible here
+        //     };
+        // }
+
+        // abcd()();  // 10
+
+    // private counter -
+        // function createCounter() {
+        //     let count = 0;  
+        //     return function() {
+        //         count++;
+        //         console.log(count);  // count is accessible here
+        //     };
+        // }
+        // let counter = createCounter();
+        // counter();  // 1
+        // counter();  // 2
+        // counter();  // 3
+
+        // let counter2 = createCounter();
+        // counter2();         
+        // counter2();  // 1
+        // counter2();  // 2   
+        // counter();  // 4
+
+    // encapsulation - clicklimiter
+        // function clickLimiter(limit) {
+        //     let click = 0;
+        //     return function() {
+        //         if (click < limit) {
+        //             click++;
+        //             console.log(`Button clicked ${click} times`);
+        //         } else {
+        //             console.log("Click limit reached");
+        //         }
+        //     };
+        // }
+        // let buttonClick = clickLimiter(3);  
+        // buttonClick();  // Button clicked 1 times
+        // buttonClick();  // Button clicked 2 times
+        // buttonClick();  // Button clicked 3 times
+        // buttonClick();  // Click limit reached
+
+//   TOASTER- 
+    // function createToaster(config){
+    //     return function(message){
+    //         let parent = document.querySelector(".parent");
+    //         let toast = document.createElement("div");
+    //         toast.className = `toast ${config.theme === "dark" ? "bg-gray-800 text white" : "bg-gray-200 text black"}   
+    //              p-4 rounded-lg shadow-lg transition-all duration-300 `;
+            
+    //         toast.textContent = message;
+    //         document.querySelector(".parent").appendChild(toast);
+
+    //         if(config.positionX !== "left" || positionY !=="top"){
+    //             parent.classList.add("fixed");
+    //             parent.className += 
+    //                 `${config.positionX === "right" ? " right-5" : " left-5"} ${config.positionY === "bottom" ? " bottom-5" : "top-5"}}`;
+    //         }
+    //         setTimeout(() => {
+    //             parent.removeChild(toast);
+    //         }, config.duration * 1000);
+    //     };
+    // }
+
+    // let toaster = createToaster({
+    //     positionX: "right",
+    //     positionY: "top",
+    //     duration: 3,
+    //     theme: "dark", 
+    // });
+
+    // toaster("Hello, this is a toast message!");
+    // toaster("This is another toast message!");
+
+
+// This keyword -  value and nature changes
+    // global 
+        // console.log(this) -> window
+    // function
+        // console.log(this) -> window
+    
+    // method -> object
+        // let obj = {
+        //     name : "prsthu",
+        //     age: 26,
+        //     sayAge: function(){
+        //         console.log(this.age);
+        //     },
+        //     sayName: function(){
+        //         console.log(this.name);
+        //     }
+        // };
+        // obj.sayAge();
+        // obj.sayName();
+    
+    // event handler - 
+        // document.querySelector("h1")
+        //     .addEventListener("click", function(){
+        //         alert();
+        //         console.log(this.style.color = "red");  //this - h1
+        //     });
+
+    // class - this -> {}
+        // class Abcd{
+        //     constructor(){
+        //         console.log(this);
+        //         this.a = 12;
+        //     }
+        // };
+        // let val = new Abcd();   // {a : 12};
+
+
+// CALL APPLY BIND --> fun ki value set krna
+    // let obj = {
+    //     name : "prathu",
+    //     age : 35,
+    // };
+    // function abcd(a, b, c){
+    //     console.log(this.name);
+    //     console.log(this, a,b,c);
+    // }
+
+    // abcd.call(obj); //this => obj
+
+    // abcd.apply(obj, [1,2,3]); 
+
+    // let fun = abcd.bind(obj, 1,2,3); 
+    // fun();
+
+// User Manager-
+let form = document.querySelector("form");
+let username = document.querySelector("#name");
+let role = document.querySelector("#role");
+let bio = document.querySelector("#bio");
+let photo = document.querySelector("#photo");
+
+const userManager = {
+    user : [],
+    init : function(e){
+        form.addEventListener("submit", this.submitForm.bind(this));
+    },
+    submitForm : function(e){
+        e.preventDefault();
+        console.log("form submitted");
+        this.addUser();
+
+    },
+
+    addUser : function(){
+        this.user.push({
+            username: username.value,
+            role: role.value,
+            bio: bio.value,
+            photo: photo.value,
+        });
+        
+        form.reset();
+        this.renderUi();
+    },
+
+    renderUi : function(){
+
+        document.querySelector(".users").innerHTML ="";
+        this.users.forEach(element => {
+            // ...
+        });
+    },
+    removeUser : function(){},
+};
+
+
+
