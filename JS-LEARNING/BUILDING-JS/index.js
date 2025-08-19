@@ -1037,45 +1037,408 @@
     // fun();
 
 // User Manager-
-let form = document.querySelector("form");
-let username = document.querySelector("#name");
-let role = document.querySelector("#role");
-let bio = document.querySelector("#bio");
-let photo = document.querySelector("#photo");
+    // let form = document.querySelector("form");
+    // let username = document.querySelector("#name");
+    // let role = document.querySelector("#role");
+    // let bio = document.querySelector("#bio");
+    // let photo = document.querySelector("#photo");
 
-const userManager = {
-    user : [],
-    init : function(e){
-        form.addEventListener("submit", this.submitForm.bind(this));
-    },
-    submitForm : function(e){
-        e.preventDefault();
-        console.log("form submitted");
-        this.addUser();
+    // const userManager = {
+    //     user : [],
+    //     init : function(e){
+    //         form.addEventListener("submit", this.submitForm.bind(this));
+    //     },
+    //     submitForm : function(e){
+    //         e.preventDefault();
+    //         console.log("form submitted");
+    //         this.addUser();
 
-    },
+    //     },
 
-    addUser : function(){
-        this.user.push({
-            username: username.value,
-            role: role.value,
-            bio: bio.value,
-            photo: photo.value,
-        });
+    //     addUser : function(){
+    //         this.user.push({
+    //             username: username.value,
+    //             role: role.value,
+    //             bio: bio.value,
+    //             photo: photo.value,
+    //         });
+            
+    //         form.reset();
+    //         this.renderUi();
+    //     },
+
+    //     renderUi : function(){
+
+    //         document.querySelector(".users").innerHTML ="";
+    //         this.users.forEach(element => {
+    //             // ...
+    //         });
+    //     },
+    //     removeUser : function(){},
+    // };
+
+
+//  OOPS-
+    // Constructor function->
+
+        // function CreatePencil(name, price, color, company) {
+            // this.name = name;
+            // this.price = price;
+            // this.color = color;
+            // this.company = company;
+            //     this.write = function(text){
+            //         let h1 = document.createElement("h1");
+            //         h1.textContent = text;
+            //         h1.style.color = color;
+            //         document.body.append(h1);
+            //     }
+        // };
+
+        // let pencil1 = new CreatePencil("natraj", 10, "red", "Nataraj");
+        // pencil1.write("yoohohooho");
+        // let pencil2 = new CreatePencil("natraj", 10, "black", "Nataraj");
+        // pencil2.write("badiiiyyyaa");
+
+    // Prototype - 
+        // CreatePencil.prototype.company = "Sheriyanss";
+
+        // CreatePencil.prototype.write = function(text){
+        //         let h1 = document.createElement("h1");
+        //         h1.textContent = text;
+        //         h1.style.color = this.color;
+        //         document.body.append(h1);
+        // }
+    
+    // Class ->
+        // let h1 = document.body.querySelector("h1");
+        // class CreatePencil{
+        //     constructor(name, price, color, company){
+        //         this.name = name;
+        //         this.price = price;
+        //         this.color = color;
+        //         this.company = company;
+        //     };
+
+        //     erase (){
+        //         h1.forEach( (params) => {
+        //             if(params.style.color === this.color){
+        //                 params.remove();
+        //             }
+        //         })
+        //     };
+
+        //     write (text) {
+        //         // let h1 = document.createElement("h1");
+        //         h1.textContent = text;
+        //         h1.style.color = this.color;
+        //         document.body.append(h1);
+        //     }
+        // };
+
+        // class Admin extends CreatePencil{
+        //     constructor(name, price, color){
+        //         super(name, price, color);
+        //         this.company = "All";
+        //     };     
+        // }
+
+        // let pencil1 = new CreatePencil("nataraj", 20, "black", "natarajan");
+        // let pencil2 = new CreatePencil("doms", 10, "red", "doms");
+        // ;
+        // console.log(pencil1.write("Hello World"));
+        // pencil2.write("Hello World 2");
+        // let a1 = new Admin("adi", 99, "blue");
+        // a1.erase();
+
+    // class User{
+    //     constructor(name, address, username, email){
+    //         this.name = name;
+    //         this.address = address;
+    //         this.username = username;
+    //         this.email = email;
+    //         this.role = "user";
+    //     };
+
+    //     write(text){
+    //         let h1 = document.createElement("h1");
+    //         h1.textContent = `${this.name} : ${text}`;
+    //     };
+
+    //     checkRole(){
+    //         console.log(`you are: ${this.role}`);
+    //     };
+    // };
+
+    // class Admin extends User{
+    //     constructor (name, address, username, email){
+    //         super(name, address, username, email);
+    //         this.role =  "admin";
+    //     };
+
+    //     remove(){
+    //         document.querySelectorAll("h1").forEach(function (elem){
+    //             elem.remove();
+    //         });
+    //     }
+    // }
+
+    // let u1 = new User("Harsh", "bhopal", "kfdvjdb123", "hehyhe@gmail.com");
+    // let u2 = new User("Prathu", "indore", "kfdvjdb123", "hehyhe@gmail.com");
+    // let a1 = new Admin("admin1", "fdjuh", "nvhbd", "mvndiufyg");
+    // a1.checkRole();
+
+// prototypal inheritence - object -> object
+    // let a = {};
+    // let b = Object.create(a);  // b is prototype of a
+    // b.name = "prathu";
+    // b.age = 26;
+    // console.log(b.name);  
+    // console.log(b.age);
+
+    // let coffee = {
+    //     color : "brown",
+    //     drink : function(){
+    //         console.log("drinking coffee");
+    //     },
+    // };
+
+    // let latte = Object.create(coffee);  // latte is prototype of coffee
+    // latte.flavor = "vanilla";
+    // latte.drink = function(){
+    //     console.log("drinking latte");
+    // };
+    // console.log(latte.color);
+    // latte.drink();
+
+// ASYNC AND SYNC -
+    // synchronous - line by line execution
+    // asynchronous - execution is not line by line, it can execute in parallel or after some time
+        // non-blocking execution, callback functions, promises, async/await
+    
+        // console.log("hey1");
+        // console.log("hey2");
+
+        // setTimeout(function(){
+        //     console.log("hey4");
+        // }, 2000);
+
+        // console.log("hey5");
+
+    // callback - passing function in another function parameters
+        // function getProfile(username, cb){
+        //     setTimeout( () => {
+        //         console.log(`profile fetched ${username}`);
+        //         cb({_id: 1324,username, age: 26, bio: "I am a software developer" },);
+        //     } , 2000);
+        // };
+
+        // function postData(id, cb){
+        //     setTimeout( () => {
+        //         console.log(`posts fetched for ${id} !`);
+        //         cb(
+        //             [{_id: id, title: "Post 1"}, 
+        //             {_id: id, title: "Post 2"}]
+        //         );
+        //     }, 2000);
+        // }
+
+        // function savedPosts(id, cb){
+        //     setTimeout( () => {
+        //         console.log(`saved posts fetched for ${id} !`);
+        //         cb({_id: id, saved: [6, 78 , 88 , 9,] });
+        //     }, 2000);
+        // }
+
+        // getProfile("Prathu", function(data){
+        //     // console.log("profile data is: ", data);
+
+        //     postData(data._id, function(posts){
+        //         // console.log("posts are", posts);
+
+        //         savedPosts (data._id, function(saved) {
+        //             console.log("saved posts are", saved);
+        //         });
+        //     });
+
+        // })
+
+// PROMISES -
+    // promises - ek object jo future me value return karega based on resolve/reject
+
+    // let pr = new Promise(function(res, rej){
+    //     setTimeout(function(){
+    //         let rn = Math.floor(Math.random() * 10);
+    //         if(rn > 5){
+    //             let data = "resolved data -> " + rn;
+    //             res(data);
+    //         } else {
+    //             let err = "rejected error -> " + rn;
+    //             rej(err);
+    //         }
+
+    //     }, 2000);
+    // });
+
+    // pr.then(function(data){
+    //     console.log("promise resolved with: ", data);
+    // })
+    // .catch(function(err){
+    //     console.log("promise rejected with: ", err);
+    // });
+
+    // Async/Await -
+        // let pr = new Promise(function(res, rej){
+        //     setTimeout(function(){
+        //         let rn = Math.floor(Math.random() * 10);
+        //         if(rn > 5){
+        //             let data = "resolved data -> " + rn;
+        //             res(data);
+        //         } else {
+        //             let err = "rejected error -> " + rn;
+        //             rej(err);
+        //         }
+
+        //     }, 2000);
+        // });
+
+        // async function abcd(){
+        //     try {
+        //         let val = await pr;
+        //         console.log(val);
+        //     } catch (err) {
+        //         console.log(err);
+        //     }
+        // };
+        // abcd();
+
+// FETCH API / HTTPS FETCHED- 
+    // fetch("https://randomuser.me/api/")
+    //     .then((rawdata) =>  rawdata.json())
+    //     .then((data) => {
+    //         console.log(data.results);
+    //         console.log(data.results[0].name);
+    //         console.log(data.info);
+    //         console.log(data.info.seed);
+    //     })
+    //     .catch((err) => {
+    //         console.error("Error:", err);
+    //     })
+
+// fetch("https://randomuser.me/api/?results=5")
+//   .then((rawdata) => rawdata.json())
+//   .then((data) => {
+//     data.results.forEach(user => {
+//         // console.log(user.name);
+
+//         const card = document.createElement("div");
+//         card.className = "card h-100";
+
+//         const img = document.createElement("img");
+//         img.src = user.picture.large;
+//         img.className = "card-img-top";
+//         img.alt = "Card image";
+//         card.appendChild(img);
+
+//         const cardBody = document.createElement("div");
+//         cardBody.className = "card-body";
+
+//         const name = document.createElement("h5");
+//         name.className = "card-title";
+//         name.textContent = user.name.first + " " + user.name.last;
+
+//         const text = document.createElement("p");
+//         text.className = "card-text";
+//         text.textContent = "This is a short description for the first card. You can add more details here.";
+
+//         cardBody.appendChild(name);
+//         cardBody.appendChild(text);
+//         card.appendChild(cardBody);
+
+//         const cardFooter = document.createElement("div");
+//         cardFooter.className = "card-footer text-center";
+
+//         const link = document.createElement("a");
+//         link.href = "#";
+//         link.className = "btn btn-primary";
+//         link.textContent = "Learn More";
+
+//         cardFooter.appendChild(link);
+//         card.appendChild(cardFooter);
+
+//         // Append to container
+//         // document.getElementById("#users").appendChild(card);
+
+//         // Append card to container
+//         const usersContainer = document.querySelector(".users");
+//         usersContainer.appendChild(card);
+
+
+//     });
+//   })
+//   .catch((err) => {
+//      console.error("Error:", err);
+//   });
+
+// USER PROJECT -->
+function getUser(){
+  fetch("https://randomuser.me/api/?results=5")
+    .then((rawdata) => rawdata.json())
+    .then((data) => {
+        document. querySelector(".row").innerHTML = ""; 
         
-        form.reset();
-        this.renderUi();
-    },
+        const usersContainer = document.querySelector(".row");
 
-    renderUi : function(){
+        data.results.forEach(user => {
+        const col = document.createElement("div");
+        col.className = "col";
 
-        document.querySelector(".users").innerHTML ="";
-        this.users.forEach(element => {
-            // ...
+        const card = document.createElement("div");
+        card.className = "card h-100";
+
+        const img = document.createElement("img");
+        img.src = user.picture.large;
+        img.className = "card-img-top";
+        img.alt = "Card image";
+        card.appendChild(img);
+
+        const cardBody = document.createElement("div");
+        cardBody.className = "card-body";
+
+        const name = document.createElement("h5");
+        name.className = "card-title";
+        name.textContent = `${user.name.first} ${user.name.last}`;
+
+        const text = document.createElement("p");
+        text.className = "card-text";
+        text.textContent = "This is a short description for the user.";
+
+        cardBody.appendChild(name);
+        cardBody.appendChild(text);
+        card.appendChild(cardBody);
+
+        const cardFooter = document.createElement("div");
+        cardFooter.className = "card-footer text-center";
+
+        const link = document.createElement("a");
+        link.href = "#";
+        link.className = "btn btn-primary";
+        link.textContent = "Learn More";
+
+        cardFooter.appendChild(link);
+        card.appendChild(cardFooter);
+
+        // Append card to column, then column to row
+        col.appendChild(card);
+        usersContainer.appendChild(col);
         });
-    },
-    removeUser : function(){},
-};
+    })
+    .catch((err) => {
+        console.error("Error:", err);
+    });
+}
+getUser();
 
-
-
+document.querySelector("#refreshBtn")
+ .addEventListener("click", function() {
+    getUser();
+ });
